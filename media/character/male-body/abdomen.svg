@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="42px" viewBox="0 0 25 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>character/male-body/abdomen</title>
+    <g id="character/male-body/abdomen" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Path-16" fill="#9B9B9E" opacity="0.699999988" points="6 2 2 9 -6.16173779e-15 28 5 42 13 41 23 33 25 27 23 19 21 11 19 7 17 4 13 1 9 9.32587341e-15"></polygon>
+        <path d="M18,34 C18.5522847,34 19,33.5522847 19,33 C19,32.4477153 18.5522847,32 18,32 C17.4477153,32 17,32.4477153 17,33 C17,33.5522847 17.4477153,34 18,34 Z" id="Oval" fill="#2D2D35"></path>
+        <circle id="Oval" fill="#2D2D35" cx="14" cy="18" r="1"></circle>
+        <line x1="14" y1="18" x2="18" y2="33" id="Path-18" stroke="#2D2D35" stroke-width="0.5" stroke-linejoin="round" stroke-dasharray="2,2"></line>
+    </g>
+</svg>

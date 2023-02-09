@@ -1,0 +1,516 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *::before, *::after {
+  background-size: cover; }
+
+:root {
+  --WenchuanBlack: #2D2D35; }
+
+.demoBox-placeMiddle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%; }
+
+.testMode .character::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.5px;
+  width: 100px;
+  transform: translate(-50%, 0%);
+  left: 0;
+  bottom: 0;
+  background-color: rgba(225, 0, 255, 0.153); }
+.testMode .character::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0.5px;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  background-color: rgba(225, 0, 255, 0.153); }
+.testMode .character .part::before {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 10;
+  width: 4px;
+  height: 4px;
+  border: 0.5px solid rgba(255, 0, 0, 0.612);
+  border-radius: 1000px;
+  transform: translate(-50%, -50%); }
+.testMode .character .part i::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: visible !important; }
+
+.character {
+  position: absolute;
+  width: 0px;
+  height: 200px;
+  background-color: red; }
+  .character .part {
+    position: absolute;
+    width: 0;
+    height: 0; }
+    .character .part.toes > i {
+      position: absolute;
+      width: 8px;
+      height: 2px; }
+      .character .part.toes > i::after {
+        background-image: url(../../media/character/male-body/toes.svg);
+        visibility: hidden; }
+    .character .part.toes.outer {
+      left: 0;
+      bottom: 0;
+      transform: rotate(0deg); }
+      .character .part.toes.outer > i {
+        transform: translate(0px, -2px); }
+    .character .part.toes.inner {
+      left: -9px;
+      bottom: -5px;
+      transform: rotate(1deg); }
+      .character .part.toes.inner > i {
+        transform: translate(-7px, -1px); }
+    .character .part.foot > i {
+      position: absolute;
+      width: 16px;
+      height: 8px; }
+      .character .part.foot > i::after {
+        background-image: url(../../media/character/male-body/foot.svg); }
+    .character .part.foot.outer {
+      left: 7px;
+      bottom: 1px;
+      transform: rotate(0deg); }
+      .character .part.foot.outer > i {
+        transform: translate(-4px, -7px); }
+    .character .part.foot.inner {
+      left: 0px;
+      bottom: -55px;
+      transform: rotate(-1deg); }
+      .character .part.foot.inner > i {
+        transform: translate(-13px, -2px); }
+    .character .part.claf > i {
+      position: absolute;
+      width: 16px;
+      height: 64px; }
+      .character .part.claf > i::after {
+        background-image: url(../../media/character/male-body/claf.svg); }
+    .character .part.claf.outer {
+      left: 9px;
+      bottom: 5px;
+      transform: rotate(0deg); }
+      .character .part.claf.outer > i {
+        transform: translate(-5px, -60px); }
+    .character .part.claf.inner {
+      left: 3px;
+      bottom: -53px;
+      transform: rotate(-26deg); }
+      .character .part.claf.inner > i {
+        transform: translate(-5px, -5px); }
+    .character .part.thigh > i {
+      position: absolute;
+      width: 32px;
+      height: 75px; }
+      .character .part.thigh > i::after {
+        background-image: url(../../media/character/male-body/thigh.svg); }
+    .character .part.thigh.outer {
+      left: 0px;
+      bottom: 55px;
+      transform: rotate(0deg); }
+      .character .part.thigh.outer > i {
+        transform: translate(-19px, -69px); }
+    .character .part.thigh.inner {
+      left: -8px;
+      bottom: -8px;
+      transform: rotate(25deg); }
+      .character .part.thigh.inner > i {
+        transform: translate(-16px, -16px); }
+    .character .part.abdomen > i {
+      position: absolute;
+      width: 25px;
+      height: 42px; }
+      .character .part.abdomen > i::after {
+        background-image: url(../../media/character/male-body/abdomen.svg); }
+    .character .part.abdomen.u {
+      left: -1px;
+      bottom: 58px;
+      transform: rotate(0deg); }
+      .character .part.abdomen.u > i {
+        transform: translate(-18px, -33px); }
+    .character .part.breasts > i {
+      position: absolute;
+      width: 31px;
+      height: 43px; }
+      .character .part.breasts > i::after {
+        background-image: url(../../media/character/male-body/breasts.svg); }
+    .character .part.breasts.u {
+      left: -4px;
+      bottom: 15px;
+      transform: rotate(0deg); }
+      .character .part.breasts.u > i {
+        transform: translate(-16px, -39px); }
+    .character .part.brachial > i {
+      position: absolute;
+      width: 15px;
+      height: 42px; }
+      .character .part.brachial > i::after {
+        background-image: url(../../media/character/male-body/brachial.svg); }
+    .character .part.brachial.outer {
+      left: 8px;
+      bottom: 29px;
+      transform: rotate(0deg); }
+      .character .part.brachial.outer > i {
+        transform: translate(-8px, -5px); }
+    .character .part.brachial.inner {
+      left: -9px;
+      bottom: 29px;
+      transform: rotate(0deg); }
+      .character .part.brachial.inner > i {
+        transform: translate(-8px, -5px); }
+    .character .part.forearm > i {
+      position: absolute;
+      width: 11px;
+      height: 38px; }
+      .character .part.forearm > i::after {
+        background-image: url(../../media/character/male-body/forearm.svg); }
+    .character .part.forearm.outer {
+      left: 3px;
+      bottom: -35px;
+      transform: rotate(0deg); }
+      .character .part.forearm.outer > i {
+        transform: translate(-8px, -3px); }
+    .character .part.forearm.inner {
+      left: 3px;
+      bottom: -35px;
+      transform: rotate(0deg); }
+      .character .part.forearm.inner > i {
+        transform: translate(-8px, -3px); }
+    .character .part.hand > i {
+      position: absolute;
+      width: 6px;
+      height: 17px; }
+      .character .part.hand > i::after {
+        background-image: url(../../media/character/male-body/hand.svg); }
+    .character .part.hand.outer {
+      left: -7px;
+      bottom: -33px;
+      transform: rotate(0deg); }
+      .character .part.hand.outer > i {
+        transform: translate(-1px, -2px); }
+    .character .part.hand.inner {
+      left: -7px;
+      bottom: -33px;
+      transform: rotate(0deg); }
+      .character .part.hand.inner > i {
+        transform: translate(-1px, -2px); }
+    .character .part.neck > i {
+      position: absolute;
+      width: 16px;
+      height: 20px; }
+      .character .part.neck > i::after {
+        background-image: url(../../media/character/male-body/neck.svg); }
+    .character .part.neck.u {
+      left: 1px;
+      bottom: 37px;
+      transform: rotate(0deg); }
+      .character .part.neck.u > i {
+        transform: translate(-11px, -15px); }
+    .character .part.head > i {
+      position: absolute;
+      width: 25px;
+      height: 25px; }
+      .character .part.head > i::after {
+        background-image: url(../../media/character/male-body/head.svg); }
+    .character .part.head.u {
+      left: -3px;
+      bottom: 12px;
+      transform: rotate(0deg); }
+      .character .part.head.u > i {
+        transform: translate(-17px, -17px); }
+
+#character-Lipperhey .hand.outer i .deco {
+  position: absolute;
+  left: 3px;
+  top: 12px;
+  transform: rotate(-18deg);
+  animation: Lipperhey-deco-rotation 20s infinite;
+  animation-delay: 1s; }
+  #character-Lipperhey .hand.outer i .deco > i {
+    display: block;
+    position: absolute;
+    width: 3px;
+    height: 75px;
+    background-image: url(../../media/character/deco/rec.svg);
+    transform: translate(-1px, -33px); }
+#character-Lipperhey .foot.inner {
+  animation: Lipperhey-inner-foot-rotation 20s infinite;
+  animation-delay: 1s; }
+#character-Lipperhey .claf.outer {
+  animation: Lipperhey-outer-claf-rotation 20s infinite;
+  animation-delay: 1s; }
+#character-Lipperhey .claf.inner {
+  animation: Lipperhey-inner-claf-rotation 20s infinite;
+  animation-delay: 1s; }
+#character-Lipperhey .thigh.outer {
+  animation: Lipperhey-outer-thigh-rotation 20s infinite;
+  animation-delay: 1s; }
+#character-Lipperhey .thigh.inner {
+  animation: Lipperhey-inner-thigh-rotation 20s infinite;
+  animation-delay: 1s; }
+#character-Lipperhey .abdomen.u {
+  animation: Lipperhey-abdomen-rotation 20s infinite;
+  animation-delay: 1s; }
+#character-Lipperhey .breasts.u {
+  animation: Lipperhey-breasts-rotation 20s infinite;
+  animation-delay: 1s; }
+#character-Lipperhey .brachial.outer {
+  transform: rotate(17deg);
+  animation: Lipperhey-outer-brachial-rotation 20s infinite;
+  animation-delay: 1s; }
+#character-Lipperhey .brachial.inner {
+  animation: Lipperhey-inner-brachial-rotation 20s infinite;
+  animation-delay: 1s; }
+#character-Lipperhey .forearm.outer {
+  transform: rotate(24deg);
+  animation: Lipperhey-outer-forearm-rotation 20s infinite;
+  animation-delay: 1s; }
+#character-Lipperhey .forearm.inner {
+  animation: Lipperhey-inner-forearm-rotation 20s infinite;
+  animation-delay: 1s; }
+#character-Lipperhey .neck.u {
+  animation: Lipperhey-neck-rotation 20s infinite;
+  animation-delay: 1s; }
+#character-Lipperhey .head.u {
+  animation: Lipperhey-head-rotation 20s infinite;
+  animation-delay: 1s; }
+
+@keyframes Lipperhey-outer-claf-rotation {
+  0% {
+    transform: rotate(0deg); }
+  5% {
+    transform: rotate(1.5deg); }
+  10% {
+    transform: rotate(1deg); }
+  50% {
+    transform: rotate(1deg); }
+  55% {
+    transform: rotate(0.9deg); }
+  60% {
+    transform: rotate(0deg); } }
+@keyframes Lipperhey-inner-claf-rotation {
+  0% {
+    transform: rotate(-26deg); }
+  5% {
+    transform: rotate(-25deg); }
+  10% {
+    transform: rotate(-25.5deg); }
+  50% {
+    transform: rotate(-25.5deg); }
+  55% {
+    transform: rotate(-25deg); }
+  60% {
+    transform: rotate(-26deg); } }
+@keyframes Lipperhey-inner-foot-rotation {
+  0% {
+    transform: rotate(0deg); }
+  5% {
+    transform: rotate(-1.5deg); }
+  10% {
+    transform: rotate(-1deg); }
+  50% {
+    transform: rotate(-1deg); }
+  55% {
+    transform: rotate(-0.9deg); }
+  60% {
+    transform: rotate(0deg); } }
+@keyframes Lipperhey-outer-thigh-rotation {
+  0% {
+    transform: rotate(0deg); }
+  5% {
+    transform: rotate(0.2deg); }
+  10% {
+    transform: rotate(1deg); }
+  50% {
+    transform: rotate(1deg); }
+  55% {
+    transform: rotate(0.8deg); }
+  60% {
+    transform: rotate(0deg); } }
+@keyframes Lipperhey-inner-thigh-rotation {
+  0% {
+    transform: rotate(25deg) translate(0px, 0px); }
+  5% {
+    transform: rotate(23deg) translate(0px, 1px); }
+  10% {
+    transform: rotate(23deg) translate(0px, 1px); }
+  50% {
+    transform: rotate(23deg) translate(0px, 1px); }
+  55% {
+    transform: rotate(23deg) translate(0px, 1px); }
+  60% {
+    transform: rotate(23deg) translate(0px, 0px); } }
+@keyframes Lipperhey-abdomen-rotation {
+  0% {
+    transform: rotate(0deg); }
+  5% {
+    transform: rotate(1deg); }
+  10% {
+    transform: rotate(1deg); }
+  50% {
+    transform: rotate(1deg); }
+  55% {
+    transform: rotate(1deg); }
+  60% {
+    transform: rotate(0deg); } }
+@keyframes Lipperhey-breasts-rotation {
+  0% {
+    transform: rotate(0deg); }
+  4% {
+    transform: rotate(4deg); }
+  10% {
+    transform: rotate(3.5deg); }
+  50% {
+    transform: rotate(3.5deg); }
+  54% {
+    transform: rotate(3deg); }
+  60% {
+    transform: rotate(0deg); } }
+@keyframes Lipperhey-neck-rotation {
+  0% {
+    transform: rotate(0deg); }
+  4% {
+    transform: rotate(-6deg); }
+  10% {
+    transform: rotate(-6deg); }
+  50% {
+    transform: rotate(-6deg); }
+  54% {
+    transform: rotate(-5deg); }
+  60% {
+    transform: rotate(0deg); } }
+@keyframes Lipperhey-head-rotation {
+  0% {
+    transform: rotate(0deg); }
+  4% {
+    transform: rotate(-7deg); }
+  10% {
+    transform: rotate(-7deg); }
+  50% {
+    transform: rotate(-7deg); }
+  54% {
+    transform: rotate(-5deg); }
+  60% {
+    transform: rotate(0deg); } }
+@keyframes Lipperhey-outer-brachial-rotation {
+  0% {
+    transform: rotate(17deg) translate(0px, 0px); }
+  4% {
+    transform: rotate(71deg) translate(0px, -2px); }
+  10% {
+    transform: rotate(73deg) translate(0px, -2px); }
+  50% {
+    transform: rotate(73deg) translate(0px, -2px); }
+  54% {
+    transform: rotate(67deg) translate(0px, -3px); }
+  60% {
+    transform: rotate(17deg) translate(0px, 0px); } }
+@keyframes Lipperhey-inner-brachial-rotation {
+  0% {
+    transform: rotate(0deg) translate(0px, 0px); }
+  4% {
+    transform: rotate(71deg) translate(-1px, 2px); }
+  10% {
+    transform: rotate(73deg) translate(-1px, 2px); }
+  50% {
+    transform: rotate(73deg) translate(-1px, 2px); }
+  54% {
+    transform: rotate(69deg) translate(-1px, 3px); }
+  60% {
+    transform: rotate(0deg) translate(0px, 0px); } }
+@keyframes Lipperhey-outer-forearm-rotation {
+  0% {
+    transform: rotate(24deg); }
+  4% {
+    transform: rotate(61deg); }
+  10% {
+    transform: rotate(60deg); }
+  50% {
+    transform: rotate(60deg); }
+  54% {
+    transform: rotate(60deg); }
+  60% {
+    transform: rotate(24deg); } }
+@keyframes Lipperhey-inner-forearm-rotation {
+  0% {
+    transform: rotate(0deg); }
+  4% {
+    transform: rotate(56deg); }
+  10% {
+    transform: rotate(55deg); }
+  50% {
+    transform: rotate(55deg); }
+  54% {
+    transform: rotate(54deg); }
+  60% {
+    transform: rotate(0deg); } }
+@keyframes Lipperhey-deco-rotation {
+  0% {
+    transform: rotate(-18deg); }
+  4% {
+    transform: rotate(-49deg); }
+  10% {
+    transform: rotate(-49deg); }
+  50% {
+    transform: rotate(-49deg); }
+  54% {
+    transform: rotate(-40deg); }
+  60% {
+    transform: rotate(-18deg); } }

@@ -1,0 +1,359 @@
+.demoBox-placeMiddle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+
+.testMode {
+  // 这个部分是用来测试人物的坐标中轴线的。中轴线的底部位于外侧下肢的脚之尖。如果角色出现移动，那么就是移动这个中轴线。
+  .character {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 0.5px;
+      width: 100px;
+      transform: translate(-50%, -0%);
+      left: 0;
+      bottom: 0;
+      background-color: rgba(225, 0, 255, 0.153);
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0.5px;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      background-color: rgba(225, 0, 255, 0.153);
+    }
+
+    // 显示身体部位起始准星位置
+    .part {
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        z-index: 10;
+        width: 4px;
+        height: 4px;
+        border: 0.5px solid rgba(255, 0, 0, 0.612);
+        border-radius: 1000px;
+        transform: translate(-50%, -50%);
+      }
+
+      // 测试的时候需要看到身体的底图，用来调整动作
+      i {
+        &::after {
+          display: block;
+          content: "";
+          position: absolute;
+          width: 100%; height: 100%;
+          visibility: visible !important;
+        }
+      }
+    }
+  }
+}
+// 角色中轴线
+.character {
+  position: absolute;
+  width: 0px;
+  height: 200px;  
+  background-color: red;
+
+  // 身体部位的起始准星
+  .part {
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    // 在 HTML 布局中，身体部分是一个“inductive set”，但是，在 css 中，它们需要被平级书写。
+
+    // 开始：身体部位
+    &.toes {
+      &>i {
+        position: absolute;
+        width: 8px; height: 2px;
+        &::after {
+          background-image: url(../../media/character/male-body/toes.svg);
+          visibility: hidden;
+        }
+      }
+      &.outer {
+        left: 0;
+        bottom: 0;
+        transform: rotate(0deg); // rotation 动画干预这里
+
+        &>i {
+          transform: translate(0px, -2px);          
+        }
+      }
+
+      &.inner {
+        left: -9px;
+        bottom: -5px;    
+        transform: rotate(1deg); // rotation 动画干预这里
+
+        &>i {
+          transform: translate(-7px, -1px);          
+        }
+      }
+    }
+
+    &.foot {
+      &>i {
+        position: absolute;
+        width: 16px; height: 8px;
+        &::after {
+          background-image: url(../../media/character/male-body/foot.svg);
+        }
+      }
+      &.outer {
+        left: 7px;
+        bottom: 1px;    
+        transform: rotate(0deg); // rotation 动画干预这里
+
+        &>i {
+          transform: translate(-4px, -7px);
+
+          
+        }
+      }
+      &.inner {
+        left: 0px;
+        bottom: -55px; 
+        transform: rotate(-1deg); // rotation 动画干预这里
+
+        &>i {
+          transform: translate(-13px, -2px);
+        }
+      }
+    }
+
+    &.claf {
+      &>i {
+        position: absolute;
+        width: 16px; height: 64px; 
+        &::after {
+          background-image: url(../../media/character/male-body/claf.svg);
+        }       
+      }
+      &.outer {
+        left: 9px;
+        bottom: 5px;
+        transform: rotate(0deg); // rotation 动画干预这里
+
+        &>i {
+          transform: translate(-5px, -60px);
+        }
+      }
+      &.inner {
+        left: 3px;
+        bottom: -53px;
+        transform: rotate(-26deg); // rotation 动画干预这里
+
+        &>i {
+          transform: translate(-5px, -5px);
+        }
+      }
+    }
+
+    &.thigh {
+      &>i {
+        position: absolute;
+        width: 32px; height: 75px;
+        &::after {
+          background-image: url(../../media/character/male-body/thigh.svg);
+        }    
+      }
+      &.outer {
+        left: 0px;
+        bottom: 55px;
+        transform: rotate(0deg); // rotation 动画干预这里
+
+        &>i {
+          transform: translate(-19px, -69px);      
+        }
+      }
+
+      &.inner {
+        left: -8px;
+        bottom: -8px;
+        transform: rotate(25deg); // rotation 动画干预这里
+
+        &>i {
+          transform: translate(-16px, -16px);      
+        }
+      }
+    }
+
+    &.abdomen {
+      &>i {
+        position: absolute;
+        width: 25px; height: 42px;  
+        &::after {
+          background-image: url(../../media/character/male-body/abdomen.svg);
+        }      
+      }
+      &.u {
+        left: -1px;
+        bottom: 58px;
+        transform: rotate(0deg); // rotation 动画干预这里
+  
+        &>i {
+          transform: translate(-18px, -33px);       
+        }        
+      }
+    }
+
+    &.breasts {
+      &>i {
+        position: absolute;
+        width: 31px; height: 43px;
+        &::after {
+          background-image: url(../../media/character/male-body/breasts.svg);
+        }        
+      }
+      &.u {
+        left: -4px;
+        bottom: 15px;
+        transform: rotate(0deg); // rotation 动画干预这里
+  
+        &>i {
+          transform: translate(-16px, -39px);          
+        }        
+      }
+    }
+
+    &.brachial {
+      &>i {
+        position: absolute;
+        width: 15px; height: 42px;
+        &::after {
+          background-image: url(../../media/character/male-body/brachial.svg);
+        }   
+      }
+      &.outer {
+        left: 8px;
+        bottom: 29px;
+        transform: rotate(0deg); // rotation 动画干预这里
+  
+        &>i {
+          transform: translate(-8px, -5px);
+        }
+      }
+
+      &.inner {
+        left: -9px;
+        bottom: 29px;
+        transform: rotate(0deg); // rotation 动画干预这里
+  
+        &>i {
+          transform: translate(-8px, -5px);
+        }
+      }
+    }
+
+    &.forearm {
+      &>i {
+        position: absolute;
+        width: 11px; height: 38px;
+        &::after {
+          background-image: url(../../media/character/male-body/forearm.svg);
+        }   
+      }
+      &.outer {
+        left: 3px;
+        bottom: -35px;
+        transform: rotate(0deg); // rotation 动画干预这里
+  
+        &>i {
+          transform: translate(-8px, -3px); 
+        }        
+      }
+      &.inner {
+        left: 3px;
+        bottom: -35px;
+        transform: rotate(0deg); // rotation 动画干预这里
+  
+        &>i {
+          transform: translate(-8px, -3px); 
+        }          
+      }
+    }
+
+    &.hand {
+      &>i {
+        position: absolute;
+        width: 6px; height: 17px;
+        &::after {
+          background-image: url(../../media/character/male-body/hand.svg);
+        }
+      }
+      &.outer {
+        left: -7px;
+        bottom: -33px;
+        transform: rotate(0deg); // rotation 动画干预这里
+
+        &>i {
+          transform: translate(-1px, -2px);          
+        }
+      }
+      &.inner {
+        left: -7px;
+        bottom: -33px;
+        transform: rotate(0deg); // rotation 动画干预这里
+
+        &>i {
+          transform: translate(-1px, -2px);          
+        }
+      }
+    }
+
+    &.neck {
+      &>i {
+        position: absolute;
+        width: 16px; height: 20px;   
+        &::after {
+          background-image: url(../../media/character/male-body/neck.svg);
+        }     
+      }
+      &.u {
+        left: 1px;
+        bottom: 37px;
+        transform: rotate(0deg); // rotation 动画干预这里
+  
+        &>i {
+          transform: translate(-11px, -15px);
+        }        
+      }
+    }
+
+    &.head {
+      &>i {
+        position: absolute;
+        width: 25px; height: 25px; 
+        &::after {
+          background-image: url(../../media/character/male-body/head.svg);
+        }        
+      }
+      &.u {
+        left: -3px;
+        bottom: 12px;
+        transform: rotate(0deg); // rotation 动画干预这里
+  
+        &>i {
+          transform: translate(-17px, -17px);         
+        }        
+      }
+    }
+    // 结束：身体部位
+  }
+}
+
+@import "Lipperhey"
