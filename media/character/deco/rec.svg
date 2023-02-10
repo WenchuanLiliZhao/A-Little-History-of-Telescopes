@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="3px" height="75px" viewBox="0 0 3 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>character/deco/rec</title>
-    <g id="character/deco/rec" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.48">
-        <rect id="Rectangle" fill="#2D2D35" x="9.09494702e-13" y="-2.27373675e-13" width="3" height="75"></rect>
+    <g id="character/deco/rec" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#B0B0FF" x="9.09494702e-13" y="-2.27373675e-13" width="3" height="75"></rect>
     </g>
 </svg>

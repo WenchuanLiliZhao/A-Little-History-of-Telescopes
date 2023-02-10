@@ -1,14 +1,6 @@
-.demoBox-placeMiddle {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-}
-
-
-.testMode {
+body.testMode {
   // 这个部分是用来测试人物的坐标中轴线的。中轴线的底部位于外侧下肢的脚之尖。如果角色出现移动，那么就是移动这个中轴线。
-  .character {
+  .char {
     &::before {
       content: "";
       display: block;
@@ -32,13 +24,13 @@
       background-color: rgba(225, 0, 255, 0.153);
     }
 
-    // 显示身体部位起始准星位置
-    .part {
+    // 这个东西用来作为测试时候的坐标提示
+    .bodyPart {
       &::before {
         display: block;
         content: "";
         position: absolute;
-        z-index: 10;
+
         width: 4px;
         height: 4px;
         border: 0.5px solid rgba(255, 0, 0, 0.612);
@@ -46,7 +38,6 @@
         transform: translate(-50%, -50%);
       }
 
-      // 测试的时候需要看到身体的底图，用来调整动作
       i {
         &::after {
           display: block;
@@ -56,28 +47,88 @@
           visibility: visible !important;
         }
       }
+      .deco {
+        &::before, &::after {
+          content: "";
+          display: block;
+          width: 0.5px;
+          height: 16px;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          left: 50%;
+          top: 50%;
+          background-color: red;
+        }
+  
+        &::after {
+          height: 0.5px;
+          width: 16px;
+        }
+      }
+    }
+  }
+
+  &.hideSkin {
+    .char {
+      .skin {
+        visibility: hidden !important;
+      }
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ================================
 // 角色中轴线
-.character {
+// ================================
+.char {
   position: absolute;
   width: 0px;
   height: 200px;  
   background-color: red;
 
-  // 身体部位的起始准星
-  .part {
+  // 实际情况下，角色确定位置靠这两个参数
+  left: 200px;
+  bottom: 100px;
+
+  // 这个东西用来作为测试时候的坐标提示
+  .bodyPart {
     position: absolute;
     width: 0;
     height: 0;
 
-    // 在 HTML 布局中，身体部分是一个“inductive set”，但是，在 css 中，它们需要被平级书写。
+    // Skin 以及 test skin 的存放位置
+    i {
+      position: absolute;
+
+      .skin {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+      }
+    }
+
+    .deco {
+      position: absolute;
+      width: 0;
+      height: 0;
+    }
 
     // 开始：身体部位
     &.toes {
       &>i {
-        position: absolute;
         width: 8px; height: 2px;
         &::after {
           background-image: url(../../media/character/male-body/toes.svg);
@@ -90,7 +141,12 @@
         transform: rotate(0deg); // rotation 动画干预这里
 
         &>i {
-          transform: translate(0px, -2px);          
+          transform: translate(0px, -2px);
+
+          .skin {
+            width: 28px;
+            height: 22px;
+          }
         }
       }
 
@@ -100,14 +156,18 @@
         transform: rotate(1deg); // rotation 动画干预这里
 
         &>i {
-          transform: translate(-7px, -1px);          
+          transform: translate(-7px, -1px);
+
+          .skin {
+            width: 28px;
+            height: 22px;
+          }
         }
       }
     }
 
     &.foot {
       &>i {
-        position: absolute;
         width: 16px; height: 8px;
         &::after {
           background-image: url(../../media/character/male-body/foot.svg);
@@ -121,7 +181,10 @@
         &>i {
           transform: translate(-4px, -7px);
 
-          
+          .skin {
+            width: 36px;
+            height: 28px;
+          }
         }
       }
       &.inner {
@@ -131,13 +194,17 @@
 
         &>i {
           transform: translate(-13px, -2px);
+
+          .skin {
+            width: 36px;
+            height: 28px;
+          }
         }
       }
     }
 
     &.claf {
       &>i {
-        position: absolute;
         width: 16px; height: 64px; 
         &::after {
           background-image: url(../../media/character/male-body/claf.svg);
@@ -150,6 +217,10 @@
 
         &>i {
           transform: translate(-5px, -60px);
+          .skin {
+            width: 40px;
+            height: 80px;
+          }
         }
       }
       &.inner {
@@ -159,13 +230,16 @@
 
         &>i {
           transform: translate(-5px, -5px);
+          .skin {
+            width: 40px;
+            height: 80px;
+          }
         }
       }
     }
 
     &.thigh {
       &>i {
-        position: absolute;
         width: 32px; height: 75px;
         &::after {
           background-image: url(../../media/character/male-body/thigh.svg);
@@ -177,7 +251,12 @@
         transform: rotate(0deg); // rotation 动画干预这里
 
         &>i {
-          transform: translate(-19px, -69px);      
+          transform: translate(-19px, -69px);
+
+          .skin {
+            width: 72px;
+            height: 99px;
+          }
         }
       }
 
@@ -187,52 +266,63 @@
         transform: rotate(25deg); // rotation 动画干预这里
 
         &>i {
-          transform: translate(-16px, -16px);      
+          transform: translate(-16px, -16px);
+
+          .skin {
+            width: 72px;
+            height: 99px;
+          }
         }
       }
     }
 
+
+    // 躯干
     &.abdomen {
-      &>i {
-        position: absolute;
-        width: 25px; height: 42px;  
-        &::after {
-          background-image: url(../../media/character/male-body/abdomen.svg);
-        }      
-      }
       &.u {
         left: -1px;
         bottom: 58px;
         transform: rotate(0deg); // rotation 动画干预这里
   
         &>i {
-          transform: translate(-18px, -33px);       
+          transform: translate(-18px, -33px);
+
+          width: 25px; height: 42px;  
+          &::after {
+            background-image: url(../../media/character/male-body/abdomen.svg);
+          }
+
+          .skin {
+            width: 75px;
+            height: 90px;
+          }
         }        
       }
     }
 
     &.breasts {
-      &>i {
-        position: absolute;
-        width: 31px; height: 43px;
-        &::after {
-          background-image: url(../../media/character/male-body/breasts.svg);
-        }        
-      }
       &.u {
         left: -4px;
         bottom: 15px;
         transform: rotate(0deg); // rotation 动画干预这里
-  
         &>i {
-          transform: translate(-16px, -39px);          
-        }        
+          transform: translate(-16px, -39px);
+          width: 31px; height: 43px;
+          &::after {
+            background-image: url(../../media/character/male-body/breasts.svg);
+          }
+
+          .skin {
+            width: 85px;
+            height: 85px;
+          }
+        }
       }
     }
 
+    // 手👋
     &.brachial {
       &>i {
-        position: absolute;
         width: 15px; height: 42px;
         &::after {
           background-image: url(../../media/character/male-body/brachial.svg);
@@ -242,9 +332,14 @@
         left: 8px;
         bottom: 29px;
         transform: rotate(0deg); // rotation 动画干预这里
-  
+
         &>i {
           transform: translate(-8px, -5px);
+
+          .skin {
+            width: 55px;
+            height: 83px;
+          }
         }
       }
 
@@ -255,13 +350,17 @@
   
         &>i {
           transform: translate(-8px, -5px);
+
+          .skin {
+            width: 55px;
+            height: 83px;
+          }
         }
       }
     }
 
     &.forearm {
       &>i {
-        position: absolute;
         width: 11px; height: 38px;
         &::after {
           background-image: url(../../media/character/male-body/forearm.svg);
@@ -274,22 +373,31 @@
   
         &>i {
           transform: translate(-8px, -3px); 
+
+          .skin {
+            width: 51px;
+            height: 78px;
+          }
         }        
       }
       &.inner {
         left: 3px;
         bottom: -35px;
-        transform: rotate(0deg); // rotation 动画干预这里
+        transform: rotate(0deg); // rotation 动画干预这里  
   
         &>i {
-          transform: translate(-8px, -3px); 
+          transform: translate(-8px, -3px);
+
+          .skin {
+            width: 51px;
+            height: 78px;
+          }
         }          
       }
     }
 
     &.hand {
       &>i {
-        position: absolute;
         width: 6px; height: 17px;
         &::after {
           background-image: url(../../media/character/male-body/hand.svg);
@@ -301,7 +409,12 @@
         transform: rotate(0deg); // rotation 动画干预这里
 
         &>i {
-          transform: translate(-1px, -2px);          
+          transform: translate(-1px, -2px);
+          
+          .skin {
+            width: 46px;
+            height: 57px;
+          }
         }
       }
       &.inner {
@@ -310,19 +423,18 @@
         transform: rotate(0deg); // rotation 动画干预这里
 
         &>i {
-          transform: translate(-1px, -2px);          
+          transform: translate(-1px, -2px);
+
+          .skin {
+            width: 46px;
+            height: 57px;
+          }
         }
       }
     }
 
+    // 👨
     &.neck {
-      &>i {
-        position: absolute;
-        width: 16px; height: 20px;   
-        &::after {
-          background-image: url(../../media/character/male-body/neck.svg);
-        }     
-      }
       &.u {
         left: 1px;
         bottom: 37px;
@@ -330,25 +442,34 @@
   
         &>i {
           transform: translate(-11px, -15px);
+          width: 16px; height: 20px;
+          &::after {
+            background-image: url(../../media/character/male-body/neck.svg);
+          }
+          .skin {
+            width: 40px;
+            height: 40px;
+          }
         }        
       }
     }
 
     &.head {
-      &>i {
-        position: absolute;
-        width: 25px; height: 25px; 
-        &::after {
-          background-image: url(../../media/character/male-body/head.svg);
-        }        
-      }
       &.u {
         left: -3px;
         bottom: 12px;
         transform: rotate(0deg); // rotation 动画干预这里
   
         &>i {
-          transform: translate(-17px, -17px);         
+          transform: translate(-17px, -17px);
+          width: 25px; height: 25px; 
+          &::after {
+            background-image: url(../../media/character/male-body/head.svg);
+          }
+          .skin {
+            width: 105px;
+            height: 105px;
+          }
         }        
       }
     }
@@ -356,4 +477,169 @@
   }
 }
 
-@import "Lipperhey"
+
+
+// ================================
+// 纵深
+// ================================
+
+@mixin bodyPartZ($mode) {
+  @if $mode == "sport" {
+    // 外侧 腿
+    .z-toes-outer {
+      z-index: 0;
+    }
+
+    .z-foot-outer {
+      z-index: 2;
+    }
+
+    .z-claf-outer {
+      z-index: 1;
+    }
+
+    .z-thigh-outer {
+      z-index: 3;
+    }
+
+    // 躯干
+    .z-abdomen {
+      z-index: 0;
+    }
+
+    .z-breasts {
+      z-index: 1;
+    }
+
+    .z-neck {
+      z-index: 0;
+    }
+
+    .z-head {
+      z-index: 2;
+    }
+
+    // 外侧 手
+    .z-brachial-outer {
+      z-index: 20;
+    }
+
+    .z-forearm-outer {
+      z-index: 21;
+    }
+
+    .z-hand-outer {
+      z-index: 22;
+    }
+
+    // 内侧 手
+    .z-brachial-inner {
+      z-index: -20;
+    }
+
+    .z-forearm-inner {
+      z-index: -21;
+    }
+
+    .z-hand-inner {
+      z-index: -22;
+    }
+
+    // 内侧 腿
+    .z-toes-inner {
+      z-index: -12;
+    }
+
+    .z-foot-inner {
+      z-index: -11;
+    }
+
+    .z-claf-inner {
+      z-index: -13;
+    }
+
+    .z-thigh-inner {
+      z-index: -10;
+    }
+  }
+
+  @if $mode == "oldFashion" {
+    // 外侧 腿
+    .z-toes-outer {
+      z-index: 0;
+    }
+
+    .z-foot-outer {
+      z-index: 2;
+    }
+
+    .z-claf-outer {
+      z-index: 1;
+    }
+
+    .z-thigh-outer {
+      z-index: 3;
+    }
+
+    // 躯干
+    .z-abdomen {
+      z-index: 10;
+    }
+
+    .z-breasts {
+      z-index: 11;
+    }
+
+    .z-neck {
+      z-index: 10;
+    }
+
+    .z-head {
+      z-index: 12;
+    }
+
+    // 外侧 手
+    .z-brachial-outer {
+      z-index: 20;
+    }
+
+    .z-forearm-outer {
+      z-index: 22;
+    }
+
+    .z-hand-outer {
+      z-index: 21;
+    }
+
+    // 内侧 手
+    .z-brachial-inner {
+      z-index: -21;
+    }
+
+    .z-forearm-inner {
+      z-index: -22;
+    }
+
+    .z-hand-inner {
+      z-index: -20;
+    }
+
+    // 内侧 腿
+    .z-toes-inner {
+      z-index: -12;
+    }
+
+    .z-foot-inner {
+      z-index: -11;
+    }
+
+    .z-claf-inner {
+      z-index: -13;
+    }
+
+    .z-thigh-inner {
+      z-index: -10;
+    }
+  }
+}
+
