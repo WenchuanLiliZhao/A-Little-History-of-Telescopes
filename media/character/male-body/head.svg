@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>character/male-body/head</title>
-    <g id="character/male-body/head" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <polygon id="Path-13-Copy" fill-opacity="0.4" fill="#2D2D35" points="7.3998629 1.56038753 4 5 3 9 -1.19095831e-15 17 3 17 3 23 3 25 6 25 14 23 15 20 20 19 24 14 25 8 23 4 20 1 14 5.89805982e-15"></polygon>
-        <circle id="Oval" fill="#2D2D35" cx="17" cy="17" r="1"></circle>
-    </g>
-</svg>

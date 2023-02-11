@@ -1,6 +1,16 @@
 @import "1-template";
 
+// ================================
+// 皮肤
+// ================================
 @import "Hans-Lipperhey";
+
+
+// ================================
+// 动画
+// ================================
+@import "animation/looking-through.scss";
+
 
 .demo-middleBox {
   position: absolute;

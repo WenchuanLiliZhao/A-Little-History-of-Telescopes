@@ -131,7 +131,7 @@ body.testMode {
       &>i {
         width: 8px; height: 2px;
         &::after {
-          background-image: url(../../media/character/male-body/toes.svg);
+          background-image: url(../../media/character/male-body/toes.png);
           visibility: hidden;
         }
       }
@@ -170,7 +170,7 @@ body.testMode {
       &>i {
         width: 16px; height: 8px;
         &::after {
-          background-image: url(../../media/character/male-body/foot.svg);
+          background-image: url(../../media/character/male-body/foot.png);
         }
       }
       &.outer {
@@ -207,7 +207,7 @@ body.testMode {
       &>i {
         width: 16px; height: 64px; 
         &::after {
-          background-image: url(../../media/character/male-body/claf.svg);
+          background-image: url(../../media/character/male-body/claf.png);
         }       
       }
       &.outer {
@@ -242,7 +242,7 @@ body.testMode {
       &>i {
         width: 32px; height: 75px;
         &::after {
-          background-image: url(../../media/character/male-body/thigh.svg);
+          background-image: url(../../media/character/male-body/thigh.png);
         }    
       }
       &.outer {
@@ -289,7 +289,7 @@ body.testMode {
 
           width: 25px; height: 42px;  
           &::after {
-            background-image: url(../../media/character/male-body/abdomen.svg);
+            background-image: url(../../media/character/male-body/abdomen.png);
           }
 
           .skin {
@@ -309,7 +309,7 @@ body.testMode {
           transform: translate(-16px, -39px);
           width: 31px; height: 43px;
           &::after {
-            background-image: url(../../media/character/male-body/breasts.svg);
+            background-image: url(../../media/character/male-body/breasts.png);
           }
 
           .skin {
@@ -325,7 +325,7 @@ body.testMode {
       &>i {
         width: 15px; height: 42px;
         &::after {
-          background-image: url(../../media/character/male-body/brachial.svg);
+          background-image: url(../../media/character/male-body/brachial.png);
         }   
       }
       &.outer {
@@ -363,7 +363,7 @@ body.testMode {
       &>i {
         width: 11px; height: 38px;
         &::after {
-          background-image: url(../../media/character/male-body/forearm.svg);
+          background-image: url(../../media/character/male-body/forearm.png);
         }   
       }
       &.outer {
@@ -400,7 +400,7 @@ body.testMode {
       &>i {
         width: 6px; height: 17px;
         &::after {
-          background-image: url(../../media/character/male-body/hand.svg);
+          background-image: url(../../media/character/male-body/hand.png);
         }
       }
       &.outer {
@@ -444,7 +444,7 @@ body.testMode {
           transform: translate(-11px, -15px);
           width: 16px; height: 20px;
           &::after {
-            background-image: url(../../media/character/male-body/neck.svg);
+            background-image: url(../../media/character/male-body/neck.png);
           }
           .skin {
             width: 40px;
@@ -464,7 +464,7 @@ body.testMode {
           transform: translate(-17px, -17px);
           width: 25px; height: 25px; 
           &::after {
-            background-image: url(../../media/character/male-body/head.svg);
+            background-image: url(../../media/character/male-body/head.png);
           }
           .skin {
             width: 105px;
