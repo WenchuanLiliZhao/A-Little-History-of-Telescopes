@@ -15,12 +15,12 @@ body.Galileo {
   z-index: 10000000;
 }
 
-body {
+body, html {
   overflow: hidden;
+}
 
-  main.scrollview {
-    overflow-y: scroll;
-    width: 100%;
-    height: 100vh;
-  }
+main.scrollview {
+  overflow-y: scroll;
+  width: 100%;
+  height: 100vh;
 }
