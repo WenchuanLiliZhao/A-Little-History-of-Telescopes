@@ -1,11 +1,14 @@
 .page-cover-container {
   position: relative;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 
   // cover gose below
   .page-cover-image-container {
     position: relative;
-    height: calc(48% - 80px);
+    height: calc(48vh- 80px);
+    height: calc((var(--vh, 1vh) * 48) - 80px);
+
     margin-bottom: 80px;
 
     &::after {
