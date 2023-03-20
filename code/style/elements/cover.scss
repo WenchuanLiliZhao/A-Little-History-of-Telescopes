@@ -16,12 +16,24 @@
       animation: coverIntro 1s forwards;
       animation-delay: 0.5s;
 
-      @media screen and (max-height: 1023px) {
+      width: 96px;
+      height: 480px;
+      top: auto;
+      bottom: 0;
+
+      @media screen and (max-width: 500px), (max-height: 800px) {
         width: 64px;
-        height: 300px;
+        height: 320px;
         top: auto;
         bottom: 0;
       }
+
+      // @media screen and (min-height: 600px) {
+      //   width: 96px;
+      //   height: 480px;
+      //   top: auto;
+      //   bottom: 0;
+      // }
 
       @media screen and (min-height: 1024px) {
         width: 128px;
