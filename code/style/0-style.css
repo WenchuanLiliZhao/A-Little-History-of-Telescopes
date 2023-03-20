@@ -286,8 +286,7 @@ main.scrollview {
           padding-left: 24px;
           padding-right: 24px; } }
   .main-content .title-page-container .divider {
-    height: 50vh;
-    height: calc(var(--vh, 1vh) * 50); }
+    height: 50vh; }
   .main-content .title-page-container .title-page-content {
     padding-left: 40px;
     padding-right: 40px; }
