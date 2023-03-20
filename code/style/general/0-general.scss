@@ -14,13 +14,3 @@ body.Galileo {
   position: fixed;
   z-index: 10000000;
 }
-
-body, html {
-  overflow: hidden;
-}
-
-main.scrollview {
-  overflow-y: scroll;
-  width: 100%;
-  height: 100vh;
-}

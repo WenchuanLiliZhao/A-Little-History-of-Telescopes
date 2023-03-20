@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -92,22 +93,14 @@ body.Galileo {
   position: fixed;
   z-index: 10000000; }
 
-body, html {
-  overflow: hidden; }
-
-main.scrollview {
-  overflow-y: scroll;
-  width: 100%;
-  height: 100vh; }
-
 .page-cover-container {
-  position: relative;
-  height: 100vh; }
+  position: relative; }
   .page-cover-container .page-cover-image-container {
     position: relative;
-    height: calc(48vh- 80px);
+    height: calc(48vh - 80px);
     margin-bottom: 80px; }
     .page-cover-container .page-cover-image-container::after {
+      content: "";
       position: absolute;
       width: 100%;
       height: 80px;
@@ -303,6 +296,10 @@ main.scrollview {
         line-height: 24px; }
         .main-content .title-page-container .title-page-content .quotation p:not(:first-of-type) {
           margin-top: 8px; }
+        .main-content .title-page-container .title-page-content .quotation p.author::before {
+          content: '\· '; }
+        .main-content .title-page-container .title-page-content .quotation p.author::after {
+          content: ' \·'; }
       .main-content .title-page-container .title-page-content .quotation::before {
         content: "";
         position: absolute;

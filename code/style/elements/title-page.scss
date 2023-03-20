@@ -21,6 +21,16 @@
         &:not(:first-of-type) {
           margin-top: 8px;
         }
+
+        &.author {
+          &::before {
+            content: '\· ';
+          }
+
+          &::after {
+            content: ' \·';
+          }
+        }
       }
 
       &::before {
