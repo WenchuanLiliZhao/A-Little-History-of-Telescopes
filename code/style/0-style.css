@@ -220,36 +220,43 @@ body.Galileo {
 
 .title-page-container .divider {
   height: 50%; }
-.title-page-container .title-page-content .quotation {
-  position: relative;
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 20px; }
-  .title-page-container .title-page-content .quotation p {
-    text-align: center;
-    font-style: italic;
-    font-size: 16px;
-    line-height: 24px; }
-    .title-page-container .title-page-content .quotation p:not(:first-of-type) {
-      margin-top: 8px; }
-  .title-page-container .title-page-content .quotation::before {
-    content: "";
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    border-top: 1px solid var(--grey-2-hex);
-    border-left: 1px solid var(--grey-2-hex);
-    top: 0;
-    left: 0; }
-  .title-page-container .title-page-content .quotation::after {
-    content: "";
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    border-bottom: 1px solid var(--grey-2-hex);
-    border-right: 1px solid var(--grey-2-hex);
-    bottom: 0;
-    right: 0; }
+.title-page-container .title-page-content {
+  margin-left: 40px;
+  margin-right: 40px; }
+  @media screen and (max-width: 640px) {
+    .title-page-container .title-page-content {
+      margin-left: 24px;
+      margin-right: 24px; } }
+  .title-page-container .title-page-content .quotation {
+    position: relative;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px; }
+    .title-page-container .title-page-content .quotation p {
+      text-align: center;
+      font-style: italic;
+      font-size: 16px;
+      line-height: 24px; }
+      .title-page-container .title-page-content .quotation p:not(:first-of-type) {
+        margin-top: 8px; }
+    .title-page-container .title-page-content .quotation::before {
+      content: "";
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      border-top: 1px solid var(--grey-2-hex);
+      border-left: 1px solid var(--grey-2-hex);
+      top: 0;
+      left: 0; }
+    .title-page-container .title-page-content .quotation::after {
+      content: "";
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      border-bottom: 1px solid var(--grey-2-hex);
+      border-right: 1px solid var(--grey-2-hex);
+      bottom: 0;
+      right: 0; }
 
 body.testMode .char::before {
   content: "";

@@ -1,9 +1,12 @@
 .title-page-container {
+
   .divider {
     height: 50%;
   }
   
   .title-page-content {
+    @include contentSpacing;
+
     .quotation {
       position: relative;
       max-width: 480px;
