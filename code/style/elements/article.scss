@@ -1,16 +1,7 @@
-@mixin contentFullWidth {
-  width: calc(100% + 80px);
-
-  margin-left: -40px;
-
-  @media screen and (max-width: 640px) {
-    margin-left: -24px;
-  }
-}
-
 article.main-article {
   .part-head {
     text-align: center;
+    @include contentSpacing;
 
     .part-numbering {
       font-size: 24px;
@@ -32,13 +23,16 @@ article.main-article {
   > p {
     font-size: 18px;
     line-height: 1.75;
+    @include contentSpacing;
   }
 
   > figure {
     margin: 80px auto;
 
-    &.full-width {
-      @include contentFullWidth();
+    .film {
+      &.full-width {
+        width: 100%;
+      }
     }
 
     figcaption {
@@ -46,7 +40,7 @@ article.main-article {
       line-height: 1.75;
       margin-top: 40px;
 
-      @include contentSpacing();
+      @include contentSpacing;
 
       max-width: 560px;
       margin-left: auto;
