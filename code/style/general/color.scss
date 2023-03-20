@@ -1,0 +1,37 @@
+& {
+  // color variable
+  --grey: #2D2D35;
+  --grey-1-hex: #47474E;
+  --grey-2-hex: #57575D;
+  --grey-3-hex: #67676D;
+  --grey-4-hex: #79797E;
+  --grey-5-hex: #89898E;
+  --grey-6-hex: #9B9B9E;
+  --grey-7-hex: #ABABAE;
+  --grey-8-hex: #BBBBBE;
+  --grey-9-hex: #CDCDCF;
+  --grey-10-hex: #DDDDDE;
+  --grey-11-hex: #EFEFEF;
+  --grey-12-hex: #F7F7F7;
+
+  --grey-1-rgba: rgba(45, 45, 53, 0.88);
+  --grey-2-rgba: rgba(45, 45, 53, 0.80);
+  --grey-3-rgba: rgba(45, 45, 53, 0.72);
+  --grey-4-rgba: rgba(45, 45, 53, 0.64);
+  --grey-5-rgba: rgba(45, 45, 53, 0.56);
+  --grey-6-rgba: rgba(45, 45, 53, 0.48);
+  --grey-7-rgba: rgba(45, 45, 53, 0.40);
+  --grey-8-rgba: rgba(45, 45, 53, 0.32);
+  --grey-9-rgba: rgba(45, 45, 53, 0.24);
+  --grey-10-rgba: rgba(45, 45, 53, 0.16);
+  --grey-11-rgba: rgba(45, 45, 53, 0.08);
+  --grey-12-rgba: rgba(45, 45, 53, 0.04);
+
+  --color-sig: #FF696D;
+
+  --white: #F7E9DB;
+
+  // color use
+  background-color: var(--grey);
+  color: var(--white);
+}

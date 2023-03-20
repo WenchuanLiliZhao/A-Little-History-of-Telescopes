@@ -1,0 +1,24 @@
+.page-fixed-items {
+  .page-nav-left {
+    position: fixed;
+
+    width: 70px;
+    height: 100%;
+
+    .text-item {
+      writing-mode: vertical-lr;
+
+      font-family: "Computer Modern Typewriter";
+
+      font-size: 12px;
+      letter-spacing: 4px;
+
+      color: var(--color-sig);
+      transform: rotate(180deg) translate(50%, 50%);
+
+      position: absolute;
+      left: 50%;
+      top: 50%;
+    }
+  }
+}

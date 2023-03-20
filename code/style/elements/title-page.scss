@@ -1,0 +1,42 @@
+.title-page-container {
+  .divider {
+    height: 80%;
+  }
+  
+  .title-page-content {
+    .quotation {
+      position: relative;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 20px;
+
+      p {
+        text-align: center;
+        font-style: italic;
+        font-size: 16px;
+        line-height: 24px;
+        &:not(:first-of-type) {
+          margin-top: 8px;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 32px; height: 32px;
+        border-top: 1px solid var(--grey-2-hex);
+        border-left: 1px solid var(--grey-2-hex);
+        top: 0; left: 0;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 32px; height: 32px;
+        border-bottom: 1px solid var(--grey-2-hex);
+        border-right: 1px solid var(--grey-2-hex);
+        bottom: 0; right: 0;
+      }
+    }
+  }
+}

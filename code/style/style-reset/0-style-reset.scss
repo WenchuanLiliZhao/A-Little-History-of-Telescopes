@@ -43,4 +43,5 @@ table {
 }
 *, *::before, *::after {
 	background-size: cover;
+	box-sizing: border-box;
 }
