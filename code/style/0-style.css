@@ -105,8 +105,8 @@ body.Galileo {
     animation-delay: 0.5s; }
     @media screen and (max-height: 1023px) {
       .page-cover-container .page-cover-image-container .image {
-        width: 96px;
-        height: 480px;
+        width: 64px;
+        height: 300px;
         top: auto;
         bottom: 0; } }
     @media screen and (min-height: 1024px) {

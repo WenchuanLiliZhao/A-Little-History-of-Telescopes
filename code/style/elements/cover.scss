@@ -17,8 +17,8 @@
       animation-delay: 0.5s;
 
       @media screen and (max-height: 1023px) {
-        width: 96px;
-        height: 480px;
+        width: 64px;
+        height: 300px;
         top: auto;
         bottom: 0;
       }
@@ -42,7 +42,7 @@
         height: 800px;
         top: 0;
         bottom: auto;
-      } 
+      }
 
       .layer {
         width: 100%;
@@ -176,3 +176,4 @@
     }
   }
 }
+
