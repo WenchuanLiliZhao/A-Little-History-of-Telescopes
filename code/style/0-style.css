@@ -46,6 +46,9 @@ table {
   background-size: cover;
   box-sizing: border-box; }
 
+img {
+  max-width: 100%; }
+
 body.Galileo {
   position: relative;
   width: 100%;
@@ -233,6 +236,7 @@ body.Galileo {
   max-width: 880px;
   position: relative; }
   .main-content article.main-article .part-head {
+    margin-top: 320px;
     text-align: center;
     padding-left: 40px;
     padding-right: 40px; }
@@ -240,18 +244,39 @@ body.Galileo {
       .main-content article.main-article .part-head {
         padding-left: 24px;
         padding-right: 24px; } }
-    .main-content article.main-article .part-head .part-numbering {
+    .main-content article.main-article .part-head .numbering {
       font-size: 24px;
       line-height: 1.5;
       font-weight: bold;
       font-style: italic; }
-    .main-content article.main-article .part-head .part-title {
+    .main-content article.main-article .part-head .title {
       font-size: 40px;
       line-height: 1.5;
       font-weight: bold;
       font-style: italic;
       color: var(--color-sig); }
+  .main-content article.main-article .chapter-head {
+    margin-top: 320px;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px; }
+    @media screen and (max-width: 640px) {
+      .main-content article.main-article .chapter-head {
+        padding-left: 24px;
+        padding-right: 24px; } }
+    .main-content article.main-article .chapter-head .numbering {
+      font-size: 20px;
+      line-height: 1.5;
+      font-weight: bold;
+      font-style: italic; }
+    .main-content article.main-article .chapter-head .title {
+      font-size: 32px;
+      line-height: 1.5;
+      font-weight: bold;
+      font-style: italic;
+      color: var(--color-sig); }
   .main-content article.main-article > p {
+    margin-top: 0.75em;
     font-size: 18px;
     line-height: 1.75;
     padding-left: 40px;
@@ -262,12 +287,11 @@ body.Galileo {
         padding-right: 24px; } }
   .main-content article.main-article > figure {
     margin: 80px auto; }
-    .main-content article.main-article > figure .film.full-width {
-      width: 100%; }
-    .main-content article.main-article > figure figcaption {
+    .main-content article.main-article > figure.illustration figcaption {
       font-size: 16px;
       line-height: 1.75;
       margin-top: 40px;
+      text-align: center;
       padding-left: 40px;
       padding-right: 40px;
       max-width: 560px;
@@ -275,52 +299,81 @@ body.Galileo {
       margin-right: auto;
       color: var(--grey-7-hex); }
       @media screen and (max-width: 640px) {
-        .main-content article.main-article > figure figcaption {
+        .main-content article.main-article > figure.illustration figcaption {
           padding-left: 24px;
           padding-right: 24px; } }
-  .main-content .title-page-container .divider {
-    height: 50vh; }
-  .main-content .title-page-container .title-page-content {
-    padding-left: 40px;
-    padding-right: 40px; }
-    @media screen and (max-width: 640px) {
-      .main-content .title-page-container .title-page-content {
-        padding-left: 24px;
-        padding-right: 24px; } }
-    .main-content .title-page-container .title-page-content .quotation {
-      position: relative;
-      max-width: 480px;
-      margin: 0 auto;
-      padding: 20px; }
-      .main-content .title-page-container .title-page-content .quotation p {
-        text-align: center;
-        font-style: italic;
-        font-size: 16px;
-        line-height: 24px; }
-        .main-content .title-page-container .title-page-content .quotation p:not(:first-of-type) {
-          margin-top: 8px; }
-        .main-content .title-page-container .title-page-content .quotation p.author::before {
-          content: '\· '; }
-        .main-content .title-page-container .title-page-content .quotation p.author::after {
-          content: ' \·'; }
-      .main-content .title-page-container .title-page-content .quotation::before {
-        content: "";
-        position: absolute;
-        width: 32px;
-        height: 32px;
-        border-top: 1px solid var(--grey-2-hex);
-        border-left: 1px solid var(--grey-2-hex);
-        top: 0;
-        left: 0; }
-      .main-content .title-page-container .title-page-content .quotation::after {
-        content: "";
-        position: absolute;
-        width: 32px;
-        height: 32px;
-        border-bottom: 1px solid var(--grey-2-hex);
-        border-right: 1px solid var(--grey-2-hex);
-        bottom: 0;
-        right: 0; }
+    .main-content article.main-article > figure.ref-image figcaption {
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.75;
+      background-color: rgba(255, 255, 255, 0.04);
+      margin-top: 0;
+      padding: 20px 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+      color: var(--grey-7-hex); }
+      @media screen and (max-width: 640px) {
+        .main-content article.main-article > figure.ref-image figcaption {
+          padding-left: 24px;
+          padding-right: 24px; } }
+    .main-content article.main-article > figure.width-full {
+      width: 100%; }
+    .main-content article.main-article > figure.width-normal {
+      padding-left: 40px;
+      padding-right: 40px; }
+      @media screen and (max-width: 640px) {
+        .main-content article.main-article > figure.width-normal {
+          padding-left: 24px;
+          padding-right: 24px; } }
+    .main-content article.main-article > figure .figbody {
+      position: relative; }
+      .main-content article.main-article > figure .figbody .test {
+        width: 100%;
+        padding-top: 50%;
+        background-color: var(--grey-1-hex); }
+  .main-content .title-page-container {
+    margin: 50vh 0; }
+    .main-content .title-page-container .title-page-content {
+      padding-left: 40px;
+      padding-right: 40px; }
+      @media screen and (max-width: 640px) {
+        .main-content .title-page-container .title-page-content {
+          padding-left: 24px;
+          padding-right: 24px; } }
+      .main-content .title-page-container .title-page-content .quotation {
+        position: relative;
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 20px; }
+        .main-content .title-page-container .title-page-content .quotation p {
+          text-align: center;
+          font-style: italic;
+          font-size: 16px;
+          line-height: 24px; }
+          .main-content .title-page-container .title-page-content .quotation p:not(:first-of-type) {
+            margin-top: 8px; }
+          .main-content .title-page-container .title-page-content .quotation p.author::before {
+            content: '\· '; }
+          .main-content .title-page-container .title-page-content .quotation p.author::after {
+            content: ' \·'; }
+        .main-content .title-page-container .title-page-content .quotation::before {
+          content: "";
+          position: absolute;
+          width: 32px;
+          height: 32px;
+          border-top: 1px solid var(--grey-2-hex);
+          border-left: 1px solid var(--grey-2-hex);
+          top: 0;
+          left: 0; }
+        .main-content .title-page-container .title-page-content .quotation::after {
+          content: "";
+          position: absolute;
+          width: 32px;
+          height: 32px;
+          border-bottom: 1px solid var(--grey-2-hex);
+          border-right: 1px solid var(--grey-2-hex);
+          bottom: 0;
+          right: 0; }
 
 body.testMode .char::before {
   content: "";
