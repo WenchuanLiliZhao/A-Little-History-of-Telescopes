@@ -49,6 +49,10 @@ table {
 img {
   max-width: 100%; }
 
+body, html {
+  width: 100%;
+  height: 100%; }
+
 body.Galileo {
   position: relative;
   width: 100%;
@@ -375,6 +379,9 @@ body.Galileo {
           bottom: 0;
           right: 0; }
 
+:root {
+  --char: 200; }
+
 body.testMode .char::before {
   content: "";
   display: block;
@@ -427,11 +434,18 @@ body.testMode .char .bodyPart .deco::after {
 body.testMode.hideSkin .char .skin {
   visibility: hidden !important; }
 
+.figbody {
+  overflow: hidden; }
+  .figbody .resbox {
+    width: calc(var(--ill-w) * 1px);
+    height: calc(var(--ill-h) * 1px);
+    position: absolute;
+    transform-origin: top left;
+    top: 0;
+    left: 0; }
+
 .char {
   position: absolute;
-  width: 0px;
-  height: 200px;
-  background-color: red;
   left: 200px;
   bottom: 100px; }
   .char .bodyPart {
@@ -456,7 +470,7 @@ body.testMode.hideSkin .char .skin {
         background-image: url(../../media/character/male-body/toes.png);
         visibility: hidden; }
     .char .bodyPart.toes.outer {
-      left: 0;
+      left: 50%;
       bottom: 0;
       transform: rotate(0deg); }
       .char .bodyPart.toes.outer > i {
@@ -974,11 +988,135 @@ body.testMode.hideSkin .char .skin {
     transform: rotate(-40deg); }
   60% {
     transform: rotate(-18deg); } }
-.demo-middleBox {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  width: 400px;
-  height: 400px;
-  outline: 0.5px dashed rgba(255, 132, 0, 0.437); }
+#Triptych-of-Galileo {
+  --ill-h: 348;
+  --ill-w: 880; }
+  #Triptych-of-Galileo .figbody {
+    position: relative;
+    width: 100%;
+    padding-top: calc(var(--ill-h) / var(--ill-w) * 100%); }
+    #Triptych-of-Galileo .figbody .bg {
+      width: calc((var(--ill-w) - 2) * 1px);
+      height: calc((var(--ill-h) - 2) * 1px);
+      position: absolute;
+      left: 1px;
+      top: 1px;
+      background-image: url(../../media/illustration/part1-cover/bg.png);
+      z-index: 0; }
+    #Triptych-of-Galileo .figbody .stage {
+      width: calc((var(--ill-w) - 2) * 1px);
+      height: 26px;
+      position: absolute;
+      left: 1px;
+      bottom: 1px;
+      background-image: url(../../media/illustration/part1-cover/stage.png);
+      z-index: 1; }
+    #Triptych-of-Galileo .figbody .chair {
+      width: 136px;
+      height: 243px;
+      position: absolute;
+      left: 345px;
+      top: 90px;
+      background-image: url(../../media/illustration/part1-cover/chair.png);
+      z-index: 2; }
+    #Triptych-of-Galileo .figbody #char--Triptych-of-Galileo--Calileo {
+      left: 392px;
+      top: 332px;
+      -moz-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      transform: scaleX(-1);
+      -ms-filter: fliph;
+      /*IE*/
+      filter: fliph;
+      /*IE*/
+      z-index: 10; }
+    #Triptych-of-Galileo .figbody .desk {
+      width: 124px;
+      height: 225px;
+      position: absolute;
+      left: 406px;
+      top: 108px;
+      background-image: url(../../media/illustration/part1-cover/desk.png);
+      z-index: 11; }
+    #Triptych-of-Galileo .figbody .pillars {
+      width: calc(var(--ill-w) * 1px);
+      height: calc(var(--ill-h) * 1px);
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      background-image: url(../../media/illustration/part1-cover/pillars.png);
+      z-index: 100; }
+
+#char--Triptych-of-Galileo--Calileo .z-toes-outer {
+  z-index: 0; }
+#char--Triptych-of-Galileo--Calileo .z-foot-outer {
+  z-index: 2; }
+#char--Triptych-of-Galileo--Calileo .z-claf-outer {
+  z-index: 1; }
+#char--Triptych-of-Galileo--Calileo .z-thigh-outer {
+  z-index: 3; }
+#char--Triptych-of-Galileo--Calileo .z-abdomen {
+  z-index: 10; }
+#char--Triptych-of-Galileo--Calileo .z-breasts {
+  z-index: 11; }
+#char--Triptych-of-Galileo--Calileo .z-neck {
+  z-index: 10; }
+#char--Triptych-of-Galileo--Calileo .z-head {
+  z-index: 12; }
+#char--Triptych-of-Galileo--Calileo .z-brachial-outer {
+  z-index: 20; }
+#char--Triptych-of-Galileo--Calileo .z-forearm-outer {
+  z-index: 22; }
+#char--Triptych-of-Galileo--Calileo .z-hand-outer {
+  z-index: 21; }
+#char--Triptych-of-Galileo--Calileo .z-brachial-inner {
+  z-index: -21; }
+#char--Triptych-of-Galileo--Calileo .z-forearm-inner {
+  z-index: -22; }
+#char--Triptych-of-Galileo--Calileo .z-hand-inner {
+  z-index: -20; }
+#char--Triptych-of-Galileo--Calileo .z-toes-inner {
+  z-index: -12; }
+#char--Triptych-of-Galileo--Calileo .z-foot-inner {
+  z-index: -11; }
+#char--Triptych-of-Galileo--Calileo .z-claf-inner {
+  z-index: -13; }
+#char--Triptych-of-Galileo--Calileo .z-thigh-inner {
+  z-index: -10; }
+#char--Triptych-of-Galileo--Calileo .z-head i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/head.png); }
+#char--Triptych-of-Galileo--Calileo .z-neck i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/neck.png); }
+#char--Triptych-of-Galileo--Calileo .z-breasts i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/breasts.png); }
+#char--Triptych-of-Galileo--Calileo .z-abdomen i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/abdomen.png); }
+#char--Triptych-of-Galileo--Calileo .z-thigh-outer i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/thigh-outer.png); }
+#char--Triptych-of-Galileo--Calileo .z-claf-outer i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/claf-outer.png); }
+#char--Triptych-of-Galileo--Calileo .z-thigh-inner i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/thigh-inner.png); }
+#char--Triptych-of-Galileo--Calileo .z-claf-inner i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/claf-inner.png); }
+#char--Triptych-of-Galileo--Calileo .z-foot-outer i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/foot-outer.png); }
+#char--Triptych-of-Galileo--Calileo .z-foot-inner i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/foot-inner.png); }
+#char--Triptych-of-Galileo--Calileo .z-toes-outer i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/toes-outer.png); }
+#char--Triptych-of-Galileo--Calileo .z-toes-inner i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/toes-inner.png); }
+#char--Triptych-of-Galileo--Calileo .z-brachial-outer i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/brachial-outer.png); }
+#char--Triptych-of-Galileo--Calileo .z-brachial-inner i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/brachial-inner.png); }
+#char--Triptych-of-Galileo--Calileo .z-forearm-outer i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/forearm-outer.png); }
+#char--Triptych-of-Galileo--Calileo .z-forearm-inner i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/forearm-inner.png); }
+#char--Triptych-of-Galileo--Calileo .z-hand-outer i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/hand-outer.png); }
+#char--Triptych-of-Galileo--Calileo .z-hand-inner i .skin {
+  background-image: url(../../media/character/male-skin/Galileo/hand-inner.png); }

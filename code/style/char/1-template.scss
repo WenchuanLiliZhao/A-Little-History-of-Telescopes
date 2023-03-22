@@ -1,5 +1,6 @@
 body.testMode {
   // 这个部分是用来测试人物的坐标中轴线的。中轴线的底部位于外侧下肢的脚之尖。如果角色出现移动，那么就是移动这个中轴线。
+
   .char {
     &::before {
       content: "";
@@ -77,26 +78,31 @@ body.testMode {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 // ================================
 // 角色中轴线
 // ================================
-.char {
+.figbody {
+  overflow: hidden;
+
+  .resbox {
+    // 伴随这个 class name 的 div，其自适应规则写在 master.js 里。
+
+    width: calc(var(--ill-w) * 1px);
+    height: calc(var(--ill-h) * 1px);
+    position: absolute;
+  
+    transform-origin: top left;
+    top: 0; left: 0;
+  }
+}
+
+
+.char {  
+
   position: absolute;
-  width: 0px;
-  height: 200px;  
-  background-color: red;
+  // width: calc(200 / 880 * 100%);
+  // padding-bottom: 100%;
+  // background-color: rgba(red, 0.1);
 
   // 实际情况下，角色确定位置靠这两个参数
   left: 200px;
@@ -130,13 +136,15 @@ body.testMode {
     &.toes {
       &>i {
         width: 8px; height: 2px;
+        // width: calc(8 / var(--char) * 100%);
+
         &::after {
           background-image: url(../../media/character/male-body/toes.png);
           visibility: hidden;
         }
       }
       &.outer {
-        left: 0;
+        left: 50%;
         bottom: 0;
         transform: rotate(0deg); // rotation 动画干预这里
 

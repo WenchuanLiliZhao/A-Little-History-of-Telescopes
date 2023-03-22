@@ -1,0 +1,223 @@
+#Triptych-of-Galileo {
+  --ill-h: 348;
+  --ill-w: 880;
+
+  .figbody {
+    position: relative;
+    width: 100%;
+    padding-top: calc(var(--ill-h) / var(--ill-w) * 100%);
+
+    .bg {
+      width: calc((var(--ill-w) - 2) * 1px);
+      height: calc((var(--ill-h) - 2) * 1px);
+      position: absolute;
+      left: 1px; top: 1px;
+
+      background-image: url(../../media/illustration/part1-cover/bg.png);
+
+      z-index: 0;
+    }
+
+    .stage {
+      width: calc((var(--ill-w) - 2) * 1px);
+      height: 26px;
+      position: absolute;
+      left: 1px; bottom: 1px;
+
+      background-image: url(../../media/illustration/part1-cover/stage.png);
+
+      z-index: 1;
+    }
+
+    .chair {
+      width: 136px;
+      height: 243px;
+      position: absolute;
+      left: 345px;
+      top: 90px;
+
+      background-image: url(../../media/illustration/part1-cover/chair.png);
+
+      z-index: 2;
+    }
+
+    #char--Triptych-of-Galileo--Calileo {
+      left: 392px;
+      top: 332px;
+      @include charFliph();
+      
+      z-index: 10;
+    }
+
+    .desk {
+      width: 124px;
+      height: 225px;
+      position: absolute;
+      left: 406px;
+      top: 108px;
+
+      background-image: url(../../media/illustration/part1-cover/desk.png);
+
+      z-index: 11;
+    }
+
+    .pillars {
+      width: calc(var(--ill-w) * 1px);
+      height: calc(var(--ill-h) * 1px);
+      position: absolute;
+      left: 0px; top: 0px;
+
+      background-image: url(../../media/illustration/part1-cover/pillars.png);
+
+      z-index: 100;
+    }
+  }
+}
+
+
+#char--Triptych-of-Galileo--Calileo {
+  @include bodyPartZ("oldFashion");
+  .z-head {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/head.png);
+      }
+    }
+  }
+
+  .z-neck {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/neck.png);
+      }
+    }
+  }
+
+  .z-breasts {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/breasts.png);
+      }
+    }
+  }
+
+  .z-abdomen {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/abdomen.png);
+      }
+    }
+  }
+
+  .z-thigh-outer {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/thigh-outer.png);
+      }
+    }
+  }
+
+  .z-claf-outer {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/claf-outer.png);
+      }
+    }
+  }
+
+  .z-thigh-inner {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/thigh-inner.png);
+      }
+    }
+  }
+
+  .z-claf-inner {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/claf-inner.png);
+      }
+    }    
+  }
+
+  .z-foot-outer {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/foot-outer.png);
+      }
+    }
+  }
+
+  .z-foot-inner {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/foot-inner.png);
+      }
+    }
+  }
+
+  .z-toes-outer {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/toes-outer.png);
+      }
+    }
+  }
+
+  .z-toes-inner {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/toes-inner.png);
+      }
+    }
+  }
+
+  .z-brachial-outer {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/brachial-outer.png);
+      }
+    }
+  }
+
+  .z-brachial-inner {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/brachial-inner.png);
+      }
+    }
+  }
+
+  .z-forearm-outer {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/forearm-outer.png);
+      }
+    }
+  }
+
+  .z-forearm-inner {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/forearm-inner.png);
+      }
+    }
+  }
+
+  .z-hand-outer {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/hand-outer.png);
+      }
+    }
+  }
+
+  .z-hand-inner {
+    i {
+      .skin {
+        background-image: url(../../media/character/male-skin/Galileo/hand-inner.png);
+      }
+    }
+  }
+}
