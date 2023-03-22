@@ -7,13 +7,13 @@
     width: 100%;
     padding-top: calc(var(--ill-h) / var(--ill-w) * 100%);
 
-    .bg {
+    .nightsky {
       width: calc((var(--ill-w) - 2) * 1px);
       height: calc((var(--ill-h) - 2) * 1px);
       position: absolute;
       left: 1px; top: 1px;
 
-      background-image: url(../../media/illustration/part1-cover/bg.png);
+      background-image: url(../../media/illustration/part1-cover/nightsky.png);
 
       z-index: 0;
     }
@@ -29,36 +29,196 @@
       z-index: 1;
     }
 
-    .chair {
-      width: 136px;
-      height: 243px;
+    .left {
       position: absolute;
-      left: 345px;
-      top: 90px;
-
-      background-image: url(../../media/illustration/part1-cover/chair.png);
-
-      z-index: 2;
-    }
-
-    #char--Triptych-of-Galileo--Calileo {
-      left: 392px;
-      top: 332px;
-      @include charFliph();
-      
       z-index: 10;
+
+      .clock-animation-part {
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 171.5px;
+        top: 178.5px;
+
+        .image {
+          width: 11px;
+          height: 142px;
+          position: absolute;
+          transform: translate(-50%, 0);
+          left: 50%;
+
+          background-image: url(../../media/illustration/part1-cover/clock-animation-part.png);
+
+          z-index: 0;
+        }
+
+        $clockAnimationDeg: 4deg;
+        transform: rotate($clockAnimationDeg);
+        animation: clockAnimation 2s infinite;
+        animation-timing-function: ease-in-out;
+        @keyframes clockAnimation {
+          0% {
+            transform: rotate($clockAnimationDeg);
+          }
+
+          50% {
+            transform: rotate(-$clockAnimationDeg);
+          }
+
+          100% {
+            transform: rotate($clockAnimationDeg);
+          }
+        }
+      }
+
+      .clock-animation-part-2 {
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 152px;
+        top: 237px;
+
+        .image {
+          width: 32px;
+          height: 32px;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          left: 50%;
+          top: 50%;
+
+          background-image: url(../../media/illustration/part1-cover/clock-animation-part-2.png);
+
+          z-index: 0;
+        }
+
+        animation: clockAnimation2 5s infinite;
+        @keyframes clockAnimation2 {
+          0% { transform: rotate(0deg); }
+          20% { transform: rotate(6deg); }
+          40% { transform: rotate(12deg); }
+          60% { transform: rotate(18deg); }
+          80% { transform: rotate(24deg); }
+          100% { transform: rotate(30deg); }
+        }
+      }
+
+      .clock {
+        width: 62px;
+        height: 176px;
+        position: absolute;
+        left: 121px; top: 157px;
+
+        background-image: url(../../media/illustration/part1-cover/clock.png);
+
+        z-index: 1;
+      }
+
+      .clock-animation-part-hour {
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 152px;
+        top: 195px;
+
+        z-index: 2;
+
+        transform: rotate(0deg);
+        
+
+        .image {
+          width: 2px;
+          height: 38px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          background-image: url(../../media/illustration/part1-cover/clock-animation-part-hour.png);
+
+          // initial deg
+          transform: translate(-50%, -50%) rotate(20deg);
+        }
+        
+        animation: clock-animation-part-hour 216000s linear infinite;
+        @keyframes clock-animation-part-hour {
+          0% {
+            transform: rotate(0deg);
+          }
+
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+
+      .clock-animation-part-min {
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 152px;
+        top: 195px;
+
+        z-index: 2;
+
+        transform: rotate(0deg);
+        
+
+        .image {
+          width: 2px;
+          height: 38px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          background-image: url(../../media/illustration/part1-cover/clock-animation-part-min.png);
+
+          // initial deg
+          transform: translate(-50%, -50%) rotate(240deg);
+        }
+        
+        animation: clock-animation-part-min 3600s linear infinite;
+        @keyframes clock-animation-part-min {
+          0% {
+            transform: rotate(0deg);
+          }
+
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
     }
 
-    .desk {
-      width: 124px;
-      height: 225px;
+    .mid {
       position: absolute;
-      left: 406px;
-      top: 108px;
 
-      background-image: url(../../media/illustration/part1-cover/desk.png);
-
-      z-index: 11;
+      .chair {
+        width: 136px;
+        height: 243px;
+        position: absolute;
+        left: 345px;
+        top: 90px;
+  
+        background-image: url(../../media/illustration/part1-cover/chair.png);
+  
+        z-index: 2;
+      }
+  
+      #char--Triptych-of-Galileo--Calileo {
+        left: 392px;
+        top: 332px;
+        
+        z-index: 10;
+      }
+  
+      .desk {
+        width: 124px;
+        height: 225px;
+        position: absolute;
+        left: 406px;
+        top: 108px;
+  
+        background-image: url(../../media/illustration/part1-cover/desk.png);
+  
+        z-index: 11;
+      }
     }
 
     .pillars {
@@ -77,6 +237,8 @@
 
 #char--Triptych-of-Galileo--Calileo {
   @include bodyPartZ("oldFashion");
+  @include charFliph();
+
   .z-head {
     i {
       .skin {
