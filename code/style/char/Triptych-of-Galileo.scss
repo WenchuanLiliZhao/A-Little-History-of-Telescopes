@@ -7,6 +7,8 @@
     width: 100%;
     padding-top: calc(var(--ill-h) / var(--ill-w) * 100%);
 
+    overflow: hidden;
+
     .nightsky {
       width: calc((var(--ill-w) - 2) * 1px);
       height: calc((var(--ill-h) - 2) * 1px);
@@ -16,6 +18,10 @@
       background-image: url(../../media/illustration/part1-cover/nightsky.png);
 
       z-index: 0;
+
+      display: grid;
+
+      grid-template-columns: auto auto auto;
     }
 
     .stage {
@@ -188,6 +194,7 @@
 
     .mid {
       position: absolute;
+      z-index: 10;
 
       .chair {
         width: 136px;
@@ -201,13 +208,24 @@
         z-index: 2;
       }
   
-      #char--Triptych-of-Galileo--Calileo {
-        left: 392px;
-        top: 332px;
-        
+      #char--Triptych-of-Galileo--Calileo {        
         z-index: 10;
       }
+
+      .tube {
+        @include charFliph;
+
+        width: 124px;
+        height: 83px;
+        position: absolute;
+        left: -131px;
+        top: -225px;
   
+        background-image: url(../../media/illustration/part1-cover/tube.png);
+  
+        z-index: -19;
+      }
+
       .desk {
         width: 124px;
         height: 225px;
@@ -221,6 +239,184 @@
       }
     }
 
+    .right {
+      position: absolute;
+      z-index: 10;
+
+      .Jupiter-globe {
+        width: 222px;
+        height: 148px;
+        position: absolute;
+        left: 617px;
+        top: 185px;
+
+        background-image: url(../../media/illustration/part1-cover/Jupiter-globe.png);
+
+        z-index: 0;
+      }
+
+      .Io, .Europa, .Ganymede, .Callisto {
+        --ani-factor: 4;
+
+        width: 0;
+        height: 0;
+        position: absolute;
+
+        top: 207px;
+
+        i {
+          position: absolute;
+          width: 6px;
+          height: 61px;
+          left: 0; top: 0;
+          transform: translate(-50%, 0);
+          left: 50%;
+
+          
+        }
+      }
+
+      .Io {
+        --period: 1.769137786;
+
+        left: 692px;
+
+        i {
+          background-image: url(../../media/illustration/part1-cover/Io.png);
+        }
+
+        animation: part1-cover-Io calc(var(--period) * var(--ani-factor) * 1s) infinite ease-in-out;
+
+        @keyframes part1-cover-Io {
+          0% {
+            transform: translate(0, 0);
+            z-index: 1;
+          }
+
+          49% {
+            z-index: 1;
+          }
+          50% {
+            transform: translate(72px, 0);
+            z-index: -1;
+          }
+
+          99% {
+            z-index: -1;
+          }
+          100% {
+            transform: translate(0, 0);
+            z-index: 1;
+          }
+        }
+      }
+
+      .Europa {
+        --period: 3.551181;
+
+        left: 778px;
+
+        i {
+          background-image: url(../../media/illustration/part1-cover/Europa.png);
+        }
+
+        animation: part1-cover-Europa calc(var(--period) * var(--ani-factor) * 1s) infinite ease-in-out;
+        
+        @keyframes part1-cover-Europa {
+          0% {
+            transform: translate(0, 0);
+            z-index: -2;
+          }
+
+          49% {
+            z-index: -2;
+          }
+          50% {
+            transform: translate(-100px, 0);
+            z-index: 2;
+          }
+
+          99% {
+            z-index: 2;
+          }
+          100% {
+            transform: translate(0, 0);
+            z-index: -2;
+          }
+        }
+      }
+
+      .Ganymede {
+        --period: 7.15455296;
+
+        left: 664px;
+
+        i {
+          background-image: url(../../media/illustration/part1-cover/Ganymede.png);
+        }
+
+        animation: part1-cover-Ganymede calc(var(--period) * var(--ani-factor) * 1s) infinite ease-in-out;
+        
+        @keyframes part1-cover-Ganymede {
+          0% {
+            transform: translate(0, 0);
+            z-index: 3;
+          }
+
+          49% {
+            z-index: 3;
+          }
+          50% {
+            transform: translate(128px, 0);
+            z-index: -3;
+          }
+
+          99% {
+            z-index: -3;
+          }
+          100% {
+            transform: translate(0, 0);
+            z-index: 3;
+          }
+        }
+      }
+
+      .Callisto {
+        --period: 16.6890184;
+
+        left: 805px;
+
+        i {
+          background-image: url(../../media/illustration/part1-cover/Callisto.png);
+        }
+
+        animation: part1-cover-Callisto calc(var(--period) * var(--ani-factor) * 1s) infinite ease-in-out;
+        
+        @keyframes part1-cover-Callisto {
+          0% {
+            transform: translate(0, 0);
+            z-index: -4;
+          }
+
+          49% {
+            z-index: -4;
+          }
+          50% {
+            transform: translate(-154px, 0);
+            z-index: 4;
+          }
+
+          99% {
+            z-index: 4;
+          }
+          100% {
+            transform: translate(0, 0);
+            z-index: -4;
+          }
+        }
+      }
+    }
+
     .pillars {
       width: calc(var(--ill-w) * 1px);
       height: calc(var(--ill-h) * 1px);
@@ -230,13 +426,15 @@
       background-image: url(../../media/illustration/part1-cover/pillars.png);
 
       z-index: 100;
+
+      pointer-events: none;
     }
   }
 }
 
-
+// Begin Skin
 #char--Triptych-of-Galileo--Calileo {
-  @include bodyPartZ("oldFashion");
+  @include bodyPartZ("sport");
   @include charFliph();
 
   .z-head {
@@ -368,17 +566,430 @@
   }
 
   .z-hand-outer {
+    z-index: 20;
+
     i {
       .skin {
         background-image: url(../../media/character/male-skin/Galileo/hand-outer.png);
       }
     }
+
+    .quill {
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      left: 1px;
+      bottom: -12px;
+
+      z-index: -1;
+
+      .quill-image {
+        width: 7px;
+        height: 40px;
+        position: absolute;
+        background-image: url(../../media/character/deco/17c-pen.png);
+        left: 0;
+        top: 0;
+        transform: translate(-50%, -30px);
+      }
+    }
   }
 
   .z-hand-inner {
+
     i {
       .skin {
         background-image: url(../../media/character/male-skin/Galileo/hand-inner.png);
+      }
+    }
+  }
+}
+
+// Begin initial posture
+#char--Triptych-of-Galileo--Calileo {
+  left: 399px;
+  top: 333px;
+
+  .foot {
+    &.outer {
+      transform: rotate(calc(var(--ini-deg) - 30deg));
+    }
+
+    &.inner {
+      transform: rotate(calc(var(--ini-deg) + 7deg));
+    }
+  }
+
+  .claf {
+    &.outer {
+      transform: rotate(calc(var(--ini-deg) - 22deg));
+    }
+
+    &.inner {
+      transform: rotate(calc(var(--ini-deg) - 67deg));
+    }
+  }
+
+  .thigh {
+    &.outer {
+      transform: rotate(calc(var(--ini-deg) + 119deg));
+    }
+
+    &.inner {
+      left: calc(var(--ini-left) - 3px);
+      bottom: calc(var(--ini-bottom) + 4px);
+
+      animation: Galileo-look-through-thigh 10s infinite;
+
+      @keyframes Galileo-look-through-thigh {
+        0% {
+          transform: rotate(calc(var(--ini-deg) + 61deg));
+        }
+
+        40% {
+          transform: rotate(calc(var(--ini-deg) + 61deg));
+        }
+
+        50% {
+          transform: rotate(calc(var(--ini-deg) + 67deg));
+        }
+
+        90% {
+          transform: rotate(calc(var(--ini-deg) + 67deg));
+        }
+
+        100% {
+          transform: rotate(calc(var(--ini-deg) + 61deg));
+        }
+      }
+    }
+  }
+
+  .abdomen {
+    &.u {
+      left: calc(var(--ini-left) - 5px);
+
+      animation: Galileo-look-through-abdomen 10s infinite;
+
+      @keyframes Galileo-look-through-abdomen {
+        0% {
+          transform: rotate(calc(var(--ini-deg) - 67deg));
+        }
+
+        40% {
+          transform: rotate(calc(var(--ini-deg) - 67deg));
+        }
+
+        50% {
+          transform: rotate(calc(var(--ini-deg) - 72deg));
+        }
+
+        90% {
+          transform: rotate(calc(var(--ini-deg) - 72deg));
+        }
+
+        100% {
+          transform: rotate(calc(var(--ini-deg) - 67deg));
+        }
+      }
+    }
+  }
+
+  .breasts {
+    &.u {
+      animation: Galileo-look-through-breasts 10s infinite;
+
+      @keyframes Galileo-look-through-breasts {
+        0% {
+          transform: rotate(calc(var(--ini-deg) - 18deg));
+        }
+
+        40% {
+          transform: rotate(calc(var(--ini-deg) - 18deg));
+        }
+
+        50% {
+          transform: rotate(calc(var(--ini-deg) - 24deg));
+        }
+
+        90% {
+          transform: rotate(calc(var(--ini-deg) - 24deg));
+        }
+
+        100% {
+          transform: rotate(calc(var(--ini-deg) - 18deg));
+        }
+      }
+    }
+  }
+
+  .neck {
+    &.u {
+      animation: Galileo-look-through-neck 10s infinite;
+
+      @keyframes Galileo-look-through-neck {
+        0% {
+          transform: rotate(calc(var(--ini-deg) + 18deg));
+        }
+
+        40% {
+          transform: rotate(calc(var(--ini-deg) + 18deg));
+        }
+
+        50% {
+          transform: rotate(calc(var(--ini-deg) - 2deg));
+        }
+
+        88% {
+          transform: rotate(calc(var(--ini-deg) - 2deg));
+        }
+
+        94% {
+          transform: rotate(calc(var(--ini-deg) - 5deg));
+        }
+
+        100% {
+          transform: rotate(calc(var(--ini-deg) + 18deg));
+        }
+      }
+    }
+  }
+
+  .head {
+    &.u {
+      animation: Galileo-look-through-head 10s infinite;
+
+      @keyframes Galileo-look-through-head {
+        0% {
+          transform: rotate(calc(var(--ini-deg) + 18deg));
+        }
+
+        40% {
+          transform: rotate(calc(var(--ini-deg) + 18deg));
+        }
+
+        50% {
+          transform: rotate(calc(var(--ini-deg) - 3deg));
+        }
+
+        95% {
+          transform: rotate(calc(var(--ini-deg) - 3deg));
+        }
+
+        100% {
+          transform: rotate(calc(var(--ini-deg) + 18deg));
+        }
+      }
+    }
+  }
+
+  .brachial {
+    &.outer {
+      left: calc(var(--ini-left) - 1px);
+      bottom: calc(var(--ini-bottom) - 1px);
+
+      animation: Galileo-look-through-brachial-outer 10s infinite;
+
+      @keyframes Galileo-look-through-brachial-outer {
+        0% {
+          transform: rotate(calc(var(--ini-deg) + 57deg));
+        }
+
+        40% {
+          transform: rotate(calc(var(--ini-deg) + 57deg));
+        }
+
+        50% {
+          transform: rotate(calc(var(--ini-deg) + 69deg));
+        }
+
+        90% {
+          transform: rotate(calc(var(--ini-deg) + 69deg));
+        }
+
+        100% {
+          transform: rotate(calc(var(--ini-deg) + 57deg));
+        }
+      }
+    }
+
+    &.inner {
+      left: calc(var(--ini-left) + 2px);
+      bottom: calc(var(--ini-bottom) + 5px);
+
+      animation: Galileo-look-through-brachial-inner 10s infinite;
+
+      @keyframes Galileo-look-through-brachial-inner {
+        0% {
+          transform: rotate(calc(var(--ini-deg) + 113deg));
+        }
+
+        42% {
+          transform: rotate(calc(var(--ini-deg) + 113deg));
+        }
+
+        44% {
+          transform: rotate(calc(var(--ini-deg) + 90deg));
+        }
+
+        90% {
+          transform: rotate(calc(var(--ini-deg) + 90deg));
+        }
+
+        100% {
+          transform: rotate(calc(var(--ini-deg) + 113deg));
+        }
+      }
+    }
+  }
+
+  .forearm {
+    &.outer {
+      animation: Galileo-look-through-forearm-outer 10s infinite;
+
+      @keyframes Galileo-look-through-forearm-outer {
+        0% {
+          transform: rotate(calc(var(--ini-deg) + 40deg));
+        }
+
+        38% {
+          transform: rotate(calc(var(--ini-deg) + 40deg));
+        }
+
+        45% {
+          transform: rotate(calc(var(--ini-deg) + 45deg));
+        }
+
+        90% {
+          transform: rotate(calc(var(--ini-deg) + 45deg));
+        }
+
+        100% {
+          transform: rotate(calc(var(--ini-deg) + 40deg));
+        }
+      }
+    }
+
+    &.inner {
+      animation: Galileo-look-through-forearm-inner 10s infinite;
+
+      @keyframes Galileo-look-through-forearm-inner {
+        0% {
+          transform: rotate(calc(var(--ini-deg) + 93deg));
+        }
+
+        42% {
+          transform: rotate(calc(var(--ini-deg) + 93deg));
+        }
+
+        49% {
+          transform: rotate(calc(var(--ini-deg) + 30deg));
+        }
+
+        88% {
+          transform: rotate(calc(var(--ini-deg) + 30deg));
+        }
+
+        100% {
+          transform: rotate(calc(var(--ini-deg) + 93deg));
+        }
+      }
+    }
+  }
+
+  .hand {
+    &.outer {
+      transform: rotate(calc(var(--ini-deg) + 44deg));
+
+      
+      .quill {
+        transform: rotate(298deg);
+
+        animation: Galileo-look-through-quill 10s infinite;
+        @keyframes Galileo-look-through-quill {
+          0% {
+            transform: rotate(298deg);
+          }
+  
+          40% {
+            transform: rotate(298deg);
+          }
+  
+          50% {
+            transform: rotate(278deg);
+          }
+
+          51% { transform: rotate(273deg); }
+          52% { transform: rotate(275deg); }
+          53% { transform: rotate(273deg); }
+
+          55% { transform: rotate(275deg); }
+          56% { transform: rotate(273deg); }
+          57% { transform: rotate(275deg); }
+          58% { transform: rotate(273deg); }
+          59% { transform: rotate(275deg); }
+
+          61% { transform: rotate(273deg); }
+          62% { transform: rotate(275deg); }
+          63% { transform: rotate(273deg); }
+
+          65% { transform: rotate(275deg); }
+          66% { transform: rotate(273deg); }
+          67% { transform: rotate(275deg); }
+          68% { transform: rotate(273deg); }
+          69% { transform: rotate(275deg); }
+
+          71% { transform: rotate(275deg); }
+          72% { transform: rotate(273deg); }
+          73% { transform: rotate(275deg); }
+          74% { transform: rotate(273deg); }
+          75% { transform: rotate(275deg); }
+
+          77% { transform: rotate(273deg); }
+          78% { transform: rotate(275deg); }
+          79% { transform: rotate(273deg); }
+
+          81% { transform: rotate(273deg); }
+          82% { transform: rotate(275deg); }
+          83% { transform: rotate(273deg); }
+          84% { transform: rotate(275deg); }
+
+          86% { transform: rotate(276deg); }
+  
+          90% {
+            transform: rotate(278deg);
+          }
+  
+          100% {
+            transform: rotate(298deg);
+          }
+        }
+      }
+    }
+
+    &.inner {
+      animation: Galileo-look-through-hand-inner 10s infinite;
+
+      @keyframes Galileo-look-through-hand-inner {
+        0% {
+          transform: rotate(calc(var(--ini-deg) - 9deg));
+        }
+
+        40% {
+          transform: rotate(calc(var(--ini-deg) - 9deg));
+        }
+
+        50% {
+          transform: rotate(calc(var(--ini-deg) + 30deg));
+        }
+
+        90% {
+          transform: rotate(calc(var(--ini-deg) + 30deg));
+        }
+
+        100% {
+          transform: rotate(calc(var(--ini-deg) - 9deg));
+        }
       }
     }
   }

@@ -82,7 +82,7 @@ body.testMode {
 // 角色中轴线
 // ================================
 .figbody {
-  overflow: hidden;
+  // overflow: hidden;
 
   .resbox {
     // 伴随这个 class name 的 div，其自适应规则写在 master.js 里。
@@ -114,6 +114,14 @@ body.testMode {
     width: 0;
     height: 0;
 
+    --ini-left: 0px;
+    --ini-bottom: 0px;
+    --ini-deg: 0deg;
+
+    left: var(--ini-left);
+    bottom: var(--ini-bottom);
+    transform: rotate(var(--ini-deg));
+
     // Skin 以及 test skin 的存放位置
     i {
       position: absolute;
@@ -144,9 +152,10 @@ body.testMode {
         }
       }
       &.outer {
-        left: 50%;
-        bottom: 0;
-        transform: rotate(0deg); // rotation 动画干预这里
+        --ini-left: 0px;
+        --ini-bottom: 0px;
+
+        --ini-deg: 0deg;
 
         &>i {
           transform: translate(0px, -2px);
@@ -159,9 +168,10 @@ body.testMode {
       }
 
       &.inner {
-        left: -9px;
-        bottom: -5px;    
-        transform: rotate(1deg); // rotation 动画干预这里
+        --ini-left: -9px;
+        --ini-bottom: -5px;
+
+        --ini-deg: 0deg;
 
         &>i {
           transform: translate(-7px, -1px);
@@ -182,9 +192,10 @@ body.testMode {
         }
       }
       &.outer {
-        left: 7px;
-        bottom: 1px;    
-        transform: rotate(0deg); // rotation 动画干预这里
+        --ini-left: 7px;
+        --ini-bottom: 1px;
+
+        --ini-deg: 0deg;
 
         &>i {
           transform: translate(-4px, -7px);
@@ -196,9 +207,10 @@ body.testMode {
         }
       }
       &.inner {
-        left: 0px;
-        bottom: -55px; 
-        transform: rotate(-1deg); // rotation 动画干预这里
+        --ini-left: 0px;
+        --ini-bottom: -55px; 
+
+        --ini-deg: 0deg;
 
         &>i {
           transform: translate(-13px, -2px);
@@ -219,9 +231,10 @@ body.testMode {
         }       
       }
       &.outer {
-        left: 9px;
-        bottom: 5px;
-        transform: rotate(0deg); // rotation 动画干预这里
+        --ini-left: 9px;
+        --ini-bottom: 5px;
+
+        --ini-deg: 0deg;
 
         &>i {
           transform: translate(-5px, -60px);
@@ -232,9 +245,10 @@ body.testMode {
         }
       }
       &.inner {
-        left: 3px;
-        bottom: -53px;
-        transform: rotate(-26deg); // rotation 动画干预这里
+        --ini-left: 3px;
+        --ini-bottom: -53px;
+
+        --ini-deg: -26deg;
 
         &>i {
           transform: translate(-5px, -5px);
@@ -254,9 +268,10 @@ body.testMode {
         }    
       }
       &.outer {
-        left: 0px;
-        bottom: 55px;
-        transform: rotate(0deg); // rotation 动画干预这里
+        --ini-left: 0px;
+        --ini-bottom: 55px;
+
+        --ini-deg: 0deg;
 
         &>i {
           transform: translate(-19px, -69px);
@@ -269,9 +284,10 @@ body.testMode {
       }
 
       &.inner {
-        left: -8px;
-        bottom: -8px;
-        transform: rotate(25deg); // rotation 动画干预这里
+        --ini-left: -8px;
+        --ini-bottom: -8px;
+
+        --ini-deg: 25deg;
 
         &>i {
           transform: translate(-16px, -16px);
@@ -288,9 +304,10 @@ body.testMode {
     // 躯干
     &.abdomen {
       &.u {
-        left: -1px;
-        bottom: 58px;
-        transform: rotate(0deg); // rotation 动画干预这里
+        --ini-left: -1px;
+        --ini-bottom: 58px;
+
+        --ini-deg: 0deg;
   
         &>i {
           transform: translate(-18px, -33px);
@@ -310,9 +327,11 @@ body.testMode {
 
     &.breasts {
       &.u {
-        left: -4px;
-        bottom: 15px;
-        transform: rotate(0deg); // rotation 动画干预这里
+        --ini-left: -4px;
+        --ini-bottom: 15px;
+        
+        --ini-deg: 0deg;
+        
         &>i {
           transform: translate(-16px, -39px);
           width: 31px; height: 43px;
@@ -337,9 +356,10 @@ body.testMode {
         }   
       }
       &.outer {
-        left: 8px;
-        bottom: 29px;
-        transform: rotate(0deg); // rotation 动画干预这里
+        --ini-left: 8px;
+        --ini-bottom: 29px;
+
+        --ini-deg: 0deg;
 
         &>i {
           transform: translate(-8px, -5px);
@@ -352,9 +372,10 @@ body.testMode {
       }
 
       &.inner {
-        left: -9px;
-        bottom: 29px;
-        transform: rotate(0deg); // rotation 动画干预这里
+        --ini-left: -9px;
+        --ini-bottom: 29px;
+
+        --ini-deg: 0deg;
   
         &>i {
           transform: translate(-8px, -5px);
@@ -375,9 +396,10 @@ body.testMode {
         }   
       }
       &.outer {
-        left: 3px;
-        bottom: -35px;
-        transform: rotate(0deg); // rotation 动画干预这里
+        --ini-left: 3px;
+        --ini-bottom: -35px;
+
+        --ini-deg: 0deg;
   
         &>i {
           transform: translate(-8px, -3px); 
@@ -389,9 +411,10 @@ body.testMode {
         }        
       }
       &.inner {
-        left: 3px;
-        bottom: -35px;
-        transform: rotate(0deg); // rotation 动画干预这里  
+        --ini-left: 3px;
+        --ini-bottom: -35px;
+
+        --ini-deg: 0deg;
   
         &>i {
           transform: translate(-8px, -3px);
@@ -412,9 +435,10 @@ body.testMode {
         }
       }
       &.outer {
-        left: -7px;
-        bottom: -33px;
-        transform: rotate(0deg); // rotation 动画干预这里
+        --ini-left: -7px;
+        --ini-bottom: -33px;
+
+        --ini-deg: 0deg;
 
         &>i {
           transform: translate(-1px, -2px);
@@ -426,9 +450,10 @@ body.testMode {
         }
       }
       &.inner {
-        left: -7px;
-        bottom: -33px;
-        transform: rotate(0deg); // rotation 动画干预这里
+        --ini-left: -7px;
+        --ini-bottom: -33px;
+
+        --ini-deg: 0deg;
 
         &>i {
           transform: translate(-1px, -2px);
@@ -444,9 +469,10 @@ body.testMode {
     // 👨
     &.neck {
       &.u {
-        left: 1px;
-        bottom: 37px;
-        transform: rotate(0deg); // rotation 动画干预这里
+        --ini-left: 1px;
+        --ini-bottom: 37px;
+
+        --ini-deg: 0deg;
   
         &>i {
           transform: translate(-11px, -15px);
@@ -464,9 +490,10 @@ body.testMode {
 
     &.head {
       &.u {
-        left: -3px;
-        bottom: 12px;
-        transform: rotate(0deg); // rotation 动画干预这里
+        --ini-left: -3px;
+        --ini-bottom: 12px;
+        
+        --ini-deg: 0deg;
   
         &>i {
           transform: translate(-17px, -17px);

@@ -112,6 +112,15 @@ body.Galileo {
       width: 100%;
       height: 80px;
       background-image: linear-gradient(to bottom, var(--grey), rgba(0, 0, 0, 0)); }
+    .page-cover-container .page-cover-image-container::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 200px;
+      background-color: var(--grey);
+      z-index: 10000;
+      transform: translate(0, -100%);
+      top: 0; }
     .page-cover-container .page-cover-image-container .image {
       position: absolute;
       transform: translate(-50%, 0);
@@ -434,15 +443,13 @@ body.testMode .char .bodyPart .deco::after {
 body.testMode.hideSkin .char .skin {
   visibility: hidden !important; }
 
-.figbody {
-  overflow: hidden; }
-  .figbody .resbox {
-    width: calc(var(--ill-w) * 1px);
-    height: calc(var(--ill-h) * 1px);
-    position: absolute;
-    transform-origin: top left;
-    top: 0;
-    left: 0; }
+.figbody .resbox {
+  width: calc(var(--ill-w) * 1px);
+  height: calc(var(--ill-h) * 1px);
+  position: absolute;
+  transform-origin: top left;
+  top: 0;
+  left: 0; }
 
 .char {
   position: absolute;
@@ -451,7 +458,13 @@ body.testMode.hideSkin .char .skin {
   .char .bodyPart {
     position: absolute;
     width: 0;
-    height: 0; }
+    height: 0;
+    --ini-left: 0px;
+    --ini-bottom: 0px;
+    --ini-deg: 0deg;
+    left: var(--ini-left);
+    bottom: var(--ini-bottom);
+    transform: rotate(var(--ini-deg)); }
     .char .bodyPart i {
       position: absolute; }
       .char .bodyPart i .skin {
@@ -470,18 +483,18 @@ body.testMode.hideSkin .char .skin {
         background-image: url(../../media/character/male-body/toes.png);
         visibility: hidden; }
     .char .bodyPart.toes.outer {
-      left: 50%;
-      bottom: 0;
-      transform: rotate(0deg); }
+      --ini-left: 0px;
+      --ini-bottom: 0px;
+      --ini-deg: 0deg; }
       .char .bodyPart.toes.outer > i {
         transform: translate(0px, -2px); }
         .char .bodyPart.toes.outer > i .skin {
           width: 28px;
           height: 22px; }
     .char .bodyPart.toes.inner {
-      left: -9px;
-      bottom: -5px;
-      transform: rotate(1deg); }
+      --ini-left: -9px;
+      --ini-bottom: -5px;
+      --ini-deg: 0deg; }
       .char .bodyPart.toes.inner > i {
         transform: translate(-7px, -1px); }
         .char .bodyPart.toes.inner > i .skin {
@@ -493,18 +506,18 @@ body.testMode.hideSkin .char .skin {
       .char .bodyPart.foot > i::after {
         background-image: url(../../media/character/male-body/foot.png); }
     .char .bodyPart.foot.outer {
-      left: 7px;
-      bottom: 1px;
-      transform: rotate(0deg); }
+      --ini-left: 7px;
+      --ini-bottom: 1px;
+      --ini-deg: 0deg; }
       .char .bodyPart.foot.outer > i {
         transform: translate(-4px, -7px); }
         .char .bodyPart.foot.outer > i .skin {
           width: 36px;
           height: 28px; }
     .char .bodyPart.foot.inner {
-      left: 0px;
-      bottom: -55px;
-      transform: rotate(-1deg); }
+      --ini-left: 0px;
+      --ini-bottom: -55px;
+      --ini-deg: 0deg; }
       .char .bodyPart.foot.inner > i {
         transform: translate(-13px, -2px); }
         .char .bodyPart.foot.inner > i .skin {
@@ -516,18 +529,18 @@ body.testMode.hideSkin .char .skin {
       .char .bodyPart.claf > i::after {
         background-image: url(../../media/character/male-body/claf.png); }
     .char .bodyPart.claf.outer {
-      left: 9px;
-      bottom: 5px;
-      transform: rotate(0deg); }
+      --ini-left: 9px;
+      --ini-bottom: 5px;
+      --ini-deg: 0deg; }
       .char .bodyPart.claf.outer > i {
         transform: translate(-5px, -60px); }
         .char .bodyPart.claf.outer > i .skin {
           width: 40px;
           height: 80px; }
     .char .bodyPart.claf.inner {
-      left: 3px;
-      bottom: -53px;
-      transform: rotate(-26deg); }
+      --ini-left: 3px;
+      --ini-bottom: -53px;
+      --ini-deg: -26deg; }
       .char .bodyPart.claf.inner > i {
         transform: translate(-5px, -5px); }
         .char .bodyPart.claf.inner > i .skin {
@@ -539,27 +552,27 @@ body.testMode.hideSkin .char .skin {
       .char .bodyPart.thigh > i::after {
         background-image: url(../../media/character/male-body/thigh.png); }
     .char .bodyPart.thigh.outer {
-      left: 0px;
-      bottom: 55px;
-      transform: rotate(0deg); }
+      --ini-left: 0px;
+      --ini-bottom: 55px;
+      --ini-deg: 0deg; }
       .char .bodyPart.thigh.outer > i {
         transform: translate(-19px, -69px); }
         .char .bodyPart.thigh.outer > i .skin {
           width: 72px;
           height: 99px; }
     .char .bodyPart.thigh.inner {
-      left: -8px;
-      bottom: -8px;
-      transform: rotate(25deg); }
+      --ini-left: -8px;
+      --ini-bottom: -8px;
+      --ini-deg: 25deg; }
       .char .bodyPart.thigh.inner > i {
         transform: translate(-16px, -16px); }
         .char .bodyPart.thigh.inner > i .skin {
           width: 72px;
           height: 99px; }
     .char .bodyPart.abdomen.u {
-      left: -1px;
-      bottom: 58px;
-      transform: rotate(0deg); }
+      --ini-left: -1px;
+      --ini-bottom: 58px;
+      --ini-deg: 0deg; }
       .char .bodyPart.abdomen.u > i {
         transform: translate(-18px, -33px);
         width: 25px;
@@ -570,9 +583,9 @@ body.testMode.hideSkin .char .skin {
           width: 75px;
           height: 90px; }
     .char .bodyPart.breasts.u {
-      left: -4px;
-      bottom: 15px;
-      transform: rotate(0deg); }
+      --ini-left: -4px;
+      --ini-bottom: 15px;
+      --ini-deg: 0deg; }
       .char .bodyPart.breasts.u > i {
         transform: translate(-16px, -39px);
         width: 31px;
@@ -588,18 +601,18 @@ body.testMode.hideSkin .char .skin {
       .char .bodyPart.brachial > i::after {
         background-image: url(../../media/character/male-body/brachial.png); }
     .char .bodyPart.brachial.outer {
-      left: 8px;
-      bottom: 29px;
-      transform: rotate(0deg); }
+      --ini-left: 8px;
+      --ini-bottom: 29px;
+      --ini-deg: 0deg; }
       .char .bodyPart.brachial.outer > i {
         transform: translate(-8px, -5px); }
         .char .bodyPart.brachial.outer > i .skin {
           width: 55px;
           height: 83px; }
     .char .bodyPart.brachial.inner {
-      left: -9px;
-      bottom: 29px;
-      transform: rotate(0deg); }
+      --ini-left: -9px;
+      --ini-bottom: 29px;
+      --ini-deg: 0deg; }
       .char .bodyPart.brachial.inner > i {
         transform: translate(-8px, -5px); }
         .char .bodyPart.brachial.inner > i .skin {
@@ -611,18 +624,18 @@ body.testMode.hideSkin .char .skin {
       .char .bodyPart.forearm > i::after {
         background-image: url(../../media/character/male-body/forearm.png); }
     .char .bodyPart.forearm.outer {
-      left: 3px;
-      bottom: -35px;
-      transform: rotate(0deg); }
+      --ini-left: 3px;
+      --ini-bottom: -35px;
+      --ini-deg: 0deg; }
       .char .bodyPart.forearm.outer > i {
         transform: translate(-8px, -3px); }
         .char .bodyPart.forearm.outer > i .skin {
           width: 51px;
           height: 78px; }
     .char .bodyPart.forearm.inner {
-      left: 3px;
-      bottom: -35px;
-      transform: rotate(0deg); }
+      --ini-left: 3px;
+      --ini-bottom: -35px;
+      --ini-deg: 0deg; }
       .char .bodyPart.forearm.inner > i {
         transform: translate(-8px, -3px); }
         .char .bodyPart.forearm.inner > i .skin {
@@ -634,27 +647,27 @@ body.testMode.hideSkin .char .skin {
       .char .bodyPart.hand > i::after {
         background-image: url(../../media/character/male-body/hand.png); }
     .char .bodyPart.hand.outer {
-      left: -7px;
-      bottom: -33px;
-      transform: rotate(0deg); }
+      --ini-left: -7px;
+      --ini-bottom: -33px;
+      --ini-deg: 0deg; }
       .char .bodyPart.hand.outer > i {
         transform: translate(-1px, -2px); }
         .char .bodyPart.hand.outer > i .skin {
           width: 46px;
           height: 57px; }
     .char .bodyPart.hand.inner {
-      left: -7px;
-      bottom: -33px;
-      transform: rotate(0deg); }
+      --ini-left: -7px;
+      --ini-bottom: -33px;
+      --ini-deg: 0deg; }
       .char .bodyPart.hand.inner > i {
         transform: translate(-1px, -2px); }
         .char .bodyPart.hand.inner > i .skin {
           width: 46px;
           height: 57px; }
     .char .bodyPart.neck.u {
-      left: 1px;
-      bottom: 37px;
-      transform: rotate(0deg); }
+      --ini-left: 1px;
+      --ini-bottom: 37px;
+      --ini-deg: 0deg; }
       .char .bodyPart.neck.u > i {
         transform: translate(-11px, -15px);
         width: 16px;
@@ -665,9 +678,9 @@ body.testMode.hideSkin .char .skin {
           width: 40px;
           height: 40px; }
     .char .bodyPart.head.u {
-      left: -3px;
-      bottom: 12px;
-      transform: rotate(0deg); }
+      --ini-left: -3px;
+      --ini-bottom: 12px;
+      --ini-deg: 0deg; }
       .char .bodyPart.head.u > i {
         transform: translate(-17px, -17px);
         width: 25px;
@@ -677,6 +690,12 @@ body.testMode.hideSkin .char .skin {
         .char .bodyPart.head.u > i .skin {
           width: 105px;
           height: 105px; }
+
+#Liepperhey-looking-through .figbody {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto; }
 
 #char--Hans-Lipperhey .z-toes-outer {
   z-index: 0; }
@@ -994,7 +1013,8 @@ body.testMode.hideSkin .char .skin {
   #Triptych-of-Galileo .figbody {
     position: relative;
     width: 100%;
-    padding-top: calc(var(--ill-h) / var(--ill-w) * 100%); }
+    padding-top: calc(var(--ill-h) / var(--ill-w) * 100%);
+    overflow: hidden; }
     #Triptych-of-Galileo .figbody .nightsky {
       width: calc((var(--ill-w) - 2) * 1px);
       height: calc((var(--ill-h) - 2) * 1px);
@@ -1002,7 +1022,9 @@ body.testMode.hideSkin .char .skin {
       left: 1px;
       top: 1px;
       background-image: url(../../media/illustration/part1-cover/nightsky.png);
-      z-index: 0; }
+      z-index: 0;
+      display: grid;
+      grid-template-columns: auto auto auto; }
     #Triptych-of-Galileo .figbody .stage {
       width: calc((var(--ill-w) - 2) * 1px);
       height: 26px;
@@ -1120,7 +1142,8 @@ body.testMode.hideSkin .char .skin {
   100% {
     transform: rotate(360deg); } }
     #Triptych-of-Galileo .figbody .mid {
-      position: absolute; }
+      position: absolute;
+      z-index: 10; }
       #Triptych-of-Galileo .figbody .mid .chair {
         width: 136px;
         height: 243px;
@@ -1130,9 +1153,23 @@ body.testMode.hideSkin .char .skin {
         background-image: url(../../media/illustration/part1-cover/chair.png);
         z-index: 2; }
       #Triptych-of-Galileo .figbody .mid #char--Triptych-of-Galileo--Calileo {
-        left: 392px;
-        top: 332px;
         z-index: 10; }
+      #Triptych-of-Galileo .figbody .mid .tube {
+        -moz-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        transform: scaleX(-1);
+        -ms-filter: fliph;
+        /*IE*/
+        filter: fliph;
+        /*IE*/
+        width: 124px;
+        height: 83px;
+        position: absolute;
+        left: -131px;
+        top: -225px;
+        background-image: url(../../media/illustration/part1-cover/tube.png);
+        z-index: -19; }
       #Triptych-of-Galileo .figbody .mid .desk {
         width: 124px;
         height: 225px;
@@ -1141,6 +1178,111 @@ body.testMode.hideSkin .char .skin {
         top: 108px;
         background-image: url(../../media/illustration/part1-cover/desk.png);
         z-index: 11; }
+    #Triptych-of-Galileo .figbody .right {
+      position: absolute;
+      z-index: 10; }
+      #Triptych-of-Galileo .figbody .right .Jupiter-globe {
+        width: 222px;
+        height: 148px;
+        position: absolute;
+        left: 617px;
+        top: 185px;
+        background-image: url(../../media/illustration/part1-cover/Jupiter-globe.png);
+        z-index: 0; }
+      #Triptych-of-Galileo .figbody .right .Io, #Triptych-of-Galileo .figbody .right .Europa, #Triptych-of-Galileo .figbody .right .Ganymede, #Triptych-of-Galileo .figbody .right .Callisto {
+        --ani-factor: 4;
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 207px; }
+        #Triptych-of-Galileo .figbody .right .Io i, #Triptych-of-Galileo .figbody .right .Europa i, #Triptych-of-Galileo .figbody .right .Ganymede i, #Triptych-of-Galileo .figbody .right .Callisto i {
+          position: absolute;
+          width: 6px;
+          height: 61px;
+          left: 0;
+          top: 0;
+          transform: translate(-50%, 0);
+          left: 50%; }
+      #Triptych-of-Galileo .figbody .right .Io {
+        --period: 1.769137786;
+        left: 692px;
+        animation: part1-cover-Io calc(var(--period) * var(--ani-factor) * 1s) infinite ease-in-out; }
+        #Triptych-of-Galileo .figbody .right .Io i {
+          background-image: url(../../media/illustration/part1-cover/Io.png); }
+@keyframes part1-cover-Io {
+  0% {
+    transform: translate(0, 0);
+    z-index: 1; }
+  49% {
+    z-index: 1; }
+  50% {
+    transform: translate(72px, 0);
+    z-index: -1; }
+  99% {
+    z-index: -1; }
+  100% {
+    transform: translate(0, 0);
+    z-index: 1; } }
+      #Triptych-of-Galileo .figbody .right .Europa {
+        --period: 3.551181;
+        left: 778px;
+        animation: part1-cover-Europa calc(var(--period) * var(--ani-factor) * 1s) infinite ease-in-out; }
+        #Triptych-of-Galileo .figbody .right .Europa i {
+          background-image: url(../../media/illustration/part1-cover/Europa.png); }
+@keyframes part1-cover-Europa {
+  0% {
+    transform: translate(0, 0);
+    z-index: -2; }
+  49% {
+    z-index: -2; }
+  50% {
+    transform: translate(-100px, 0);
+    z-index: 2; }
+  99% {
+    z-index: 2; }
+  100% {
+    transform: translate(0, 0);
+    z-index: -2; } }
+      #Triptych-of-Galileo .figbody .right .Ganymede {
+        --period: 7.15455296;
+        left: 664px;
+        animation: part1-cover-Ganymede calc(var(--period) * var(--ani-factor) * 1s) infinite ease-in-out; }
+        #Triptych-of-Galileo .figbody .right .Ganymede i {
+          background-image: url(../../media/illustration/part1-cover/Ganymede.png); }
+@keyframes part1-cover-Ganymede {
+  0% {
+    transform: translate(0, 0);
+    z-index: 3; }
+  49% {
+    z-index: 3; }
+  50% {
+    transform: translate(128px, 0);
+    z-index: -3; }
+  99% {
+    z-index: -3; }
+  100% {
+    transform: translate(0, 0);
+    z-index: 3; } }
+      #Triptych-of-Galileo .figbody .right .Callisto {
+        --period: 16.6890184;
+        left: 805px;
+        animation: part1-cover-Callisto calc(var(--period) * var(--ani-factor) * 1s) infinite ease-in-out; }
+        #Triptych-of-Galileo .figbody .right .Callisto i {
+          background-image: url(../../media/illustration/part1-cover/Callisto.png); }
+@keyframes part1-cover-Callisto {
+  0% {
+    transform: translate(0, 0);
+    z-index: -4; }
+  49% {
+    z-index: -4; }
+  50% {
+    transform: translate(-154px, 0);
+    z-index: 4; }
+  99% {
+    z-index: 4; }
+  100% {
+    transform: translate(0, 0);
+    z-index: -4; } }
     #Triptych-of-Galileo .figbody .pillars {
       width: calc(var(--ill-w) * 1px);
       height: calc(var(--ill-h) * 1px);
@@ -1148,7 +1290,8 @@ body.testMode.hideSkin .char .skin {
       left: 0px;
       top: 0px;
       background-image: url(../../media/illustration/part1-cover/pillars.png);
-      z-index: 100; }
+      z-index: 100;
+      pointer-events: none; }
 
 #char--Triptych-of-Galileo--Calileo {
   -moz-transform: scaleX(-1);
@@ -1168,25 +1311,25 @@ body.testMode.hideSkin .char .skin {
   #char--Triptych-of-Galileo--Calileo .z-thigh-outer {
     z-index: 3; }
   #char--Triptych-of-Galileo--Calileo .z-abdomen {
-    z-index: 10; }
+    z-index: 0; }
   #char--Triptych-of-Galileo--Calileo .z-breasts {
-    z-index: 11; }
+    z-index: 1; }
   #char--Triptych-of-Galileo--Calileo .z-neck {
-    z-index: 10; }
+    z-index: 0; }
   #char--Triptych-of-Galileo--Calileo .z-head {
-    z-index: 12; }
+    z-index: 2; }
   #char--Triptych-of-Galileo--Calileo .z-brachial-outer {
     z-index: 20; }
   #char--Triptych-of-Galileo--Calileo .z-forearm-outer {
-    z-index: 22; }
-  #char--Triptych-of-Galileo--Calileo .z-hand-outer {
     z-index: 21; }
+  #char--Triptych-of-Galileo--Calileo .z-hand-outer {
+    z-index: 22; }
   #char--Triptych-of-Galileo--Calileo .z-brachial-inner {
-    z-index: -21; }
-  #char--Triptych-of-Galileo--Calileo .z-forearm-inner {
-    z-index: -22; }
-  #char--Triptych-of-Galileo--Calileo .z-hand-inner {
     z-index: -20; }
+  #char--Triptych-of-Galileo--Calileo .z-forearm-inner {
+    z-index: -21; }
+  #char--Triptych-of-Galileo--Calileo .z-hand-inner {
+    z-index: -22; }
   #char--Triptych-of-Galileo--Calileo .z-toes-inner {
     z-index: -12; }
   #char--Triptych-of-Galileo--Calileo .z-foot-inner {
@@ -1227,7 +1370,251 @@ body.testMode.hideSkin .char .skin {
     background-image: url(../../media/character/male-skin/Galileo/forearm-outer.png); }
   #char--Triptych-of-Galileo--Calileo .z-forearm-inner i .skin {
     background-image: url(../../media/character/male-skin/Galileo/forearm-inner.png); }
-  #char--Triptych-of-Galileo--Calileo .z-hand-outer i .skin {
-    background-image: url(../../media/character/male-skin/Galileo/hand-outer.png); }
+  #char--Triptych-of-Galileo--Calileo .z-hand-outer {
+    z-index: 20; }
+    #char--Triptych-of-Galileo--Calileo .z-hand-outer i .skin {
+      background-image: url(../../media/character/male-skin/Galileo/hand-outer.png); }
+    #char--Triptych-of-Galileo--Calileo .z-hand-outer .quill {
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      left: 1px;
+      bottom: -12px;
+      z-index: -1; }
+      #char--Triptych-of-Galileo--Calileo .z-hand-outer .quill .quill-image {
+        width: 7px;
+        height: 40px;
+        position: absolute;
+        background-image: url(../../media/character/deco/17c-pen.png);
+        left: 0;
+        top: 0;
+        transform: translate(-50%, -30px); }
   #char--Triptych-of-Galileo--Calileo .z-hand-inner i .skin {
     background-image: url(../../media/character/male-skin/Galileo/hand-inner.png); }
+
+#char--Triptych-of-Galileo--Calileo {
+  left: 399px;
+  top: 333px; }
+  #char--Triptych-of-Galileo--Calileo .foot.outer {
+    transform: rotate(calc(var(--ini-deg) - 30deg)); }
+  #char--Triptych-of-Galileo--Calileo .foot.inner {
+    transform: rotate(calc(var(--ini-deg) + 7deg)); }
+  #char--Triptych-of-Galileo--Calileo .claf.outer {
+    transform: rotate(calc(var(--ini-deg) - 22deg)); }
+  #char--Triptych-of-Galileo--Calileo .claf.inner {
+    transform: rotate(calc(var(--ini-deg) - 67deg)); }
+  #char--Triptych-of-Galileo--Calileo .thigh.outer {
+    transform: rotate(calc(var(--ini-deg) + 119deg)); }
+  #char--Triptych-of-Galileo--Calileo .thigh.inner {
+    left: calc(var(--ini-left) - 3px);
+    bottom: calc(var(--ini-bottom) + 4px);
+    animation: Galileo-look-through-thigh 10s infinite; }
+@keyframes Galileo-look-through-thigh {
+  0% {
+    transform: rotate(calc(var(--ini-deg) + 61deg)); }
+  40% {
+    transform: rotate(calc(var(--ini-deg) + 61deg)); }
+  50% {
+    transform: rotate(calc(var(--ini-deg) + 67deg)); }
+  90% {
+    transform: rotate(calc(var(--ini-deg) + 67deg)); }
+  100% {
+    transform: rotate(calc(var(--ini-deg) + 61deg)); } }
+  #char--Triptych-of-Galileo--Calileo .abdomen.u {
+    left: calc(var(--ini-left) - 5px);
+    animation: Galileo-look-through-abdomen 10s infinite; }
+@keyframes Galileo-look-through-abdomen {
+  0% {
+    transform: rotate(calc(var(--ini-deg) - 67deg)); }
+  40% {
+    transform: rotate(calc(var(--ini-deg) - 67deg)); }
+  50% {
+    transform: rotate(calc(var(--ini-deg) - 72deg)); }
+  90% {
+    transform: rotate(calc(var(--ini-deg) - 72deg)); }
+  100% {
+    transform: rotate(calc(var(--ini-deg) - 67deg)); } }
+  #char--Triptych-of-Galileo--Calileo .breasts.u {
+    animation: Galileo-look-through-breasts 10s infinite; }
+@keyframes Galileo-look-through-breasts {
+  0% {
+    transform: rotate(calc(var(--ini-deg) - 18deg)); }
+  40% {
+    transform: rotate(calc(var(--ini-deg) - 18deg)); }
+  50% {
+    transform: rotate(calc(var(--ini-deg) - 24deg)); }
+  90% {
+    transform: rotate(calc(var(--ini-deg) - 24deg)); }
+  100% {
+    transform: rotate(calc(var(--ini-deg) - 18deg)); } }
+  #char--Triptych-of-Galileo--Calileo .neck.u {
+    animation: Galileo-look-through-neck 10s infinite; }
+@keyframes Galileo-look-through-neck {
+  0% {
+    transform: rotate(calc(var(--ini-deg) + 18deg)); }
+  40% {
+    transform: rotate(calc(var(--ini-deg) + 18deg)); }
+  50% {
+    transform: rotate(calc(var(--ini-deg) - 2deg)); }
+  88% {
+    transform: rotate(calc(var(--ini-deg) - 2deg)); }
+  94% {
+    transform: rotate(calc(var(--ini-deg) - 5deg)); }
+  100% {
+    transform: rotate(calc(var(--ini-deg) + 18deg)); } }
+  #char--Triptych-of-Galileo--Calileo .head.u {
+    animation: Galileo-look-through-head 10s infinite; }
+@keyframes Galileo-look-through-head {
+  0% {
+    transform: rotate(calc(var(--ini-deg) + 18deg)); }
+  40% {
+    transform: rotate(calc(var(--ini-deg) + 18deg)); }
+  50% {
+    transform: rotate(calc(var(--ini-deg) - 3deg)); }
+  95% {
+    transform: rotate(calc(var(--ini-deg) - 3deg)); }
+  100% {
+    transform: rotate(calc(var(--ini-deg) + 18deg)); } }
+  #char--Triptych-of-Galileo--Calileo .brachial.outer {
+    left: calc(var(--ini-left) - 1px);
+    bottom: calc(var(--ini-bottom) - 1px);
+    animation: Galileo-look-through-brachial-outer 10s infinite; }
+@keyframes Galileo-look-through-brachial-outer {
+  0% {
+    transform: rotate(calc(var(--ini-deg) + 57deg)); }
+  40% {
+    transform: rotate(calc(var(--ini-deg) + 57deg)); }
+  50% {
+    transform: rotate(calc(var(--ini-deg) + 69deg)); }
+  90% {
+    transform: rotate(calc(var(--ini-deg) + 69deg)); }
+  100% {
+    transform: rotate(calc(var(--ini-deg) + 57deg)); } }
+  #char--Triptych-of-Galileo--Calileo .brachial.inner {
+    left: calc(var(--ini-left) + 2px);
+    bottom: calc(var(--ini-bottom) + 5px);
+    animation: Galileo-look-through-brachial-inner 10s infinite; }
+@keyframes Galileo-look-through-brachial-inner {
+  0% {
+    transform: rotate(calc(var(--ini-deg) + 113deg)); }
+  42% {
+    transform: rotate(calc(var(--ini-deg) + 113deg)); }
+  44% {
+    transform: rotate(calc(var(--ini-deg) + 90deg)); }
+  90% {
+    transform: rotate(calc(var(--ini-deg) + 90deg)); }
+  100% {
+    transform: rotate(calc(var(--ini-deg) + 113deg)); } }
+  #char--Triptych-of-Galileo--Calileo .forearm.outer {
+    animation: Galileo-look-through-forearm-outer 10s infinite; }
+@keyframes Galileo-look-through-forearm-outer {
+  0% {
+    transform: rotate(calc(var(--ini-deg) + 40deg)); }
+  38% {
+    transform: rotate(calc(var(--ini-deg) + 40deg)); }
+  45% {
+    transform: rotate(calc(var(--ini-deg) + 45deg)); }
+  90% {
+    transform: rotate(calc(var(--ini-deg) + 45deg)); }
+  100% {
+    transform: rotate(calc(var(--ini-deg) + 40deg)); } }
+  #char--Triptych-of-Galileo--Calileo .forearm.inner {
+    animation: Galileo-look-through-forearm-inner 10s infinite; }
+@keyframes Galileo-look-through-forearm-inner {
+  0% {
+    transform: rotate(calc(var(--ini-deg) + 93deg)); }
+  42% {
+    transform: rotate(calc(var(--ini-deg) + 93deg)); }
+  49% {
+    transform: rotate(calc(var(--ini-deg) + 30deg)); }
+  88% {
+    transform: rotate(calc(var(--ini-deg) + 30deg)); }
+  100% {
+    transform: rotate(calc(var(--ini-deg) + 93deg)); } }
+  #char--Triptych-of-Galileo--Calileo .hand.outer {
+    transform: rotate(calc(var(--ini-deg) + 44deg)); }
+    #char--Triptych-of-Galileo--Calileo .hand.outer .quill {
+      transform: rotate(298deg);
+      animation: Galileo-look-through-quill 10s infinite; }
+@keyframes Galileo-look-through-quill {
+  0% {
+    transform: rotate(298deg); }
+  40% {
+    transform: rotate(298deg); }
+  50% {
+    transform: rotate(278deg); }
+  51% {
+    transform: rotate(273deg); }
+  52% {
+    transform: rotate(275deg); }
+  53% {
+    transform: rotate(273deg); }
+  55% {
+    transform: rotate(275deg); }
+  56% {
+    transform: rotate(273deg); }
+  57% {
+    transform: rotate(275deg); }
+  58% {
+    transform: rotate(273deg); }
+  59% {
+    transform: rotate(275deg); }
+  61% {
+    transform: rotate(273deg); }
+  62% {
+    transform: rotate(275deg); }
+  63% {
+    transform: rotate(273deg); }
+  65% {
+    transform: rotate(275deg); }
+  66% {
+    transform: rotate(273deg); }
+  67% {
+    transform: rotate(275deg); }
+  68% {
+    transform: rotate(273deg); }
+  69% {
+    transform: rotate(275deg); }
+  71% {
+    transform: rotate(275deg); }
+  72% {
+    transform: rotate(273deg); }
+  73% {
+    transform: rotate(275deg); }
+  74% {
+    transform: rotate(273deg); }
+  75% {
+    transform: rotate(275deg); }
+  77% {
+    transform: rotate(273deg); }
+  78% {
+    transform: rotate(275deg); }
+  79% {
+    transform: rotate(273deg); }
+  81% {
+    transform: rotate(273deg); }
+  82% {
+    transform: rotate(275deg); }
+  83% {
+    transform: rotate(273deg); }
+  84% {
+    transform: rotate(275deg); }
+  86% {
+    transform: rotate(276deg); }
+  90% {
+    transform: rotate(278deg); }
+  100% {
+    transform: rotate(298deg); } }
+  #char--Triptych-of-Galileo--Calileo .hand.inner {
+    animation: Galileo-look-through-hand-inner 10s infinite; }
+@keyframes Galileo-look-through-hand-inner {
+  0% {
+    transform: rotate(calc(var(--ini-deg) - 9deg)); }
+  40% {
+    transform: rotate(calc(var(--ini-deg) - 9deg)); }
+  50% {
+    transform: rotate(calc(var(--ini-deg) + 30deg)); }
+  90% {
+    transform: rotate(calc(var(--ini-deg) + 30deg)); }
+  100% {
+    transform: rotate(calc(var(--ini-deg) - 9deg)); } }
