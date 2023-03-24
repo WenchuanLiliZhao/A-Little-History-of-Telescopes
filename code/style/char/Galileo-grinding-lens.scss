@@ -1,0 +1,16 @@
+#Galileo-grinding-lens {
+  .figbody {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 0 auto;
+
+    // ================================
+    // begin skin
+    // ================================
+    #char--Galileo-grinding-lens {
+      @include bodyPartZ("sport");
+      @include charFliph;
+    }
+  }
+}
