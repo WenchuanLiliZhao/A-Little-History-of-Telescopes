@@ -53,12 +53,11 @@ function resbox() {
     var scaleRatio = momCurrentW / momInitialW;
     set[i].style.transform = "scale(" + scaleRatio + ")";
 
-    var resbox = document.querySelectorAll(".resbox");
-    if (resbox != null) {
-      mom.style.overflow = "hidden";
-      console.log(mom.parentElement);
-      
-    }
+    // var resbox = document.querySelectorAll(".resbox");
+    // if (resbox != null) {
+    //   mom.style.overflow = "hidden";
+    //   console.log(mom.parentElement);
+    // }
     
   }
   console.log("============= \n \n");
