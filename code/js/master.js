@@ -3,8 +3,6 @@ var loader = document.getElementById("preloader");
 window.addEventListener("load", function(){
   loader.style.display = "none";
 
-  location.reload();
-
   console.log("Welcome!");
 })
 
