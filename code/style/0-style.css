@@ -56,7 +56,8 @@ body, html {
 body.Galileo {
   position: relative;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  overflow-x: hidden; }
   body.Galileo {
     --grey: #2D2D35;
     --grey-1-hex: #47474E;
