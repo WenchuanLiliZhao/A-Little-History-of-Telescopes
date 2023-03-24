@@ -5,12 +5,337 @@
     position: relative;
     margin: 0 auto;
 
+    
+
     // ================================
     // begin skin
     // ================================
-    #char--Galileo-grinding-lens {
+    #char--Galileo-grinding-lens--Galileo {
       @include bodyPartZ("sport");
       @include charFliph;
+
+      .z-head {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/head/Galileo-grinding-lens.png);
+          }
+        }
+      }
+
+      .z-neck {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/neck/Galileo-grinding-lens.png);
+          }
+        }
+      }
+
+      .z-breasts {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/breasts/Galileo-grinding-lens.png);
+          }
+        }
+      }
+
+      .z-abdomen {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/abdomen/Galileo-grinding-lens.png);
+          }
+        }
+      }
+
+      .z-thigh-outer {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/thigh-outer/Galileo-grinding-lens.png);
+          }
+        }
+      }
+
+      .z-claf-outer {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/claf-outer/Galileo-grinding-lens.png);
+          }
+        }
+      }
+
+      .z-thigh-inner {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/thigh-inner/Galileo-grinding-lens.png);
+          }
+        }
+      }
+
+      .z-claf-inner {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/claf-inner/Galileo-grinding-lens.png);
+          }
+        }    
+      }
+
+      .z-foot-outer {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/foot-outer/Galileo-grinding-lens.png);
+          }
+        }
+      }
+
+      .z-foot-inner {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/foot-inner/Galileo-grinding-lens.png);
+          }
+        }
+      }
+
+      .z-toes-outer {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/toes-outer/Galileo-grinding-lens.png);
+          }
+        }
+      }
+
+      .z-toes-inner {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/toes-inner/Galileo-grinding-lens.png);
+          }
+        }
+      }
+
+      .z-brachial-outer {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/brachial-outer/Galileo-grinding-lens.png);
+          }
+        }
+      }
+
+      .z-brachial-inner {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/brachial-inner/Galileo-grinding-lens.png);
+          }
+        }
+      }
+
+      .z-forearm-outer {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/forearm-outer/Galileo-grinding-lens.png);
+          }
+        }
+      }
+
+      .z-forearm-inner {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/forearm-inner/Galileo-grinding-lens.png);
+          }
+        }
+      }
+
+      .z-hand-outer {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/hand-outer/Galileo-grinding-lens.png);
+          }
+        }
+      }
+
+      .z-hand-inner {
+        i {
+          .skin {
+            background-image: url(../../media/character/male-skin/hand-inner/Galileo-grinding-lens.png);
+          }
+        }
+      }
+    }
+
+    // ================================
+    // begin animation
+    // ================================
+    #char--Galileo-grinding-lens--Galileo {
+      left: 50%;
+      bottom: 0;
+
+      left: 42px;
+      bottom: 0;
+
+      .foot {
+        &.outer {
+          --ini-deg: -10deg;
+        }
+
+        &.inner {
+
+        }
+      }
+
+      .claf {
+        &.outer {
+          --ini-deg: -7deg;
+        }
+
+        &.inner {
+
+        }
+      }
+
+      .thigh {
+        &.outer {
+          --ini-deg: 28deg;
+        }
+
+        &.inner {
+          --ini-deg: 47deg;
+        }
+      }
+
+      .abdomen {
+        &.u {
+          --ini-deg: -25deg;
+
+          
+        }
+      }
+
+      .breasts {
+        &.u {
+          --ini-deg: -20deg;
+        }
+      }
+
+      .neck {
+        &.u {
+          --ini-deg: 0deg;
+        }
+      }
+
+      .head {
+        &.u {
+          --ini-deg: 0deg;
+        }
+      }
+
+      .brachial {
+        &.outer {
+          --shift-left: -5px;
+          --shift-bottom: 4px;
+          --ini-deg: 67deg;
+        }
+
+        &.inner {
+          --shift-left: 11px;
+          --shift-bottom: 4px;
+          --ini-deg: 78deg;
+        }
+      }
+
+      .forearm {
+        &.outer {
+          --ini-deg: 23deg;
+        }
+
+        &.inner {
+          --ini-deg: 20deg;
+        }
+      }
+
+      .hand {
+        &.outer {
+          --ini-deg: 45deg;
+        }
+
+        &.inner {
+          --ini-deg: 14deg;
+        }
+      }
+    }
+
+    .oval {
+      position: absolute;
+      left: 112px;
+      top: 81px;
+      i {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: 1px;
+        top: 0;
+        background-image: url("../../media/illustration/Galileo-granding-lens/grinder-oval.png");
+
+        animation: Galileo-grinding-lens-oval-rotation 0.5s infinite linear;
+
+        @keyframes Galileo-grinding-lens-oval-rotation {
+          0% {
+            transform: rotate(0deg);
+          }
+  
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+
+      animation: Galileo-grinding-lens-oval-shake 0.5s infinite;
+      
+      @keyframes Galileo-grinding-lens-oval-shake {
+        0% {
+          transform: translate(-1px, 0);
+        }
+
+        70% {
+          transform: translate(0, 0);
+        }
+
+        100% {
+          transform: translate(-0.7px, 0);
+        }
+      }
+    }
+
+    #char--Galileo-grinding-lens--grinder {
+      width: 110px;
+      height: 112px;
+      position: absolute;
+      left: 65px;
+      top: 88px;
+
+      background-image: url("../../media/illustration/Galileo-granding-lens/grinder.png");
+
+      .part {
+        width: 12px;
+        height: 76px;
+        position: absolute;
+        left: 49px;
+        top: 28px;
+
+        background-image: url("../../media/illustration/Galileo-granding-lens/grinder-part.png");
+
+        animation: char--Galileo-grinding-lens--grinder-part-shake 0.17s infinite;
+
+        @keyframes char--Galileo-grinding-lens--grinder-part-shake {
+          0% {
+            transform: translate(-0.5px, 0);
+          }
+  
+          70% {
+            transform: translate(0, 0);
+          }
+  
+          100% {
+            transform: translate(-0.7px, 0);
+          }
+        }
+      }
     }
   }
 }

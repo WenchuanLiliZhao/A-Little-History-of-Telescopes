@@ -460,9 +460,13 @@ body.testMode.hideSkin .char .skin {
     height: 0;
     --ini-left: 0px;
     --ini-bottom: 0px;
+    --shift-left: 0px;
+    --shift-bottom: 0px;
+    --left: calc(var(--ini-left) + var(--shift-left));
+    --bottom: calc(var(--ini-left) + var(--shift-left));
     --ini-deg: 0deg;
-    left: var(--ini-left);
-    bottom: var(--ini-bottom);
+    left: calc(var(--ini-left) + var(--shift-left));
+    bottom: calc(var(--ini-bottom) + var(--shift-bottom));
     transform: rotate(var(--ini-deg)); }
     .char .bodyPart i {
       position: absolute; }
@@ -1685,7 +1689,7 @@ body.testMode.hideSkin .char .skin {
   height: 200px;
   position: relative;
   margin: 0 auto; }
-  #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens {
+  #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo {
     -moz-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
     -o-transform: scaleX(-1);
@@ -1694,39 +1698,159 @@ body.testMode.hideSkin .char .skin {
     /*IE*/
     filter: fliph;
     /*IE*/ }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-toes-outer {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-toes-outer {
       z-index: 0; }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-foot-outer {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-foot-outer {
       z-index: 2; }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-claf-outer {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-claf-outer {
       z-index: 1; }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-thigh-outer {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-thigh-outer {
       z-index: 3; }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-abdomen {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-abdomen {
       z-index: 0; }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-breasts {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-breasts {
       z-index: 1; }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-neck {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-neck {
       z-index: 0; }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-head {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-head {
       z-index: 2; }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-brachial-outer {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-brachial-outer {
       z-index: 20; }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-forearm-outer {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-forearm-outer {
       z-index: 21; }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-hand-outer {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-hand-outer {
       z-index: 22; }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-brachial-inner {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-brachial-inner {
       z-index: -20; }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-forearm-inner {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-forearm-inner {
       z-index: -21; }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-hand-inner {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-hand-inner {
       z-index: -22; }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-toes-inner {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-toes-inner {
       z-index: -12; }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-foot-inner {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-foot-inner {
       z-index: -11; }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-claf-inner {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-claf-inner {
       z-index: -13; }
-    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens .z-thigh-inner {
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-thigh-inner {
       z-index: -10; }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-head i .skin {
+      background-image: url(../../media/character/male-skin/head/Galileo-grinding-lens.png); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-neck i .skin {
+      background-image: url(../../media/character/male-skin/neck/Galileo-grinding-lens.png); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-breasts i .skin {
+      background-image: url(../../media/character/male-skin/breasts/Galileo-grinding-lens.png); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-abdomen i .skin {
+      background-image: url(../../media/character/male-skin/abdomen/Galileo-grinding-lens.png); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-thigh-outer i .skin {
+      background-image: url(../../media/character/male-skin/thigh-outer/Galileo-grinding-lens.png); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-claf-outer i .skin {
+      background-image: url(../../media/character/male-skin/claf-outer/Galileo-grinding-lens.png); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-thigh-inner i .skin {
+      background-image: url(../../media/character/male-skin/thigh-inner/Galileo-grinding-lens.png); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-claf-inner i .skin {
+      background-image: url(../../media/character/male-skin/claf-inner/Galileo-grinding-lens.png); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-foot-outer i .skin {
+      background-image: url(../../media/character/male-skin/foot-outer/Galileo-grinding-lens.png); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-foot-inner i .skin {
+      background-image: url(../../media/character/male-skin/foot-inner/Galileo-grinding-lens.png); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-toes-outer i .skin {
+      background-image: url(../../media/character/male-skin/toes-outer/Galileo-grinding-lens.png); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-toes-inner i .skin {
+      background-image: url(../../media/character/male-skin/toes-inner/Galileo-grinding-lens.png); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-brachial-outer i .skin {
+      background-image: url(../../media/character/male-skin/brachial-outer/Galileo-grinding-lens.png); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-brachial-inner i .skin {
+      background-image: url(../../media/character/male-skin/brachial-inner/Galileo-grinding-lens.png); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-forearm-outer i .skin {
+      background-image: url(../../media/character/male-skin/forearm-outer/Galileo-grinding-lens.png); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-forearm-inner i .skin {
+      background-image: url(../../media/character/male-skin/forearm-inner/Galileo-grinding-lens.png); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-hand-outer i .skin {
+      background-image: url(../../media/character/male-skin/hand-outer/Galileo-grinding-lens.png); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .z-hand-inner i .skin {
+      background-image: url(../../media/character/male-skin/hand-inner/Galileo-grinding-lens.png); }
+  #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo {
+    left: 50%;
+    bottom: 0;
+    left: 42px;
+    bottom: 0; }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .foot.outer {
+      --ini-deg: -10deg; }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .claf.outer {
+      --ini-deg: -7deg; }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .thigh.outer {
+      --ini-deg: 28deg; }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .thigh.inner {
+      --ini-deg: 47deg; }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .abdomen.u {
+      --ini-deg: -25deg; }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .breasts.u {
+      --ini-deg: -20deg; }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .neck.u {
+      --ini-deg: 0deg; }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .head.u {
+      --ini-deg: 0deg; }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .brachial.outer {
+      --shift-left: -5px;
+      --shift-bottom: 4px;
+      --ini-deg: 67deg; }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .brachial.inner {
+      --shift-left: 11px;
+      --shift-bottom: 4px;
+      --ini-deg: 78deg; }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .forearm.outer {
+      --ini-deg: 23deg; }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .forearm.inner {
+      --ini-deg: 20deg; }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .hand.outer {
+      --ini-deg: 45deg; }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--Galileo .hand.inner {
+      --ini-deg: 14deg; }
+  #Galileo-grinding-lens .figbody .oval {
+    position: absolute;
+    left: 112px;
+    top: 81px;
+    animation: Galileo-grinding-lens-oval-shake 0.5s infinite; }
+    #Galileo-grinding-lens .figbody .oval i {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      left: 1px;
+      top: 0;
+      background-image: url("../../media/illustration/Galileo-granding-lens/grinder-oval.png");
+      animation: Galileo-grinding-lens-oval-rotation 0.5s infinite linear; }
+@keyframes Galileo-grinding-lens-oval-rotation {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+@keyframes Galileo-grinding-lens-oval-shake {
+  0% {
+    transform: translate(-1px, 0); }
+  70% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(-0.7px, 0); } }
+  #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--grinder {
+    width: 110px;
+    height: 112px;
+    position: absolute;
+    left: 65px;
+    top: 88px;
+    background-image: url("../../media/illustration/Galileo-granding-lens/grinder.png"); }
+    #Galileo-grinding-lens .figbody #char--Galileo-grinding-lens--grinder .part {
+      width: 12px;
+      height: 76px;
+      position: absolute;
+      left: 49px;
+      top: 28px;
+      background-image: url("../../media/illustration/Galileo-granding-lens/grinder-part.png");
+      animation: char--Galileo-grinding-lens--grinder-part-shake 0.17s infinite; }
+@keyframes char--Galileo-grinding-lens--grinder-part-shake {
+  0% {
+    transform: translate(-0.5px, 0); }
+  70% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(-0.7px, 0); } }

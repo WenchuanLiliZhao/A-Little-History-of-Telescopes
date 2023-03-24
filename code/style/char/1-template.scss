@@ -116,10 +116,17 @@ body.testMode {
 
     --ini-left: 0px;
     --ini-bottom: 0px;
+
+    --shift-left: 0px;
+    --shift-bottom: 0px;
+
+    --left: calc(var(--ini-left) + var(--shift-left));
+    --bottom: calc(var(--ini-left) + var(--shift-left));
+
     --ini-deg: 0deg;
 
-    left: var(--ini-left);
-    bottom: var(--ini-bottom);
+    left: calc(var(--ini-left) + var(--shift-left));
+    bottom: calc(var(--ini-bottom) + var(--shift-bottom));
     transform: rotate(var(--ini-deg));
 
     // Skin 以及 test skin 的存放位置
