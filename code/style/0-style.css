@@ -92,13 +92,12 @@ body.Galileo {
     letter-spacing: 0.025em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-
-#preloader {
-  background-color: var(--grey);
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 10000000; }
+  body.Galileo #preloader {
+    background-color: var(--grey);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 10000000; }
 
 .page-cover-container {
   position: relative; }
@@ -400,17 +399,17 @@ body.testMode .char::before {
   transform: translate(-50%, 0%);
   left: 0;
   bottom: 0;
-  background-color: rgba(225, 0, 255, 0.153); }
+  background-color: rgba(51, 255, 0, 0.8); }
 body.testMode .char::after {
   content: "";
   display: block;
   position: absolute;
   width: 0.5px;
-  height: 100%;
+  height: 100px;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
-  background-color: rgba(225, 0, 255, 0.153); }
+  background-color: rgba(51, 255, 0, 0.8); }
 body.testMode .char .bodyPart::before {
   display: block;
   content: "";
@@ -696,139 +695,139 @@ body.testMode.hideSkin .char .skin {
   height: 200px;
   position: relative;
   margin: 0 auto; }
-
-#char--Hans-Lipperhey .z-toes-outer {
-  z-index: 0; }
-#char--Hans-Lipperhey .z-foot-outer {
-  z-index: 2; }
-#char--Hans-Lipperhey .z-claf-outer {
-  z-index: 1; }
-#char--Hans-Lipperhey .z-thigh-outer {
-  z-index: 3; }
-#char--Hans-Lipperhey .z-abdomen {
-  z-index: 10; }
-#char--Hans-Lipperhey .z-breasts {
-  z-index: 11; }
-#char--Hans-Lipperhey .z-neck {
-  z-index: 10; }
-#char--Hans-Lipperhey .z-head {
-  z-index: 12; }
-#char--Hans-Lipperhey .z-brachial-outer {
-  z-index: 20; }
-#char--Hans-Lipperhey .z-forearm-outer {
-  z-index: 22; }
-#char--Hans-Lipperhey .z-hand-outer {
-  z-index: 21; }
-#char--Hans-Lipperhey .z-brachial-inner {
-  z-index: -21; }
-#char--Hans-Lipperhey .z-forearm-inner {
-  z-index: -22; }
-#char--Hans-Lipperhey .z-hand-inner {
-  z-index: -20; }
-#char--Hans-Lipperhey .z-toes-inner {
-  z-index: -12; }
-#char--Hans-Lipperhey .z-foot-inner {
-  z-index: -11; }
-#char--Hans-Lipperhey .z-claf-inner {
-  z-index: -13; }
-#char--Hans-Lipperhey .z-thigh-inner {
-  z-index: -10; }
-#char--Hans-Lipperhey .z-head i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/head.png); }
-#char--Hans-Lipperhey .z-neck i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/neck.png); }
-#char--Hans-Lipperhey .z-breasts i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/breasts.png); }
-#char--Hans-Lipperhey .z-abdomen i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/abdomen.png); }
-#char--Hans-Lipperhey .z-thigh-outer i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/thigh-outer.png); }
-#char--Hans-Lipperhey .z-claf-outer i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/claf-outer.png); }
-#char--Hans-Lipperhey .z-thigh-inner i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/thigh-inner.png); }
-#char--Hans-Lipperhey .z-claf-inner i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/claf-inner.png); }
-#char--Hans-Lipperhey .z-foot-outer i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/foot-outer.png); }
-#char--Hans-Lipperhey .z-foot-inner i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/foot-inner.png); }
-#char--Hans-Lipperhey .z-toes-outer i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/toes-outer.png); }
-#char--Hans-Lipperhey .z-toes-inner i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/toes-inner.png); }
-#char--Hans-Lipperhey .z-brachial-outer i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/brachial-outer.png); }
-#char--Hans-Lipperhey .z-brachial-inner i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/brachial-inner.png); }
-#char--Hans-Lipperhey .z-forearm-outer i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/forearm-outer.png); }
-#char--Hans-Lipperhey .z-forearm-inner i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/forearm-inner.png); }
-#char--Hans-Lipperhey .z-hand-outer i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/hand-outer.png); }
-#char--Hans-Lipperhey .z-hand-inner i .skin {
-  background-image: url(../../media/character/male-skin/Lipperhey/hand-inner.png); }
-
-[id*="char--"].animation--looking-through .z-hand-outer .telescope {
-  z-index: -1;
-  position: absolute;
-  left: 2px;
-  top: 10px;
-  transform: rotate(-18deg);
-  animation: lookingThrough-deco-rotation 20s infinite;
-  animation-delay: 2s; }
-  [id*="char--"].animation--looking-through .z-hand-outer .telescope > .image {
-    z-index: -10;
-    display: block;
-    position: absolute;
-    width: 3px;
-    height: 75px;
-    background-image: url(../../media/character/deco/Lipperhey-telescope.png);
-    transform: translate(-1px, -33px); }
-[id*="char--"].animation--looking-through .foot.inner {
-  animation: lookingThrough-inner-foot-rotation 20s infinite;
-  animation-delay: 2s; }
-[id*="char--"].animation--looking-through .claf.outer {
-  animation: lookingThrough-outer-claf-rotation 20s infinite;
-  animation-delay: 2s; }
-[id*="char--"].animation--looking-through .claf.inner {
-  animation: lookingThrough-inner-claf-rotation 20s infinite;
-  animation-delay: 2s; }
-[id*="char--"].animation--looking-through .thigh.outer {
-  animation: lookingThrough-outer-thigh-rotation 20s infinite;
-  animation-delay: 2s; }
-[id*="char--"].animation--looking-through .thigh.inner {
-  animation: lookingThrough-inner-thigh-rotation 20s infinite;
-  animation-delay: 2s; }
-[id*="char--"].animation--looking-through .abdomen.u {
-  animation: lookingThrough-abdomen-rotation 20s infinite;
-  animation-delay: 2s; }
-[id*="char--"].animation--looking-through .breasts.u {
-  animation: lookingThrough-breasts-rotation 20s infinite;
-  animation-delay: 2s; }
-[id*="char--"].animation--looking-through .brachial.outer {
-  transform: rotate(17deg);
-  animation: lookingThrough-outer-brachial-rotation 20s infinite;
-  animation-delay: 2s; }
-[id*="char--"].animation--looking-through .brachial.inner {
-  transform: rotate(14deg);
-  animation: lookingThrough-inner-brachial-rotation 20s infinite;
-  animation-delay: 2s; }
-[id*="char--"].animation--looking-through .forearm.outer {
-  transform: rotate(24deg);
-  animation: lookingThrough-outer-forearm-rotation 20s infinite;
-  animation-delay: 2s; }
-[id*="char--"].animation--looking-through .forearm.inner {
-  animation: lookingThrough-inner-forearm-rotation 20s infinite;
-  animation-delay: 2s; }
-[id*="char--"].animation--looking-through .neck.u {
-  animation: lookingThrough-neck-rotation 20s infinite;
-  animation-delay: 2s; }
-[id*="char--"].animation--looking-through .head.u {
-  animation: lookingThrough-head-rotation 20s infinite;
-  animation-delay: 2s; }
-
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-toes-outer {
+    z-index: 0; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-foot-outer {
+    z-index: 2; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-claf-outer {
+    z-index: 1; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-thigh-outer {
+    z-index: 3; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-abdomen {
+    z-index: 10; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-breasts {
+    z-index: 11; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-neck {
+    z-index: 10; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-head {
+    z-index: 12; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-brachial-outer {
+    z-index: 20; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-forearm-outer {
+    z-index: 22; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-hand-outer {
+    z-index: 21; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-brachial-inner {
+    z-index: -21; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-forearm-inner {
+    z-index: -22; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-hand-inner {
+    z-index: -20; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-toes-inner {
+    z-index: -12; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-foot-inner {
+    z-index: -11; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-claf-inner {
+    z-index: -13; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-thigh-inner {
+    z-index: -10; }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-head i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/head.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-neck i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/neck.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-breasts i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/breasts.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-abdomen i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/abdomen.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-thigh-outer i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/thigh-outer.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-claf-outer i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/claf-outer.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-thigh-inner i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/thigh-inner.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-claf-inner i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/claf-inner.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-foot-outer i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/foot-outer.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-foot-inner i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/foot-inner.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-toes-outer i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/toes-outer.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-toes-inner i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/toes-inner.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-brachial-outer i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/brachial-outer.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-brachial-inner i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/brachial-inner.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-forearm-outer i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/forearm-outer.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-forearm-inner i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/forearm-inner.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-hand-outer i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/hand-outer.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-hand-inner i .skin {
+    background-image: url(../../media/character/male-skin/Lipperhey/hand-inner.png); }
+  #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey {
+    left: 50%;
+    bottom: 0; }
+    #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-hand-outer .telescope {
+      z-index: -1;
+      position: absolute;
+      left: 2px;
+      top: 10px;
+      transform: rotate(-18deg);
+      animation: lookingThrough-deco-rotation 17s infinite;
+      animation-delay: 2s; }
+      #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .z-hand-outer .telescope > .image {
+        z-index: -10;
+        display: block;
+        position: absolute;
+        width: 3px;
+        height: 75px;
+        background-image: url(../../media/character/deco/Lipperhey-telescope.png);
+        transform: translate(-1px, -33px); }
+    #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .foot.inner {
+      animation: lookingThrough-inner-foot-rotation 17s infinite;
+      animation-delay: 2s; }
+    #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .claf.outer {
+      animation: lookingThrough-outer-claf-rotation 17s infinite;
+      animation-delay: 2s; }
+    #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .claf.inner {
+      animation: lookingThrough-inner-claf-rotation 17s infinite;
+      animation-delay: 2s; }
+    #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .thigh.outer {
+      animation: lookingThrough-outer-thigh-rotation 17s infinite;
+      animation-delay: 2s; }
+    #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .thigh.inner {
+      animation: lookingThrough-inner-thigh-rotation 17s infinite;
+      animation-delay: 2s; }
+    #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .abdomen.u {
+      animation: lookingThrough-abdomen-rotation 17s infinite;
+      animation-delay: 2s; }
+    #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .breasts.u {
+      animation: lookingThrough-breasts-rotation 17s infinite;
+      animation-delay: 2s; }
+    #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .brachial.outer {
+      transform: rotate(17deg);
+      animation: lookingThrough-outer-brachial-rotation 17s infinite;
+      animation-delay: 2s; }
+    #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .brachial.inner {
+      transform: rotate(14deg);
+      animation: lookingThrough-inner-brachial-rotation 17s infinite;
+      animation-delay: 2s; }
+    #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .forearm.outer {
+      transform: rotate(24deg);
+      animation: lookingThrough-outer-forearm-rotation 17s infinite;
+      animation-delay: 2s; }
+    #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .forearm.inner {
+      animation: lookingThrough-inner-forearm-rotation 17s infinite;
+      animation-delay: 2s; }
+    #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .neck.u {
+      animation: lookingThrough-neck-rotation 17s infinite;
+      animation-delay: 2s; }
+    #Liepperhey-looking-through .figbody #char--Liepperhey-looking-through--Hans-Lipperhey .head.u {
+      animation: lookingThrough-head-rotation 17s infinite;
+      animation-delay: 2s; }
 @keyframes lookingThrough-outer-claf-rotation {
   0% {
     transform: rotate(0deg); }
@@ -1013,8 +1012,7 @@ body.testMode.hideSkin .char .skin {
   #Triptych-of-Galileo .figbody {
     position: relative;
     width: 100%;
-    padding-top: calc(var(--ill-h) / var(--ill-w) * 100%);
-    overflow: hidden; }
+    padding-top: calc(var(--ill-h) / var(--ill-w) * 100%); }
     #Triptych-of-Galileo .figbody .nightsky {
       width: calc((var(--ill-w) - 2) * 1px);
       height: calc((var(--ill-h) - 2) * 1px);
@@ -1618,3 +1616,66 @@ body.testMode.hideSkin .char .skin {
     transform: rotate(calc(var(--ini-deg) + 30deg)); }
   100% {
     transform: rotate(calc(var(--ini-deg) - 9deg)); } }
+#diagram-of-Lipperheys-telescope {
+  --ill-h: 360;
+  --ill-w: 880; }
+  #diagram-of-Lipperheys-telescope .figbody {
+    position: relative;
+    width: 100%;
+    padding-top: calc(var(--ill-h) / var(--ill-w) * 100%); }
+    #diagram-of-Lipperheys-telescope .figbody .diagram {
+      width: calc(var(--ill-w) * 1px);
+      height: calc(var(--ill-h) * 1px);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-image: url("../../media/illustration/diagram-of-Lipperhey-telescope.png"); }
+      #diagram-of-Lipperheys-telescope .figbody .diagram .tube, #diagram-of-Lipperheys-telescope .figbody .diagram .tube-hover {
+        width: 672px;
+        height: 32px;
+        position: absolute;
+        left: 104px;
+        top: 328px;
+        transition: opacity 0.5s; }
+      #diagram-of-Lipperheys-telescope .figbody .diagram .tube {
+        background-image: url("../../media/illustration/diagram-of-Lipperhey-telescope/tube.png");
+        opacity: 1; }
+      #diagram-of-Lipperheys-telescope .figbody .diagram .tube-hover {
+        background-image: url("../../media/illustration/diagram-of-Lipperhey-telescope/tube-hover.png");
+        opacity: 0; }
+      #diagram-of-Lipperheys-telescope .figbody .diagram:hover .tube {
+        opacity: 1; }
+      #diagram-of-Lipperheys-telescope .figbody .diagram:hover .tube-hover {
+        opacity: 1; }
+
+#diagram-of-eyepiece {
+  --ill-h: 240;
+  --ill-w: 880; }
+  #diagram-of-eyepiece .figbody {
+    position: relative;
+    width: 100%;
+    padding-top: calc(var(--ill-h) / var(--ill-w) * 100%); }
+    #diagram-of-eyepiece .figbody .diagram {
+      width: calc(var(--ill-w) * 1px);
+      height: calc(var(--ill-h) * 1px);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-image: url("../../media/illustration/diagram-of-eyepiece.png"); }
+      #diagram-of-eyepiece .figbody .diagram .eyepiece, #diagram-of-eyepiece .figbody .diagram .no-eyepiece {
+        width: 820px;
+        height: 160px;
+        position: absolute;
+        left: 40px;
+        top: 40px;
+        transition: opacity 0.5s; }
+      #diagram-of-eyepiece .figbody .diagram .eyepiece {
+        background-image: url("../../media/illustration/diagram-of-eyepiece/eyepiece.png");
+        opacity: 1; }
+      #diagram-of-eyepiece .figbody .diagram .no-eyepiece {
+        background-image: url("../../media/illustration/diagram-of-eyepiece/no-eyepiece.png");
+        opacity: 0; }
+      #diagram-of-eyepiece .figbody .diagram:hover .eyepiece {
+        opacity: 0; }
+      #diagram-of-eyepiece .figbody .diagram:hover .no-eyepiece {
+        opacity: 1; }

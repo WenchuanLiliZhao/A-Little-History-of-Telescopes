@@ -1,0 +1,53 @@
+#diagram-of-Lipperheys-telescope {
+  --ill-h: 360;
+  --ill-w: 880;
+
+  .figbody {
+    position: relative;
+    width: 100%;
+    padding-top: calc(var(--ill-h) / var(--ill-w) * 100%);
+
+    .diagram {
+      width: calc(var(--ill-w) * 1px);
+      height: calc(var(--ill-h) * 1px);
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      background-image: url("../../media/illustration/diagram-of-Lipperhey-telescope.png");
+
+      .tube, .tube-hover {
+        width: 672px;
+        height: 32px;
+        position: absolute;
+
+        left: 104px;
+        top: 328px;
+
+        transition: opacity 0.5s;
+      }
+
+      .tube {
+        background-image: url("../../media/illustration/diagram-of-Lipperhey-telescope/tube.png");
+
+        opacity: 1;
+      }
+
+      .tube-hover {
+        background-image: url("../../media/illustration/diagram-of-Lipperhey-telescope/tube-hover.png");
+
+        opacity: 0;
+      }
+
+      &:hover {
+        .tube {
+          opacity: 1;
+        }
+
+        .tube-hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

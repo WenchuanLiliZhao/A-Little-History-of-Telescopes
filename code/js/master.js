@@ -1,7 +1,9 @@
-
+document.querySelector("body").style.overflowY = "hidden";
 var loader = document.getElementById("preloader");
 window.addEventListener("load", function(){
   loader.style.display = "none";
+
+  document.querySelector("body").style.overflowY = "auto";
 
   console.log("Welcome!");
 })
@@ -42,21 +44,24 @@ function resbox() {
 
   var set = document.querySelectorAll(".resbox");
 
+  console.log("\n The overflow attr is added by JS: \n =============")
   for (i = 0; i < set.length; i++) {
     var mom = set[i].parentElement;
 
     var momInitialW = getComputedStyle(mom).getPropertyValue('--ill-w');
-
     var momCurrentW = mom.offsetWidth;
-
-    console.log("🤖️ initial height: " + momInitialW);
-
     var scaleRatio = momCurrentW / momInitialW;
-
-    console.log("🤖️ scaleRatio: " + scaleRatio);
-
     set[i].style.transform = "scale(" + scaleRatio + ")";
+
+    var resbox = document.querySelectorAll(".resbox");
+    if (resbox != null) {
+      mom.style.overflow = "hidden";
+      console.log(mom.parentElement);
+      
+    }
+    
   }
+  console.log("============= \n \n");
 }
 
 

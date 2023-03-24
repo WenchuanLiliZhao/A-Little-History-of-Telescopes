@@ -1,5 +1,6 @@
 // 这里使用 `[id*="char--"]` 是为了提高动画参数的优先级
-[id*="char--"].animation--looking-through {
+// [id*="char--"].animation--looking-through,
+#Liepperhey-looking-through {
   $lookingThrough-animation-time: 20s;
   $lookingThrough-animation-delay: 2s;
 
@@ -112,17 +113,6 @@
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 @keyframes lookingThrough-outer-claf-rotation {
   0% {

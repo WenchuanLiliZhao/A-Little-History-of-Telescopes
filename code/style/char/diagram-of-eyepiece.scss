@@ -1,0 +1,53 @@
+#diagram-of-eyepiece {
+  --ill-h: 240;
+  --ill-w: 880;
+
+  .figbody {
+    position: relative;
+    width: 100%;
+    padding-top: calc(var(--ill-h) / var(--ill-w) * 100%);
+
+    .diagram {
+      width: calc(var(--ill-w) * 1px);
+      height: calc(var(--ill-h) * 1px);
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      background-image: url("../../media/illustration/diagram-of-eyepiece.png");
+
+      .eyepiece, .no-eyepiece {
+        width: 820px;
+        height: 160px;
+        position: absolute;
+
+        left: 40px;
+        top: 40px;
+
+        transition: opacity 0.5s;
+      }
+
+      .eyepiece {
+        background-image: url("../../media/illustration/diagram-of-eyepiece/eyepiece.png");
+
+        opacity: 1;
+      }
+
+      .no-eyepiece {
+        background-image: url("../../media/illustration/diagram-of-eyepiece/no-eyepiece.png");
+
+        opacity: 0;
+      }
+
+      &:hover {
+        .eyepiece {
+          opacity: 0;
+        }
+
+        .no-eyepiece {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

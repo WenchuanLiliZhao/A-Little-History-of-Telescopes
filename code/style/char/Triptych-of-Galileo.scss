@@ -7,8 +7,6 @@
     width: 100%;
     padding-top: calc(var(--ill-h) / var(--ill-w) * 100%);
 
-    overflow: hidden;
-
     .nightsky {
       width: calc((var(--ill-w) - 2) * 1px);
       height: calc((var(--ill-h) - 2) * 1px);
