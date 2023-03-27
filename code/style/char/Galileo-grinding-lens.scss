@@ -319,12 +319,42 @@
       .neck {
         &.u {
           --ini-deg: 0deg;
+
+          animation: Galileo-grinding-lens--head 3s infinite;
+          @keyframes Galileo-grinding-lens--head {
+            0% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+
+            50% {
+              transform: rotate(calc(var(--ini-deg) - 5deg));
+            }
+
+            100% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+          }
         }
       }
 
       .head {
         &.u {
           --ini-deg: 0deg;
+
+          animation: Galileo-grinding-lens--head 5s infinite;
+          @keyframes Galileo-grinding-lens--head {
+            0% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+
+            50% {
+              transform: rotate(calc(var(--ini-deg) - 4deg));
+            }
+
+            100% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+          }
         }
       }
 

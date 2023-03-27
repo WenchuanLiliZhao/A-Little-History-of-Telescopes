@@ -1288,14 +1288,49 @@
           However, Lipperhey did not seem to intend to observe celestial bodies with his telescope. But, what Galilei Galilei (1564-1642), the Italian astronomer and physicist, had was an ambition far beyond practical purposes such as navigational observation or military reconnaissance. He wanted to see something no man had seen before in the night sky, which motivated him to improve Lipperhey’s design.
         </p>
 
-        <figure class="illustration width-full" id="">
+        <figure class="illustration width-full" id="diagram-of-magnification">
           <div class="figbody">
-            <div class="test"></div>
+            <div class="resbox">
+              <div class="mag">
+                <div class="image">
+                  <img src="media/illustration/diagram-of-magnification/sky.png" alt="">
+                </div>
+              </div>
+              <div class="no-mag">
+                <div class="image">
+                  <img src="media/illustration/diagram-of-magnification/sky.png" alt="">
+                </div>
+              </div>
+              <div class="diagram"></div>
+            </div>
           </div>
           <figcaption>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quos sed ab libero sunt possimus, vel, repudiandae doloremque veniam placeat soluta odio ea recusandae doloribus hic tempore maxime repellat! Odit!
           </figcaption>
+
+          <script>
+            function diagramOfMagnification() {
+              addEventListener('mousemove', function(event) {
+                let mouseX = event.screenX;
+                let mouseY = event.screenY;
+                // console.log("Current mouse position: X = " + mouseX + ", Y = " + mouseY);
+
+
+                let mom = document.querySelector("#diagram-of-magnification");
+
+                let skyMag = mom.querySelector(".mag .image");
+                console.log(skyMag);
+                skyMag.style.transform = "translate(" + (-mouseX / 100) + "px , " + (-mouseY / 100) + "px)"
+
+                
+              });
+            }
+
+            diagramOfMagnification()
+          </script>
         </figure>
+
+        
 
         <p>
           By adjusting the curvature of the lenses and the distance between them, his telescope had a magnification of thirty times “so that the diameter of the same Moon appears as if it were thirty times.”

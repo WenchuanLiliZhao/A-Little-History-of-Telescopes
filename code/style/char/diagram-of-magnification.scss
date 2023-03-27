@@ -1,0 +1,60 @@
+#diagram-of-magnification {
+  --ill-h: 360;
+  --ill-w: 880;
+
+    .figbody {
+      position: relative;
+      width: 100%;
+      padding-top: calc(var(--ill-h) / var(--ill-w) * 100%);
+
+    .mag {
+      width: 320px;
+      height: 320px;
+      position: absolute;
+      left: 520px;
+      top: 20px;
+      border-radius: 1000px;
+      overflow: hidden;
+      opacity: 0.5;
+
+      .image {
+        width: 360px;
+        height: 360px;
+
+        img {
+          transform: translate(-20px, -20px);
+        }
+      }
+    }
+
+    .no-mag {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      left: 640px;
+      top: 140px;
+      border-radius: 1000px;
+      border: 1px solid rgba(white, 0.16);
+      overflow: hidden;
+
+      .image {
+        width: 90px;
+        height: 90px;
+
+        img {
+          transform: translate(-5px, -5px);
+        }
+      }
+    }
+
+    .diagram {
+      width: calc(var(--ill-w) * 1px);
+      height: calc(var(--ill-h) * 1px);
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      background-image: url(../../media/illustration/diagram-of-magnification.png)
+    }
+  }
+}
