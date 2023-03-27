@@ -172,6 +172,21 @@
       .foot {
         &.outer {
           --ini-deg: -10deg;
+
+          animation: Galileo-grinding-lens--foot-outer 1s infinite;
+          @keyframes Galileo-grinding-lens--foot-outer {
+            0% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+
+            50% {
+              transform: rotate(calc(var(--ini-deg) - 0.5deg));
+            }
+
+            100% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+          }
         }
 
         &.inner {
@@ -182,20 +197,80 @@
       .claf {
         &.outer {
           --ini-deg: -7deg;
+
+          animation: Galileo-grinding-lens--claf-outer 1s infinite;
+          @keyframes Galileo-grinding-lens--claf-outer {
+            0% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+
+            50% {
+              transform: rotate(calc(var(--ini-deg) - 1deg));
+            }
+
+            100% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+          }
         }
 
         &.inner {
+          --ini-deg: -23deg;
 
+          animation: Galileo-grinding-lens--claf-inner 1s infinite;
+          @keyframes Galileo-grinding-lens--claf-inner {
+            0% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+
+            50% {
+              transform: rotate(calc(var(--ini-deg) + 2deg));
+            }
+
+            100% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+          }
         }
       }
 
       .thigh {
         &.outer {
           --ini-deg: 28deg;
+
+          animation: Galileo-grinding-lens--thigh-outer 1s infinite;
+          @keyframes Galileo-grinding-lens--thigh-outer {
+            0% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+
+            50% {
+              transform: rotate(calc(var(--ini-deg) + 2deg));
+            }
+
+            100% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+          }
         }
 
         &.inner {
           --ini-deg: 47deg;
+
+          animation: Galileo-grinding-lens--thigh-inner 1s infinite;
+          @keyframes Galileo-grinding-lens--thigh-inner {
+            0% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+
+            50% {
+              transform: rotate(calc(var(--ini-deg) - 2deg));
+            }
+
+            100% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+          }
         }
       }
 
@@ -203,13 +278,41 @@
         &.u {
           --ini-deg: -25deg;
 
-          
+          animation: Galileo-grinding-lens--abdomen 1s infinite;
+          @keyframes Galileo-grinding-lens--abdomen {
+            0% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+
+            50% {
+              transform: rotate(calc(var(--ini-deg) - 1deg));
+            }
+
+            100% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+          }
         }
       }
 
       .breasts {
         &.u {
           --ini-deg: -20deg;
+
+          animation: Galileo-grinding-lens--abdomen 2s infinite;
+          @keyframes Galileo-grinding-lens--abdomen {
+            0% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+
+            50% {
+              transform: rotate(calc(var(--ini-deg) - 1deg));
+            }
+
+            100% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+          }
         }
       }
 
@@ -230,22 +333,82 @@
           --shift-left: -5px;
           --shift-bottom: 4px;
           --ini-deg: 67deg;
+
+          animation: Galileo-grinding-lens--brachial-outer 2s infinite;
+          @keyframes Galileo-grinding-lens--brachial-outer {
+            0% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+
+            50% {
+              transform: rotate(calc(var(--ini-deg) - 2deg));
+            }
+
+            100% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+          }
         }
 
         &.inner {
           --shift-left: 11px;
           --shift-bottom: 4px;
           --ini-deg: 78deg;
+
+          animation: Galileo-grinding-lens--brachial-inner 4s infinite;
+          @keyframes Galileo-grinding-lens--brachial-inner {
+            0% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+
+            50% {
+              transform: rotate(calc(var(--ini-deg) - 4deg));
+            }
+
+            100% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+          }
         }
       }
 
       .forearm {
         &.outer {
           --ini-deg: 23deg;
+
+          animation: Galileo-grinding-lens--forearm-outer 2s infinite;
+          @keyframes Galileo-grinding-lens--forearm-outer {
+            0% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+
+            50% {
+              transform: rotate(calc(var(--ini-deg) + 2deg));
+            }
+
+            100% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+          }
         }
 
         &.inner {
           --ini-deg: 20deg;
+
+          animation: Galileo-grinding-lens--forearm-inner 4s infinite;
+          @keyframes Galileo-grinding-lens--forearm-inner {
+            0% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+
+            50% {
+              transform: rotate(calc(var(--ini-deg) + 8deg));
+            }
+
+            100% {
+              transform: rotate(calc(var(--ini-deg) + 0deg));
+            }
+          }
         }
       }
 
