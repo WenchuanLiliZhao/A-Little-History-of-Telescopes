@@ -1289,45 +1289,10 @@
         </p>
 
         <figure class="illustration width-full" id="diagram-of-magnification">
-          <div class="figbody">
-            <div class="resbox">
-              <div class="mag">
-                <div class="image">
-                  <img src="media/illustration/diagram-of-magnification/sky.png" alt="">
-                </div>
-              </div>
-              <div class="no-mag">
-                <div class="image">
-                  <img src="media/illustration/diagram-of-magnification/sky.png" alt="">
-                </div>
-              </div>
-              <div class="diagram"></div>
-            </div>
-          </div>
+          <img src="media/illustration/diagram-of-magnification-display.png" alt="">
           <figcaption>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quos sed ab libero sunt possimus, vel, repudiandae doloremque veniam placeat soluta odio ea recusandae doloribus hic tempore maxime repellat! Odit!
           </figcaption>
-
-          <script>
-            function diagramOfMagnification() {
-              addEventListener('mousemove', function(event) {
-                let mouseX = event.screenX;
-                let mouseY = event.screenY;
-                // console.log("Current mouse position: X = " + mouseX + ", Y = " + mouseY);
-
-
-                let mom = document.querySelector("#diagram-of-magnification");
-
-                let skyMag = mom.querySelector(".mag .image");
-                console.log(skyMag);
-                skyMag.style.transform = "translate(" + (-mouseX / 100) + "px , " + (-mouseY / 100) + "px)"
-
-                
-              });
-            }
-
-            diagramOfMagnification()
-          </script>
         </figure>
 
         
