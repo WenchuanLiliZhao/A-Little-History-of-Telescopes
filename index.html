@@ -1289,13 +1289,70 @@
         </p>
 
         <figure class="illustration width-full" id="diagram-of-magnification">
-          <img src="media/illustration/diagram-of-magnification-display.png" alt="">
+          <div class="figbody">
+            <div class="resbox">
+              <div class="mag">
+                <div class="image">
+                  <img src="media/illustration/diagram-of-magnification/sky.png" alt="">
+                </div>
+              </div>
+              <div class="no-mag">
+                <div class="image">
+                  <img src="media/illustration/diagram-of-magnification/sky.png" alt="">
+                </div>
+              </div>
+              <div class="diagram"></div>
+            </div>
+          </div>
           <figcaption>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quos sed ab libero sunt possimus, vel, repudiandae doloremque veniam placeat soluta odio ea recusandae doloribus hic tempore maxime repellat! Odit!
           </figcaption>
-        </figure>
 
-        
+          <script>
+            function diagramOfMagnification() {
+              addEventListener('mousemove', function(event) {
+                let screenWidth = window.innerWidth;
+                let screenHeight = window.innerHeight;
+                // console.log(screenHeight);
+                let x = event.screenX - (screenWidth / 2);
+                let y = event.screenY + 100 - (screenHeight / 2);
+                // console.log("(" + x + ", " + y + ")")
+
+                let mom = document.querySelector("#diagram-of-magnification");
+
+                let skyset = mom.querySelectorAll(".image");
+
+                for (i = 0; i < skyset.length; i++) {
+                  let size = Math.abs(parseFloat(window.getComputedStyle(skyset[i]).getPropertyValue('top')));
+                  // console.log(size);
+
+                  let transRatioX = (x / (screenWidth / 2)) * size;
+                  let transRatioY = (y / (screenHeight / 2)) * size;
+
+                  if (transRatioX >= size) {
+                    transRatioX = size
+                  } 
+                  
+                  if (transRatioX <= -size) {
+                    transRatioX = -size
+                  }
+
+                  if (transRatioY >= size) {
+                    transRatioY = size
+                  } 
+                  
+                  if (transRatioY <= -size) {
+                    transRatioY = -size
+                  }
+
+                  skyset[i].style.transform = "translate(" + transRatioX + "px , " + transRatioY + "px)"
+                }
+              });
+            }
+
+            diagramOfMagnification()
+          </script>
+        </figure>
 
         <p>
           By adjusting the curvature of the lenses and the distance between them, his telescope had a magnification of thirty times “so that the diameter of the same Moon appears as if it were thirty times.”
@@ -1303,7 +1360,7 @@
 
         <figure class="ref-image width-normal" id="" style="max-width: 600px">
           <div class="figbody">
-            <img src="media/ref-image/Calileo-script-moon.jpg" alt="">
+            <img src="media/ref-image/Calileo-script-moon.jpg" alt="Calileo-script-moon.jpg" style="opacity: 0.8">
           </div>
           <figcaption>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -1318,9 +1375,23 @@
           On the night of 7 January 1610, Galileo pointed his telescope at Jupiter. That night, he discovered three new stars around Jupiter.
         </p>
 
-        <figure class="illustration width-full" id="">
+        <figure class="illustration width-full" id="Galilean-moons">
           <div class="figbody">
-            <div class="test"></div>
+            <div class="resbox">
+              <div class="system">
+                <div class="moon-4"><i></i></div>
+                <div class="moon-3"><i></i></div>
+                <div class="moon-2"><i></i></div>
+                <div class="moon-1"><i></i></div>
+                <!--  -->
+                <div class="shadow-4"></div>
+                <div class="shadow-3"></div>
+                <div class="shadow-2"></div>
+                <div class="shadow-1"></div>
+                <!--  -->
+                <div class="Jupiter"></div>
+              </div>
+            </div>
           </div>
           <figcaption>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quos sed ab libero sunt possimus, vel, repudiandae doloremque veniam placeat soluta odio ea recusandae doloribus hic tempore maxime repellat! Odit!
@@ -1330,6 +1401,10 @@
         <p>According to his observation, these three stars’ positions were changing daily. On the night of 13 January, a fourth star appeared. What Galileo found is the moons of Jupiter. They are Io, Europa, Ganymede, and Callisto, and we call them Galilean moons.</p>
 
         <p>Galileo’s observation provided strong evidence for Copernicus' heliocentric theory by the fact that not all celestial bodies orbit the earth. In the next several decades, the technology of telescopes spread rapidly among scientists and the Heliocentric theory that the church upholds faced its biggest challenge.</p>
+
+        
+        
+
 
       </article>
       <!-- end article -->

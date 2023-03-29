@@ -1,0 +1,92 @@
+#Galilean-moons {
+
+  --ill-w: 560;
+  --ill-h: 551;
+
+  max-width: 560px;
+
+  .figbody {
+    position: relative;
+    width: 100%;
+    padding-top: calc(var(--ill-h) / var(--ill-w) * 100%);
+
+    .system {
+      position: relative;
+      margin-top: 20px;
+      margin-left: 40px;
+
+      [class*="moon-"] {
+        transform-origin: center;
+        transform: rotate(0deg);
+        position: absolute;
+
+        &[class*="-4"] {
+          width: 480px;
+          height: 480px;
+          background-color: #35343C;
+          border-radius: 1000px;
+          left: 0;
+          top: 0;
+        }
+  
+        &[class*="-3"] {
+          width: 272px;
+          height: 272px;
+          background-color: #3D3B43;
+          border-radius: 1000px;
+          left: 104px;
+          top: 104px;
+        }
+  
+        &[class*="-2"] {
+          width: 172px;
+          height: 172px;
+          background-color: #454249;
+          border-radius: 1000px;
+          left: 154px;
+          top: 154px;
+        }
+  
+        &[class*="-1"] {
+          width: 108px;
+          height: 108px;
+          background-color: #4C484F;
+          border-radius: 1000px;
+          left: 186px;
+          top: 186px;
+        }
+      }
+
+      
+
+      [class*="shadow-"] {
+        background-color: var(--white);
+        opacity: 0.04;
+        height: 291px;
+        position: absolute;
+        top: 240px;
+
+        &[class*="-4"] {
+          width: 480px;
+        }
+  
+        &[class*="-3"] {
+          width: 272px;
+          left: 104px;
+        }
+  
+        &[class*="-2"] {
+          width: 172px;
+          left: 154px;
+        }
+  
+        &[class*="-1"] {
+          width: 108px;
+          left: 186px;
+        }
+      }
+
+
+    }
+  }
+}

@@ -1966,3 +1966,112 @@ body.testMode.hideSkin .char .skin {
     transform: translate(0, 0); }
   100% {
     transform: translate(-0.7px, 0); } }
+#diagram-of-magnification {
+  --ill-h: 360;
+  --ill-w: 880; }
+  #diagram-of-magnification .figbody {
+    position: relative;
+    width: 100%;
+    padding-top: calc(var(--ill-h) / var(--ill-w) * 100%); }
+    #diagram-of-magnification .figbody .mag {
+      width: 320px;
+      height: 320px;
+      position: absolute;
+      left: 520px;
+      top: 20px;
+      border-radius: 1000px;
+      overflow: hidden;
+      opacity: 0.5; }
+      #diagram-of-magnification .figbody .mag .image {
+        position: absolute;
+        width: 360px;
+        height: 360px;
+        top: -20px;
+        left: -20px;
+        background-image: url(../../media/illustration/diagram-of-magnification/sky.png); }
+    #diagram-of-magnification .figbody .no-mag {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      left: 640px;
+      top: 140px;
+      border-radius: 1000px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      overflow: hidden; }
+      #diagram-of-magnification .figbody .no-mag .image {
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        top: -5px;
+        left: -5px; }
+        #diagram-of-magnification .figbody .no-mag .image img {
+          transform: translate(-5px, -5px); }
+    #diagram-of-magnification .figbody .diagram {
+      width: calc(var(--ill-w) * 1px);
+      height: calc(var(--ill-h) * 1px);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-image: url(../../media/illustration/diagram-of-magnification.png); }
+
+#Galilean-moons {
+  --ill-w: 560;
+  --ill-h: 551;
+  max-width: 560px; }
+  #Galilean-moons .figbody {
+    position: relative;
+    width: 100%;
+    padding-top: calc(var(--ill-h) / var(--ill-w) * 100%); }
+    #Galilean-moons .figbody .system {
+      position: relative;
+      margin-top: 20px;
+      margin-left: 40px; }
+      #Galilean-moons .figbody .system [class*="moon-"] {
+        transform-origin: center;
+        transform: rotate(0deg);
+        position: absolute; }
+        #Galilean-moons .figbody .system [class*="moon-"][class*="-4"] {
+          width: 480px;
+          height: 480px;
+          background-color: #35343C;
+          border-radius: 1000px;
+          left: 0;
+          top: 0; }
+        #Galilean-moons .figbody .system [class*="moon-"][class*="-3"] {
+          width: 272px;
+          height: 272px;
+          background-color: #3D3B43;
+          border-radius: 1000px;
+          left: 104px;
+          top: 104px; }
+        #Galilean-moons .figbody .system [class*="moon-"][class*="-2"] {
+          width: 172px;
+          height: 172px;
+          background-color: #454249;
+          border-radius: 1000px;
+          left: 154px;
+          top: 154px; }
+        #Galilean-moons .figbody .system [class*="moon-"][class*="-1"] {
+          width: 108px;
+          height: 108px;
+          background-color: #4C484F;
+          border-radius: 1000px;
+          left: 186px;
+          top: 186px; }
+      #Galilean-moons .figbody .system [class*="shadow-"] {
+        background-color: var(--white);
+        opacity: 0.04;
+        height: 291px;
+        position: absolute;
+        top: 240px; }
+        #Galilean-moons .figbody .system [class*="shadow-"][class*="-4"] {
+          width: 480px; }
+        #Galilean-moons .figbody .system [class*="shadow-"][class*="-3"] {
+          width: 272px;
+          left: 104px; }
+        #Galilean-moons .figbody .system [class*="shadow-"][class*="-2"] {
+          width: 172px;
+          left: 154px; }
+        #Galilean-moons .figbody .system [class*="shadow-"][class*="-1"] {
+          width: 108px;
+          left: 186px; }
