@@ -7,7 +7,6 @@ function pauseIntoAni() {
   for (let i = 0; i < introTargetSet.length; i++) {
     let target = introTargetSet[i];
     target.style.animationPlayState = 'paused';
-    console.log("haha haha")
   }
 }
 
@@ -15,6 +14,7 @@ pauseIntoAni();
 
 window.addEventListener("load", function(){
   preloader.style.display = "none";
+  console.log("Welcome")
 
   document.querySelector("body").style.overflowY = "auto";
   
