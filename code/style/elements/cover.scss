@@ -32,7 +32,7 @@
       top: 0;
     }
     
-    .image {
+    .cover-image { //.intro
       position: absolute;
       transform: translate(-50%, 0);
       left: 50%;
@@ -42,8 +42,11 @@
       opacity: 0;;
       
       animation-delay: 0.5s;
-      animation: coverIntro 1s forwards;
-      @keyframes coverIntro {
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      // animation-name: coverIntro;
+      @keyframes cover-image-intro {
         0% {
           opacity: 0;
           transform: translate(-50%, -20px);
@@ -142,9 +145,14 @@
       font-size: 28px;
       line-height: 1.5;
 
-      opacity: 0;
-      animation: title-intro-trans $title-animation-duration forwards;
-      animation-delay: 1*$title-animation-delay-step + $title-animation-delay;
+      &.cover-heading-animation {
+        opacity: 0;
+        animation-delay: 1*$title-animation-delay-step + $title-animation-delay;
+        animation-duration: $title-animation-duration;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        // animation-name: cover-heading-animation-intro;
+      }
     }
   
     h1.title {
@@ -154,9 +162,14 @@
   
       font-weight: bold;
 
-      opacity: 0;
-      animation: title-intro-trans $title-animation-duration forwards;
-      animation-delay: 2*$title-animation-delay-step + $title-animation-delay;
+      &.cover-heading-animation {
+        opacity: 0;
+        animation-delay: 2*$title-animation-delay-step + $title-animation-delay;
+        animation-duration: $title-animation-duration;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        // animation-name: cover-heading-animation-intro;
+      }
     }
   
     p.author {
@@ -167,9 +180,14 @@
       font-style: italic;
       color: var(--color-sig);
 
-      opacity: 0;
-      animation: title-intro-trans $title-animation-duration forwards;
-      animation-delay: 3*$title-animation-delay-step + $title-animation-delay;
+      &.cover-heading-animation {
+        opacity: 0;
+        animation-delay: 3*$title-animation-delay-step + $title-animation-delay;
+        animation-duration: $title-animation-duration;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        // animation-name: cover-heading-animation-intro;
+      }
     }
 
     @media screen and (max-width: 1500px) {
@@ -200,7 +218,7 @@
       }
     }
 
-    @keyframes title-intro-trans {
+    @keyframes cover-heading-animation-intro {
       0% {
         opacity: 0;
         transform: scale(0.95);

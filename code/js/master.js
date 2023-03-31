@@ -5,13 +5,29 @@ let introTargetSet = document.querySelectorAll(".intro");
 
 let preloader = document.querySelector("#preloader");
 
+function addIntroClass() {
+  
+
+  var introSet = document.querySelectorAll(".intro");
+
+  for (let i = 0; i < introSet.length; i++) {
+    target = introSet[i];
+    
+    let introPreClass = target.classList.item(0);
+    console.log(introPreClass);
+
+    target.style.animationName = introPreClass + "-intro";
+  }
+}
+
 window.addEventListener("load", () => {
   preloader.style.display = "none";
-  console.log("Welcome");
+  console.log("Welcome!");
 
   document.querySelector("body").style.overflowY = "auto";
-})
 
+  addIntroClass();
+})
 
 
 
