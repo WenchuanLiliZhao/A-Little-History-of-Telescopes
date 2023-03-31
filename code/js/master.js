@@ -10,8 +10,6 @@ window.addEventListener("load", () => {
   console.log("Welcome");
 
   document.querySelector("body").style.overflowY = "auto";
-
-  document.querySelector("#page").style.display = "block";
 })
 
 
