@@ -3,6 +3,8 @@ body.Galileo {
   @import "font";
 
   overflow-x: hidden;
+
+  
 }
 
 
@@ -12,5 +14,7 @@ body, html {
   height: 100%;
   max-height: 100%;
 
-  
+  *::-webkit-scrollbar {
+    display: none;
+  }
 }
