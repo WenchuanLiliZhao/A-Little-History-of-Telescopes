@@ -1,9 +1,28 @@
+
 document.querySelector("body").style.overflowY = "hidden";
-var loader = document.getElementById("preloader");
+let preloader = document.getElementById("preloader");
+let introTargetSet = document.querySelectorAll(".intro");
+
+function pauseIntoAni() {
+  for (let i = 0; i < introTargetSet.length; i++) {
+    let target = introTargetSet[i];
+    target.style.animationPlayState = 'paused';
+    console.log("haha haha")
+  }
+}
+
+pauseIntoAni();
+
 window.addEventListener("load", function(){
-  loader.style.display = "none";
+  preloader.style.display = "none";
 
   document.querySelector("body").style.overflowY = "auto";
+  
+
+  for (let i = 0; i < introTargetSet.length; i++) {
+    let target = introTargetSet[i];
+    target.style.animationPlayState = 'running';
+  }
 
   console.log("Welcome!");
 })
