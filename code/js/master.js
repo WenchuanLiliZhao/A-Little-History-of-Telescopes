@@ -1,29 +1,19 @@
 
 
-let preloader = document.getElementById("preloader");
+
 let introTargetSet = document.querySelectorAll(".intro");
 
-function pauseIntoAni() {
-  for (let i = 0; i < introTargetSet.length; i++) {
-    let target = introTargetSet[i];
-    target.style.animationPlayState = 'paused';
-  }
+let preloader = document.querySelector("#preloader");
 
-  document.querySelector("body").style.overflowY = "hidden";
-}
-
-pauseIntoAni();
-
-window.addEventListener("load", function(){
+window.addEventListener("load", () => {
   preloader.style.display = "none";
-  console.log("Welcome")
+  console.log("Welcome");
 
   document.querySelector("body").style.overflowY = "auto";
-  
+
 
   for (let i = 0; i < introTargetSet.length; i++) {
     let target = introTargetSet[i];
-    target.style.animationPlayState = 'running';
   }
 })
 
@@ -59,11 +49,11 @@ function charBoxScale() {
 
 
 function resbox() {
-  console.log("resbox\(\) is ready");
+  // console.log("resbox\(\) is ready");
 
   var set = document.querySelectorAll(".resbox");
 
-  console.log("\n The overflow attr is added by JS: \n =============")
+  // console.log("\n The overflow attr is added by JS: \n =============")
   for (i = 0; i < set.length; i++) {
     var mom = set[i].parentElement;
 
@@ -79,7 +69,7 @@ function resbox() {
     // }
     
   }
-  console.log("============= \n \n");
+  // console.log("============= \n \n");
 }
 
 
