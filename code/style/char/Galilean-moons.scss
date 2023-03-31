@@ -1,7 +1,7 @@
 #Galilean-moons {
 
   --ill-w: 560;
-  --ill-h: 567;
+  --ill-h: 490;
 
   max-width: 560px;
 
@@ -12,14 +12,34 @@
 
     .system {
       position: relative;
-      margin-top: 20px;
+      margin-top: 5px;
       margin-left: 40px;
+
+      --ani-dur-factor: 2;
 
       [class*="moon-"] {
         transform-origin: center;
         transform: rotate(0deg);
         position: absolute;
         background-color: rgba(#F7E9DB, 0.04);
+
+        --dur: calc(var(--ani-dur-factor) * var(--period) * 1s);
+
+        animation-iteration-count: infinite;
+        animation-duration: calc(var(--ani-dur-factor) * var(--period) * 1s);
+        animation-timing-function: linear;
+
+        animation-name: Galilean-moons-orbiting;
+
+        @keyframes Galilean-moons-orbiting {
+          0% {
+            transform: rotate(calc(var(--iniDeg) + 0deg));
+          }
+
+          100% {
+            transform: rotate(calc(var(--iniDeg) + 360deg));
+          }
+        }
 
         i {
           width: 10px;
@@ -28,6 +48,21 @@
 
           left: -5px;
           top: calc(50% - 5px);
+
+          animation-iteration-count: infinite;
+          animation-duration: calc(var(--ani-dur-factor) * var(--period) * 1s);
+          animation-timing-function: linear;
+
+          animation-name: Galilean-moons-image-rotation;
+          @keyframes Galilean-moons-image-rotation {
+          0% {
+            transform: rotate(calc(-1 * (var(--iniDeg) + 0deg)));
+          }
+
+          100% {
+            transform: rotate(calc(-1 * (var(--iniDeg) + 360deg)));
+          }
+        }
         }
 
         &[class*="-4"] {
@@ -37,6 +72,9 @@
           border-radius: 1000px;
           left: 0;
           top: 0;
+
+          --iniDeg: 30deg;
+          --period: 16.689;
 
           i {
             background-image: url(../../media/illustration/Galilean-moons-orbiting/vector/Callisto.png);
@@ -50,6 +88,9 @@
           left: 104px;
           top: 104px;
 
+          --iniDeg: 12.3deg;
+          --period: 7.155;
+
           i {
             background-image: url(../../media/illustration/Galilean-moons-orbiting/vector/Ganymede.png);
           }
@@ -62,6 +103,9 @@
           left: 154px;
           top: 154px;
 
+          --period: 3.551;
+          --iniDeg: 12.3deg;
+
           i {
             background-image: url(../../media/illustration/Galilean-moons-orbiting/vector/Europa.png);
           }
@@ -73,6 +117,9 @@
           border-radius: 1000px;
           left: 186px;
           top: 186px;
+
+          --period: 1.769;
+          --iniDeg: 30deg;
 
           i {
             background-image: url(../../media/illustration/Galilean-moons-orbiting/vector/Io.png);

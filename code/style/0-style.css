@@ -2016,7 +2016,7 @@ body.testMode.hideSkin .char .skin {
 
 #Galilean-moons {
   --ill-w: 560;
-  --ill-h: 567;
+  --ill-h: 490;
   max-width: 560px; }
   #Galilean-moons .figbody {
     position: relative;
@@ -2024,25 +2024,47 @@ body.testMode.hideSkin .char .skin {
     padding-top: calc(var(--ill-h) / var(--ill-w) * 100%); }
     #Galilean-moons .figbody .system {
       position: relative;
-      margin-top: 20px;
-      margin-left: 40px; }
+      margin-top: 5px;
+      margin-left: 40px;
+      --ani-dur-factor: 2; }
       #Galilean-moons .figbody .system [class*="moon-"] {
         transform-origin: center;
         transform: rotate(0deg);
         position: absolute;
-        background-color: rgba(247, 233, 219, 0.04); }
+        background-color: rgba(247, 233, 219, 0.04);
+        --dur: calc(var(--ani-dur-factor) * var(--period) * 1s);
+        animation-iteration-count: infinite;
+        animation-duration: calc(var(--ani-dur-factor) * var(--period) * 1s);
+        animation-timing-function: linear;
+        animation-name: Galilean-moons-orbiting; }
+@keyframes Galilean-moons-orbiting {
+  0% {
+    transform: rotate(calc(var(--iniDeg) + 0deg)); }
+  100% {
+    transform: rotate(calc(var(--iniDeg) + 360deg)); } }
         #Galilean-moons .figbody .system [class*="moon-"] i {
           width: 10px;
           height: 10px;
           position: absolute;
           left: -5px;
-          top: calc(50% - 5px); }
+          top: calc(50% - 5px);
+          animation-iteration-count: infinite;
+          animation-duration: calc(var(--ani-dur-factor) * var(--period) * 1s);
+          animation-timing-function: linear;
+          animation-name: Galilean-moons-image-rotation; }
+@keyframes Galilean-moons-image-rotation {
+  0% {
+    transform: rotate(calc(-1 * (var(--iniDeg) + 0deg))); }
+  100% {
+    transform: rotate(calc(-1 * (var(--iniDeg) + 360deg))); } }
         #Galilean-moons .figbody .system [class*="moon-"][class*="-4"] {
           width: 480px;
           height: 480px;
           border-radius: 1000px;
           left: 0;
-          top: 0; }
+          top: 0;
+          --iniDeg: 30deg;
+          --period: 16.689; }
           #Galilean-moons .figbody .system [class*="moon-"][class*="-4"] i {
             background-image: url(../../media/illustration/Galilean-moons-orbiting/vector/Callisto.png); }
         #Galilean-moons .figbody .system [class*="moon-"][class*="-3"] {
@@ -2050,7 +2072,9 @@ body.testMode.hideSkin .char .skin {
           height: 272px;
           border-radius: 1000px;
           left: 104px;
-          top: 104px; }
+          top: 104px;
+          --iniDeg: 12.3deg;
+          --period: 7.155; }
           #Galilean-moons .figbody .system [class*="moon-"][class*="-3"] i {
             background-image: url(../../media/illustration/Galilean-moons-orbiting/vector/Ganymede.png); }
         #Galilean-moons .figbody .system [class*="moon-"][class*="-2"] {
@@ -2058,7 +2082,9 @@ body.testMode.hideSkin .char .skin {
           height: 172px;
           border-radius: 1000px;
           left: 154px;
-          top: 154px; }
+          top: 154px;
+          --period: 3.551;
+          --iniDeg: 12.3deg; }
           #Galilean-moons .figbody .system [class*="moon-"][class*="-2"] i {
             background-image: url(../../media/illustration/Galilean-moons-orbiting/vector/Europa.png); }
         #Galilean-moons .figbody .system [class*="moon-"][class*="-1"] {
@@ -2066,7 +2092,9 @@ body.testMode.hideSkin .char .skin {
           height: 108px;
           border-radius: 1000px;
           left: 186px;
-          top: 186px; }
+          top: 186px;
+          --period: 1.769;
+          --iniDeg: 30deg; }
           #Galilean-moons .figbody .system [class*="moon-"][class*="-1"] i {
             background-image: url(../../media/illustration/Galilean-moons-orbiting/vector/Io.png); }
       #Galilean-moons .figbody .system .Jupiter {
