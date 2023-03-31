@@ -14,6 +14,7 @@ window.addEventListener("load", () => {
 
   for (let i = 0; i < introTargetSet.length; i++) {
     let target = introTargetSet[i];
+    target.classList.add("intro-on")
   }
 })
 

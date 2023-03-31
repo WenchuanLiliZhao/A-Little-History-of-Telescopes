@@ -132,6 +132,9 @@ body, html {
       #preloader .container [class*="wave-"][class*="-3"] {
         animation-delay: 0.6s; }
 
+.intro-on {
+  color: red !important; }
+
 .page-cover-container {
   position: relative; }
   .page-cover-container .page-cover-image-container {
