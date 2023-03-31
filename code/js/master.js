@@ -1,5 +1,5 @@
 
-document.querySelector("body").style.overflowY = "hidden";
+
 let preloader = document.getElementById("preloader");
 let introTargetSet = document.querySelectorAll(".intro");
 
@@ -8,6 +8,8 @@ function pauseIntoAni() {
     let target = introTargetSet[i];
     target.style.animationPlayState = 'paused';
   }
+
+  document.querySelector("body").style.overflowY = "hidden";
 }
 
 pauseIntoAni();
@@ -23,8 +25,6 @@ window.addEventListener("load", function(){
     let target = introTargetSet[i];
     target.style.animationPlayState = 'running';
   }
-
-  console.log("Welcome!");
 })
 
 
