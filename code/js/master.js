@@ -11,11 +11,7 @@ window.addEventListener("load", () => {
 
   document.querySelector("body").style.overflowY = "auto";
 
-
-  for (let i = 0; i < introTargetSet.length; i++) {
-    let target = introTargetSet[i];
-    target.classList.add("intro-on")
-  }
+  document.querySelector("#page").style.display = "block";
 })
 
 
