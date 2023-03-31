@@ -14,7 +14,7 @@ function pauseIntoAni() {
 pauseIntoAni();
 
 window.addEventListener("load", function(){
-  // preloader.style.display = "none";
+  preloader.style.display = "none";
 
   document.querySelector("body").style.overflowY = "auto";
   
