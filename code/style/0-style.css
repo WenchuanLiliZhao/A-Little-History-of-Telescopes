@@ -2016,7 +2016,7 @@ body.testMode.hideSkin .char .skin {
 
 #Galilean-moons {
   --ill-w: 560;
-  --ill-h: 551;
+  --ill-h: 567;
   max-width: 560px; }
   #Galilean-moons .figbody {
     position: relative;
@@ -2029,35 +2029,53 @@ body.testMode.hideSkin .char .skin {
       #Galilean-moons .figbody .system [class*="moon-"] {
         transform-origin: center;
         transform: rotate(0deg);
-        position: absolute; }
+        position: absolute;
+        background-color: rgba(247, 233, 219, 0.04); }
+        #Galilean-moons .figbody .system [class*="moon-"] i {
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          left: -5px;
+          top: calc(50% - 5px); }
         #Galilean-moons .figbody .system [class*="moon-"][class*="-4"] {
           width: 480px;
           height: 480px;
-          background-color: #35343C;
           border-radius: 1000px;
           left: 0;
           top: 0; }
+          #Galilean-moons .figbody .system [class*="moon-"][class*="-4"] i {
+            background-image: url(../../media/illustration/Galilean-moons-orbiting/vector/Callisto.png); }
         #Galilean-moons .figbody .system [class*="moon-"][class*="-3"] {
           width: 272px;
           height: 272px;
-          background-color: #3D3B43;
           border-radius: 1000px;
           left: 104px;
           top: 104px; }
+          #Galilean-moons .figbody .system [class*="moon-"][class*="-3"] i {
+            background-image: url(../../media/illustration/Galilean-moons-orbiting/vector/Ganymede.png); }
         #Galilean-moons .figbody .system [class*="moon-"][class*="-2"] {
           width: 172px;
           height: 172px;
-          background-color: #454249;
           border-radius: 1000px;
           left: 154px;
           top: 154px; }
+          #Galilean-moons .figbody .system [class*="moon-"][class*="-2"] i {
+            background-image: url(../../media/illustration/Galilean-moons-orbiting/vector/Europa.png); }
         #Galilean-moons .figbody .system [class*="moon-"][class*="-1"] {
           width: 108px;
           height: 108px;
-          background-color: #4C484F;
           border-radius: 1000px;
           left: 186px;
           top: 186px; }
+          #Galilean-moons .figbody .system [class*="moon-"][class*="-1"] i {
+            background-image: url(../../media/illustration/Galilean-moons-orbiting/vector/Io.png); }
+      #Galilean-moons .figbody .system .Jupiter {
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        background-image: url(../../media/illustration/Galilean-moons-orbiting/vector/Jupiter.png);
+        left: 218px;
+        top: 218px; }
       #Galilean-moons .figbody .system [class*="shadow-"] {
         background-color: var(--white);
         opacity: 0.04;
@@ -2075,3 +2093,95 @@ body.testMode.hideSkin .char .skin {
         #Galilean-moons .figbody .system [class*="shadow-"][class*="-1"] {
           width: 108px;
           left: 186px; }
+    #Galilean-moons .figbody .system-h {
+      position: absolute;
+      width: 480px;
+      height: 32px;
+      bottom: 0;
+      transform: translate(-50%, 0);
+      left: 50%; }
+      #Galilean-moons .figbody .system-h [class*="orbit-"] {
+        height: 100%;
+        position: absolute;
+        transform: translate(-50%, 0);
+        left: 50%; }
+        #Galilean-moons .figbody .system-h [class*="orbit-"] .bd {
+          position: absolute;
+          width: 0px;
+          height: 32px;
+          transition: 1s; }
+          #Galilean-moons .figbody .system-h [class*="orbit-"] .bd i {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            left: -16px; }
+        #Galilean-moons .figbody .system-h [class*="orbit-"][class*="-Jupiter"] {
+          width: 480px; }
+          #Galilean-moons .figbody .system-h [class*="orbit-"][class*="-Jupiter"] .bd {
+            left: 240px; }
+            #Galilean-moons .figbody .system-h [class*="orbit-"][class*="-Jupiter"] .bd i {
+              background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Jupiter-1.png);
+              animation: Galilean-moons-script-Jupiter 0.5s infinite; }
+@keyframes Galilean-moons-script-Jupiter {
+  0% {
+    background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Jupiter-1.png); }
+  33.3333% {
+    background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Jupiter-2.png); }
+  66.6666% {
+    background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Jupiter-3.png); } }
+        #Galilean-moons .figbody .system-h [class*="orbit-"][class*="-Io"] {
+          width: 108px; }
+          #Galilean-moons .figbody .system-h [class*="orbit-"][class*="-Io"] .bd {
+            left: 54px; }
+            #Galilean-moons .figbody .system-h [class*="orbit-"][class*="-Io"] .bd i {
+              background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Io-1.png);
+              animation: Galilean-moons-script-Io 0.5s infinite; }
+@keyframes Galilean-moons-script-Io {
+  0% {
+    background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Io-1.png); }
+  33.3333% {
+    background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Io-2.png); }
+  66.6666% {
+    background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Io-3.png); } }
+        #Galilean-moons .figbody .system-h [class*="orbit-"][class*="-Europa"] {
+          width: 172px; }
+          #Galilean-moons .figbody .system-h [class*="orbit-"][class*="-Europa"] .bd {
+            left: 86px; }
+            #Galilean-moons .figbody .system-h [class*="orbit-"][class*="-Europa"] .bd i {
+              background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Europa-1.png);
+              animation: Galilean-moons-script-Europa 0.5s infinite; }
+@keyframes Galilean-moons-script-Europa {
+  0% {
+    background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Europa-1.png); }
+  33.3333% {
+    background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Europa-2.png); }
+  66.6666% {
+    background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Europa-3.png); } }
+        #Galilean-moons .figbody .system-h [class*="orbit-"][class*="-Ganymede"] {
+          width: 272px; }
+          #Galilean-moons .figbody .system-h [class*="orbit-"][class*="-Ganymede"] .bd {
+            left: 136px; }
+            #Galilean-moons .figbody .system-h [class*="orbit-"][class*="-Ganymede"] .bd i {
+              background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Ganymede-1.png);
+              animation: Galilean-moons-script-Ganymede 0.5s infinite; }
+@keyframes Galilean-moons-script-Ganymede {
+  0% {
+    background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Ganymede-1.png); }
+  33.3333% {
+    background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Ganymede-2.png); }
+  66.6666% {
+    background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Ganymede-3.png); } }
+        #Galilean-moons .figbody .system-h [class*="orbit-"][class*="-Callisto"] {
+          width: 480px; }
+          #Galilean-moons .figbody .system-h [class*="orbit-"][class*="-Callisto"] .bd {
+            left: 240px; }
+            #Galilean-moons .figbody .system-h [class*="orbit-"][class*="-Callisto"] .bd i {
+              background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Callisto-1.png);
+              animation: Galilean-moons-script-Callisto 0.5s infinite; }
+@keyframes Galilean-moons-script-Callisto {
+  0% {
+    background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Callisto-1.png); }
+  33.3333% {
+    background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Callisto-2.png); }
+  66.6666% {
+    background-image: url(../../media/illustration/Galilean-moons-orbiting/script/Callisto-3.png); } }
