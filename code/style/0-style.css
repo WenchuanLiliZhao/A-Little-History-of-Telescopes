@@ -97,7 +97,8 @@ body, html {
   height: 100%;
   max-height: 100%; }
   body *::-webkit-scrollbar, html *::-webkit-scrollbar {
-    visibility: hidden; }
+    visibility: hidden;
+    display: none; }
 
 #preloader {
   background-color: var(--grey);
