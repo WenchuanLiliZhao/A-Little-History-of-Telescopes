@@ -91,6 +91,11 @@ body.Galileo {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
 
+body, html {
+  box-sizing: content-box; }
+  body ::-webkit-scrollbar, html ::-webkit-scrollbar {
+    width: 0px; }
+
 #preloader {
   background-color: var(--grey);
   height: 100vh;

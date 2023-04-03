@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
   preloader.style.display = "none";
   console.log("Welcome!");
 
-  document.querySelector("body").style.overflowY = "auto";
+  document.querySelector("body").style.overflowY = "scroll";
 
   addIntroClass();
 })
